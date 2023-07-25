@@ -1,0 +1,45 @@
+10_SAS ON Common Network Ports
+Self-Assessment Sheet
+
+1. What is Port 20 (TCP)?
+Ans: Port 20 (TCP) is a File Transfer Protocol for Data Transfer.
+2. What is Port 21 (TCP)?
+Ans: Port 21 (TCP) is a File Transfer Protocol which controls the Data Transfer.
+3. What is FTP (File Transfer Protocol)?
+Ans: It is a Protocol which transfers files from one system to another.
+4. What is Port 22 (TCP)?
+Ans: Port 22 (TCP) is used for SSH for Encrypted Communication Link.
+5. What is SSH (Secure Shell)?
+Ans: The Secure Shell Protocol is a cryptographic network protocol for operating network services securely over an unsecured network. Its most notable applications are remote login and command-line execution. SSH applications are based on a client–server architecture, connecting an SSH client instance with an SSH server.
+6. What is Port 23 (TCP)? 
+Ans: Port 23 (TCP) is the Telnet port used to login to devices remotely but is not used in the Production environment.
+7. What is Telnet?
+Ans:  Telecommunication Network Port 23 (TCP) is called Telnet.
+8. What is Port 25 (TCP)?
+Ans: Port 25 (TCP) is the mail server port SMTP (Simple Mail Transfer Protocol).
+9. What is Simple Mail Transfer Protocol (SMTP)?
+Ans: SMTP is the server to server email transfer protocol. Port 25 (TCP).
+10. What is Port 53 (UDP)?
+Ans: Port 53 (UDP) is a Protocol which translates names to IP addresses.
+11. What is DNS (Domain Name System)?
+Ans: The Domain Name System (DNS) turns domain names into IP addresses, which browsers use to load internet pages. Every device connected to the internet has its own IP address, which is used by other devices to locate the device. DNS servers make it possible for people to input normal words into their browsers, such as Fortinet.com, without having to keep track of the IP address for every website. 
+12. What is Port 80 (TCP)?
+Ans: Port 80 (TCP) is HTTP (HyperText Transfer Protocol) protocol which is unsecured communication.
+13. What is Port 443 (TCP)?
+Ans: Port 443 (TCP) is HTTPS (HyperText Transfer Protocol Secure) Protocol which is a secured way of communication.
+14. What is HTTP (Hypertext Transfer Protocol)?
+Ans: Port 80 (TCP) is HTTP.
+15. What is HTTPS (Hypertext Transfer Protocol Secure)?
+Ans: Port 443 (TCP) is HTTPS
+16. Port 110 (TCP)?
+Ans: Port 110 (TCP) is POP3 (Post Office Protocol version 3) which uses basic mail transfer functionality.
+17. What is Port 143 (TCP)?
+Ans: Port 143 (TCP) is IMAP (Internet Message Access Protocol v4)  which includes email management from multiple clients.
+18. POP and IMAP?
+Ans: Post Office Protocol (POP) & Internet Message Access Protocol (IMAP).
+19. What is POP3 (Post Office Protocol version 3)?
+Ans: POP3 is an email protocol using Port 110 (TCP) for basic mail transfer functionality.
+20. What is IMAP (Internet Message Access Protocol)?
+Ans: IMAP is also an email protocol using Port 143 (TCP) which includes email management from multiple clients.
+
+

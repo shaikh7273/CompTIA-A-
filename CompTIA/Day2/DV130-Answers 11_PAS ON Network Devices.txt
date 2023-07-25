@@ -1,0 +1,35 @@
+11_SAS ON Network Devices
+Self-Assessment Sheet
+
+1. What is a Router?
+	
+2. What is a Switch?
+	
+3. What is an Unmanaged Switch?
+	
+4. What is a Managed Switch?
+	
+5. What is a Bridge?
+	
+6. What is a Patch Panel?
+	
+7. What is a Firewall?
+	
+8. What is a Hub?
+	
+9. What is a Cable Modem?
+	
+10. What is a DSL Modem?
+	
+11. What is ONT?
+	
+12. What is Network Interface Card (NIC)?
+	
+13. What is a Wireless Access Point (WAP)?
+	
+14. What is a Wireless LAN Controller?
+	
+15. What is a Repeater?
+	
+
+

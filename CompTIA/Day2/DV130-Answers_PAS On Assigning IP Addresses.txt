@@ -1,0 +1,42 @@
+
+
+16_SAS On Assigning IP Addresses
+Self-Assessment Sheet
+1. How to assign IPv4 IP addresses for Private IP?
+Ans: 
+2. What is the process of DHCP (Dynamic Host Configuration Protocol)?
+Ans: It’s a four step process (DORA) which is listed below.
+1) Discover
+2) Offer
+3) Request
+4) Acknowledge
+3. What is the result of DHCP (Dynamic Host Configuration Protocol)?
+Ans: Result of DHCP is that a unique IP address will be assigned to the machine from the pool of IP addresses.
+4. Features of Static IP address?
+Ans: It provides the same IP address no matter how many times you restart the machine.
+5. Features of Dynamic IP address?
+Ans: Easy & Automatic configuration, Unlimited IP addressing, better security and better physical security.
+6. What is Automatic Private IP Address (APIPA)?
+Ans: Automatic Private IP Addressing (APIPA) is a feature in operating systems (such as Windows) that enables computers to automatically self-configure an IP address and subnet mask when their DHCP server isn’t reachable. The IP address range for APIPA is 169.254.0.1-169.254.255.254, with the subnet mask of 255.255.0.0.
+7. What is unicast addresses?
+Ans: A unicast address is an address that identifies a unique node on a network. Unicast addressing is available in IPv4 and IPv6 and typically refers to a single sender or a single receiver, although it can be used in both sending and receiving.
+8. What is multicast addresses?
+Ans: A multicast address is a specific type of IP address labeling a network location that is used to multicast data packets within a network. It stands in contrast to other IP addresses that only allow for unicast models.
+9. What is anycast addresses?
+Ans: Anycast, also known as IP Anycast or Anycast routing, is an IP network addressing scheme that allows multiple servers to share the same IP address, allowing for multiple physical destination servers to be logically identified by a single IP address. Based on the location of the user request, the anycast routers send it to the server in the network based on a least-cost analysis that includes assessing the number of hops, shortest distance, lowest transit cost, and minimum latency measurements to optimize the selection of a destination server.
+
+10. What is BootP?
+Ans: Bootstrap Protocol (BOOTP) provides a dynamic method for associating workstations with servers. It also provides a dynamic method for assigning workstation Internet Protocol (IP) addresses and initial program load (IPL) sources.
+BOOTP is a TCP/IP protocol. It allows a client to find its IP address and the name of a load file from a server on the network. A client uses BOOTP to find this information without intervention from the user of the client.
+
+
+
+
+
+
+
+
+
+
+
+

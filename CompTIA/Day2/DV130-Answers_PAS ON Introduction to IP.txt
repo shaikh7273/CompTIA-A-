@@ -1,0 +1,41 @@
+9_SAS On Introduction to IP
+Self -Assessment Sheet
+
+1. What is Internet Protocol (IP)?
+Ans: IP is like a shipping truck carrying data.	
+2. What is the meaning of Encapsulation?
+Ans: It means “transportation of TCP and UDP inside IP”.
+	
+3. What does TCP stand for?
+Ans: Transmission Control Protocol
+	
+4. How does TCP (Transmission Control Protocol) work?
+Ans: Transmission Control Protocol is one of the most used protocols in digital network communications and is part of the Internet protocol suite, commonly known as the TCP/IP suite. Primarily, TCP ensures end-to-end delivery of data between distinct nodes. TCP works in collaboration with Internet Protocol, which defines the logical location of the remote node, whereas TCP transports and ensures that the data is delivered to the correct destination.
+	
+5. What does UDP stand for?
+Ans: User Datagram Protocol
+6. How does UDP (User Datagram Protocol) work?
+Ans: User Datagram Protocol (UDP) is a Transport Layer protocol. UDP is a part of the Internet Protocol suite, referred to as UDP/IP suite. Unlike TCP, it is an unreliable and connectionless protocol. So, there is no need to establish a connection prior to data transfer. The UDP helps to establish low-latency and loss-tolerating connections established over the network.The UDP enables process to process communication.
+7. What is OSI Layer 4?
+Ans: Transport Layer
+8. What does OSI Layer 4 - Transport Layer do?
+Ans: Layer 4 of the OSI Model,  also known as the Transport Layer manages network traffic between hosts and end systems to ensure complete data transfers. Transport-layer protocols such as TCP, UDP, DCCP, and SCTP are used to control the volume of data, where it is sent, and at what rate.
+9. What is Multiplexing?
+Ans: Multiple applications on your system communicating to a server at one time is known as Multiplexing.
+10. What is a port?
+Ans: A port is a software-defined number associated with a network protocol that receives or transmits communication for a specific service. It allows computers to differentiate between different kinds of traffic, such as emails going to a different port than webpages, even though both reach a computer over the same Internet connection
+11. What is a Port Number?
+Ans: Port numbers are part of the addressing information that helps identify senders and receivers of information and a particular application on the devices. Port numbers consist of 16-bit numbers.
+12. What does IPv4 Socket consist of?
+Ans:IPv4 Socket Consists of
+      Server IP address, protocol, server application port number
+      Client IP address, protocol, client port number
+13. What are Non-Ephemeral Ports?
+Ans: These are Permanent port numbers usually ranging from 0 to 1023.
+14. What are Ephemeral Ports?
+Ans: These are Temporary port numbers usually ranging from 1024 to 65535.
+15. What is Data Transport Analogy?
+Ans: TCP/IP protocol stack is that each layer plays a role in the overall communication process. Each layer invokes services that are necessary for that layer to perform its role. As an outgoing transmission passes down through the stack, each layer includes a bundle of relevant information called a header along with the actual data. The little data package containing the header and the data then becomes the data that is repackaged at the next lower level with the next lower layer’s header. 
+16. What is Network Topology?
+Ans: Network topology is the topological structure of a network that can be depicted physically or logically. It is an application of graph theory wherein communicating devices are modeled as nodes and the connections between the devices are modeled as links or lines between the nodes.
+

@@ -1,0 +1,40 @@
+
+12_SAS ON Software Defined Networking
+Self-Assessment Sheet
+
+1. What is Software Defined Networking (SDN)?
+Ans: SDN is an approach to networking that uses software controllers that can be driven by application programming interfaces (APIs) to communicate with hardware infrastructure to direct network traffic. Using software, it creates and operates a series of virtual overlay networks that work in conjunction with a physical underlay network. SDNs offer the potential to deliver application environments as code and minimize the hands-on time needed for managing the network.
+	
+2. What are Computer Networking Planes?
+Ans: On a whiteboard, networks may be drawn as a cloud or a number of straight lines between nodes. In reality, there are three dimensions, called “planes,” of a network: the Data Plane, the Control Plane, and the Management Plane.  It is important to understand these planes and how each of them is treated in a software-defined network.
+3. What is Data Plane?
+Ans: The data plane is responsible for handling the data packets and applying actions to them, based on rules that we program into lookup tables.
+	
+4. What is Control Plane?
+Ans: The control plane is tasked with calculating and programming actions for the data plane. This is where the forwarding decisions are made and where other functions (e.g., Quality of Service, Virtual Local Area Networks, etc.) are implemented. The control plane is operating at a lower speed than the data plane. It does not operate — or need to operate — at wire speed.
+	
+5. What is Management Plane?
+Ans: The management plane is where we can configure and monitor the network device (e.g., switch or router). The network device can be a shell, command-line interface (CLI) or web interface. The management plane usually runs on the same processor as the control plane.
+	
+6. What is Software Defined Networking Controller (SDN Controller)?
+Ans: All traditional networking devices like routers and switches use a distributed control plane. But newer models of networking i.eSoftware-defined Networking (SDN) uses a centralized control plane. Distributed control plane means that control plane of all networking devices lies within the device itself. 
+Each device has their own control plane to control data plane. In the Centralized control plane system, there is a device which contains the control plane of all devices. This device controls the activities of the data plane of all networking devices simultaneously. This device is called Controller or SDN controller. 
+	
+7. What is Distributed Control Planes?
+Ans: All traditional networking devices like routers and switches use a distributed control plane. But newer models of networking i.e Software-defined Networking (SDN) uses a centralized control plane. Distributed control plane means that control plane of all networking devices lies within the device itself. 
+	
+8. What is Controller Based Networking?
+Ans: The biggest difference between SDN and traditional networking is simply that SDN is software-based and traditional networking is usually hardware-based. Being software-based helps SDN with scalability and flexibility, and helps it provide its users with more control and easier resource management, allowing users to virtually manage resources with the control plane.
+Unlike SDN, traditional networks use routers, switches and other hardware and physical infrastructure to generate connections and run the networks.
+SDN controllers use a northbound interface that communicates with APIs, allowing application developers to program the network. The opposite of this interaction is application developers using traditional networking protocols to program the network.	
+9. What is a Routed Port?
+Ans: A routed port is a physical port that acts similarly to an interface on a router. Unlike an access port, a routed port is not associated with a particular VLAN. A routed port behaves like a regular router interface.
+	
+10. What is OpenFlow?
+Ans: The OpenFlow (OF) protocol is a standard in software-defined networking (SDN) architecture. This protocol defines the communication between an SDN controller and the network device/agent.
+OpenFlow is the standard southbound protocol used between the SDN controller and the switch. The SDN controller takes the information from the applications and converts them into flow entries, which are fed to the switch via OF. It can also be used for monitoring switch and port statistics in network management.
+
+
+	
+
+

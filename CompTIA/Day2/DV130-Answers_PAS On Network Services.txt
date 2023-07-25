@@ -1,0 +1,56 @@
+
+14_SAS On Network Services
+Self-Assessment Sheet
+
+1. What is a Web Server?
+Ans: A web server stores and delivers the content for a website – such as text, images, video, and application data – to clients that request it. The most common type of client is a web browser program, which requests data from your website when a user clicks on a link or downloads a document on a page displayed in the browser.
+	
+2. What is a File Server?
+Ans: A file server is a computer responsible for the storage and management of data files so that other computers on the same network can access the files. It enables users to share information over a network without having to physically transfer files.File servers only make a remote file system accessible to clients.
+	
+3. What is Print Server? 
+Ans: A print server is a dedicated appliance or central point of software. They help clients/users/devices connect to shared printers and they process or pass through spool files from a client to the printer. When you hit print, the print server accepts the job and pushes it to the appropriate printer.
+	
+4. What is a (Domain Name System) DNS Server?
+Ans: DNS is a server which converts names to IP addresses and vice-versa. The Domain Name System (DNS) is the phonebook of the Internet. When users type domain names such as ‘google.com’ or ‘nytimes.com’ into web browsers, DNS is responsible for finding the correct IP address for those sites. Browsers then use those addresses to communicate with origin servers or CDN edge servers to access website information. This all happens thanks to DNS servers
+	
+5. What is a (Dynamic Host Configuration Protocol) DHCP Server?
+Ans: A DHCP Server is a network server that automatically provides and assigns IP addresses, default gateways and other network parameters to client devices. It relies on the standard protocol known as Dynamic Host Configuration Protocol or DHCP to respond to broadcast queries by clients.
+	
+6. What is a Mail Server?
+Ans: A mail server -- also known as a mail transfer agent, or MTA; mail transport agent; mail router; or internet mailer -- is an application that receives incoming email from local users and remote senders and forwards outgoing messages for delivery.
+	
+7. What is a Proxy Server?
+Ans: A proxy server is a system or router that provides a gateway between users and the internet. Therefore, it helps prevent cyber attackers from entering a private network. It is a server, referred to as an “intermediary” because it goes between end-users and the web pages they visit online.
+When a computer connects to the internet, it uses an IP address. This is similar to your home’s street address, telling incoming data where to go and marking outgoing data with a return address for other devices to authenticate. A proxy server is essentially a computer on the internet that has an IP address of its own.
+	
+8. What is an Authentication Server?
+Ans: An authentication server manages processes that allow access to a network, application, or system.
+Before connecting with a server, users must prove that they are who they say they are. An authentication server handles this delicate work. 
+You can embed authentication servers within switches, dedicated computers, or network servers. They can use out-of-the-box software, or they can run on custom code written for your organization. 
+No matter how you set up and deploy them, these servers have a vital role to play in keeping your critical assets safe and protected. 
+9. What is SIEM (Security Information and Event Management)?
+Ans: Security information and event management, or SIEM, is a security solution that helps organizations recognize and address potential security threats and vulnerabilities before they have a chance to disrupt business operations. SIEM systems help enterprise security teams detect user behavior anomalies and use artificial intelligence (AI) to automate many of the manual processes associated with threat detection and incident response.
+	
+10. What is Forensic Analysis?
+Ans: Forensic analysis definition can be described as a detailed process of detecting, investigating, and documenting the reason, course, and consequences of a security incident or violation against state and organization laws. Forensic analysis is often used for providing evidence in court hearings, especially in criminal investigations. It employs a wide range of investigative procedures and technologies.
+	
+11. What is Syslog?
+Ans: Syslog is a protocol that computer systems use to send event data logs to a central location for storage. Logs can then be accessed by analysis and reporting software to perform audits, monitoring, troubleshooting, and other essential IT operational tasks.
+
+12. What is IDS (Intrusion Detection System)?
+Ans: A system called an intrusion detection system (IDS) observes network traffic for malicious transactions and sends immediate alerts when it is observed. It is software that checks a network or system for malicious activities or policy violations.
+13. What is IPS(Intrusion Prevention System)?
+Ans: An Intrusion Prevention System (IPS) is a network security tool (which can be a hardware device or software) that continuously monitors a network for malicious activity and takes action to prevent it, including reporting, blocking, or dropping it, when it does occur.  
+
+14. What is All-in-one security appliance?
+Ans: Unified Threat Management (UTM) / Web Security Gateway
+15. What is Endpoint Management Server?
+Ans: Endpoint management is the application of policies to maintain the functionality of networked devices and protect them from unauthorized access. manageability features in Intel vPro® platform-based devices can help improve control and security.
+
+16. What is a Legacy System?
+Ans: A legacy system is an old or out-dated system, technology or software application that continues to be used by an organization because it still performs the functions it was initially intended to do. Generally, legacy systems no longer have support and maintenance and they are limited in terms of growth. However, they cannot easily be replaced.
+17. What is an Embedded System?
+Ans: An embedded system is a microprocessor-based computer hardware system with software that is designed to perform a dedicated function, either as an independent system or as a part of a large system. At the core is an integrated circuit designed to carry out computation for real-time operations.
+
+

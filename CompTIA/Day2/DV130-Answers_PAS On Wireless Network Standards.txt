@@ -1,0 +1,60 @@
+
+13_SAS On Wireless Network Standards
+Self-Assessment Sheet
+
+1. What is 802.11a speed?
+Ans: 802.11a speed is 54 Mbits/s.
+	
+2. What is 802.11a Frequency & range?
+Ans: 5 GHz and smaller range than 802.11b.
+	
+3. What are some other features of 802.11a?
+Ans: It operates at 54 Mbits/s and is not commonly seen today.
+	
+4. What is 802.11b Speed?
+Ans: 802.11b speed is 11 Mbits/s.
+	
+5. What is 802.11b Frequency & range?
+Ans: 2.4GHz and better range than 802.11a.
+	
+6. What are some other features of 802.11b?
+Ans: It has less absorption problems and it is also not commonly seen today.
+	
+7. What is 802.11g Speed?
+Ans: 54 Mbits/s
+	
+8. What is 802.11g Frequency & range?
+Ans: 2.4GHz
+	
+9. What are some other features of 802.11g?
+Ans: It’s an upgrade to 802.11b. It is backward compatible with 802.11b.
+	
+10. What is 802.11n Speed?
+Ans: 600 Mbits/s.
+	
+11. What is 802.11n Frequency & range?
+Ans: 5 GHz and/or 2.4 GHz.
+	
+12. What are some other features of 802.11n?
+Ans: It has a high throughput compared to other older standard devices. It uses MIMO (Multiple-Input Multiple-Output).
+	
+13. What is 802.11ac Speed?
+Ans: 7 Gigabits/s
+	
+14. What is 802.11ac Frequency & range?
+Ans: 5 GHz.
+	
+15. What is 802.11ax Speed?
+Ans: 1202 Mbits/s
+	
+16. What is 802.11ax Frequency & range?
+Ans: 5 GHz and/or 2.4 GHz.
+	
+17. What is RFID?
+Ans: Radio-frequency Identification
+	
+18. How does RFID work?
+Ans: RFID stands for radio-frequency identification, and is a vital part of modern tracking, location, and identification technologies. It uses electromagnetic fields to identify and track RFID tags. These tags are small and can be attached to people, machines, electronic devices, vehicles, or any other physical object. RFID tags act as intelligent barcodes that can be scanned to identify and obtain information about the RFID tag.
+	
+
+
