@@ -1,0 +1,68 @@
+DV500_2_SAS On Laptop Hardware
+Self-Assessment Sheet
+
+
+1. What does it mean to be modular? 
+Ans: Modular means which is easily removable.
+2. What type of battery technology do we use today?
+Ans: Li-Ion or Li-Po
+
+3. What happens each time you charge a battery?
+Ans: It diminishes the battery with every single charge.
+
+4. What is one advantage to using a modular battery configuration?
+Ans: We can install a new fully charged battery when the installed one on Laptop is completely drained.
+
+5. True or False? lithium-ion batteries are designed to be 80 percent charged. 
+Ans: False
+
+6. True or False? In lithium-ion batteries, discharging some of the battery and charging it back up again you have to worry about causing a effect on memory or limiting the amount of capacity that battery might have.
+Ans: False
+
+7. Where are all the programs that are executing in your operating system executing?
+Ans
+
+8. What does SO-DIMM stand for?
+Ans: Small Outline - Dual Inline Memory Module
+
+9. Where is SO-DIMM usually used?
+Ans : Modern Laptops
+
+10.  Are you able to change/upgrade memory for a device that has it soldered to the motherboard?
+Ans : No. We cannot.
+
+11.  In what form do older laptops have storage in?
+Ans: Spinning Physical Drive 
+ 
+
+12.  In what form do new laptops have storage?
+Ans : SSD’s or M2’s
+
+13.  What is one advantage of SSD?
+Ans : Read and Write speeds are much faster compared to traditional HD’s.
+
+14.  What is one way you can migrate from a hard drive to an SSD
+Ans : Image/Clone the HDD and move the data to SSD.
+15.  What are some types of authentications?
+Ans :  
+
+16. What is one disadvantage of laptop keyboard?
+Ans: As the laptops are becoming smaller there’s very less space for Keyboard.
+
+17.  What is NFC?
+Ans  Near Field Communication
+
+18. What does NFC allow you to do?
+Ans: It allows you to connect to nearby NFC devices wirelessly.
+19.  Is m.2 a modular setup?
+Ans: Yes
+
+20. M.2 interface on an SSD drive is larger than traditional SATA-connected SSD? True or False?
+Ans  False
+
+
+
+
+
+
+
