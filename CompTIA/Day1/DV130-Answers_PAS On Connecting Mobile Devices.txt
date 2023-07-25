@@ -1,0 +1,71 @@
+DV500_4_SAS On Connecting Mobile Devices 
+Self-Assessment Sheet
+
+1. What does USB stand for?
+Ans: Universal Serial Bus
+
+2. What are USBs used for?
+Ans: Charging and Data Transfers.
+
+3. What type of plug are we seeing less of on laptops?
+Ans: USB-A
+
+4. What is NFC?
+Ans: Near Field Communication
+
+5. What does NFC do?
+Ans: Sends a small amount of data over a limited area.
+
+6. Give an example of NFC?
+Ans: Payment Systems at Stores
+
+7. What method is the most used in mobile device connectivity?
+Ans: Bluetooth
+
+8. What are examples of mobile hot spot?
+Ans: Our Cell Phone
+
+9. What device uses lightning connection?
+Ans: Apple Devices (iPhone & iPad)
+
+10.  What interface was used before USB?
+   Ans: Serial Interface
+
+11.  What connection has nine pins?
+Ans: DB-9
+
+12.  Sometimes DB-9 is referred to as?
+Ans: DE-9
+
+
+13. What replaced DB-9?
+Ans: USB-A
+
+14.  If you have an older device, it may be connecting over USB with what type of USB?
+Ans: USB-A
+
+15.  Many of today’s mobile devices connectivity will use which USB?
+Ans: USB-C
+
+16.  What type of signals can USB-C plug send?
+Ans
+
+17.  RS232 is associated with what type of interface?
+Ans: Serial Interface
+
+18.  Is mobile hotspot free on all devices?
+Ans: No
+
+19.  What is 802.1?
+Ans: It is a part of set of Standard Wireless connection (LAN).
+
+
+
+
+
+
+
+
+
+
+
