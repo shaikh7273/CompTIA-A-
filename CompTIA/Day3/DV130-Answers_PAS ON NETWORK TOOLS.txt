@@ -1,0 +1,27 @@
+22_SAS ON NETWORK TOOLS
+
+Q1. What is cable crimping?
+A. Crimping is a process used to join wire to wire or wire to terminal. Just as the name suggests, bonding occurs when one piece of metal is deformed and compressed tightly with another piece of metal.
+
+Q2. What is a modular connector?
+A.   A modular connector is a type of electrical connector for cords and cables of electronic devices and appliances, such in computer networking, telecommunication equipment, and audio headsets.
+
+
+Q3. What is a wifi analyzer?
+A. If you’re working with a wireless network, then you don’t have to spend a lot of time crimping cables. But you do have to spend time understanding all of the different frequencies that are in use on that wireless network. To be able to understand exactly what’s happening over the air, you might want to make use of a Wi-Fi analyzer. These are analyzers that listen to all of the signals on this wireless network. And they’re able to provide you with information about what frequencies are in use and which ones may be open.
+
+Q4. What is a tone generator and probe?
+A. If you’ve ever worked in a data center or large network where there are hundreds of different cables and you just want to find one of those hundreds of cables, then you probably want to use a tone generator. Sometimes you’ll hear this referred to as a toner probe, which describes both of the components that you would use to be able to identify that cable. One of these is a tone generator that adds a signal onto the copper wire. The other is an inductive probe. This inductive probe doesn’t need to touch the copper that’s inside of that cable. You just need to get close to the cable so that you can hear the tone that’s being generated on the other end of the cable.
+
+
+Q5. What is a punch down tool?
+A. In some environments you’re not connecting an RJ45 connector, you’re instead connecting to a punch down block. This is a punch down block. And you can see that you have a specialized tool that you would use to connect that wire into the punch down block permanently. This can be pretty tedious if you’re working with a lot of cables, because you’re taking each wire that’s inside of the cable, putting each of those wires into their own slot on the punch down block, and using the punch down tool to individually fasten those wires to the punch down block. When you’re using this punch down tool, it’s not only pushing the wire into the punch down block, but it’s cutting off any excess wire, making a neat connection to the block.
+
+Q6. What are cable testers?
+A. Another great tool to have in your tool bag is a cable tester. These usually come in two different units. And you plug each one of them into the two ends of the cable. They’ll then perform a continuity test, and tell you if pin 1 is connected to pin 1, pin 2 is connected to pin 2, and so on. Some cable testers can also tell you if you happen to miss any of these cables or not punch them down properly or they may be able to tell you if you crossed wires between different pins. These cable testers are relatively simplistic, and they don’t have a lot of advanced functionality. For example, a cable tester may not be able to tell you what the crosstalk values might be between these wires or how much signal loss occurs from one end of the cable to the other.
+
+Q7. What is a loopback plug?
+A. When you’re troubleshooting, it’s useful to know if the problems you’re seeing are related to the cable or related to the interface on the device. One way that you could test the interface is through the use of a loopback plug. You would have data coming out of an interface, looping back around, and going right back into that same device. This allows you to send information out a serial port, receive that information immediately back in that serial port, and be able to compare those two values to see if they match. If they don’t match then it’s very possible you have a problem with that physical interface. There are also loopback cables that you can get for ethernet connections, T1 wide area network, or fiber connections.
+These are not crossover cables, you can see that you’re not connecting multiple devices together, this is instead used to send data out one interface and directly back into the same interface. Crossover cables commonly connect two devices directly to each other, but a loopback plug is effectively connecting a device to itself.
+
+

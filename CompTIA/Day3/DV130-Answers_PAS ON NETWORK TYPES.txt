@@ -1,0 +1,99 @@
+21_SAS ON NETWORK TYPES
+
+1. What is a LAN?
+Ans:  A LAN is a Local Area Network. And although local is a relative term, this usually means devices that are in your building or group of buildings that are nearby.
+
+2. What are the typical network connections for a LAN?
+Ans:  The networks providing these high bandwidths usually are ethernet networks and 802.11 wireless networks.
+
+3.  \What is a WAN?
+Ans: f you’re communicating to a location that is in another city, another country, or somewhere else around the world, then you’re communicating over a WAN or a Wide Area Network.
+4. Why are the speeds slower on a WAN compared to LAN?
+Ans: If you’re communicating to a location that is in another city, another country, or somewhere else around the world, then you’re communicating over a WAN or a Wide Area Network. Because of the distances involved in getting that signal from one location to another over such a long distance, these speeds are usually slower than what you might find on a local area network.
+
+5. What are some examples of technologies used in a WAN?
+Ans:Examples of technologies used in a WAN are point to point serial connection, it could be through MPLS, or many other types of wide area network technologies. 
+
+6. How are WANs connected?
+Ans: Sometimes these wide area networks are connected with fiber that’s in the ground or you may be communicating to another location through a non-terrestrial or satellite link.
+
+7. What is a PAN?
+Ans: If you’ve ever connected your phone to a pair of wireless earbuds, then you’ve used a Personal Area Network or a PAN.
+
+8. What are some examples of technologies used in a PAN?
+Ans: pan networks can be many different technologies. You might be using Bluetooth, which is very common when connecting these earpods, or you might use infrared or NFC connections. These are very common in automobiles where you’re connecting your mobile phone to the audio system that’s in your car or your truck. And you may be able to integrate other applications, such as your map or your contact list.
+
+
+9. What is one of the most common ways to connect a personal area network?
+Ans: Connecting your wireless headset is probably one of the most common ways to connect a personal area network.
+
+10. What type of telemetry can be acquired using a personal area network?
+Ans: And if you’re working out, you may be able to use a personal area network to communicate directly to the equipment. And it’s very common to create reports based on this workout telemetry that you’ve been able to acquire using your personal area network.
+
+11. What is a Metropolitan Area Network (MAN)?
+Ans: If you work for a company that has many locations within the same city or geographical area, you may be connecting those sites together using a Metropolitan Area Network or a MAN.
+
+
+12. How does the distance of a MAN compare to that of a LAN and WAN?
+Ans:  The distances you would need to communicate to these sites are much longer than what you would find with a local area network but not as far as what you would find with a wide area network. This middle range of a metropolitan area network is usually with locations that are in the same city.
+
+
+13. What is the most common topology for connecting sites in a MAN today?
+Ans: Although in the past there have been a number of different topologies that would connect these sites within the same city, today we commonly see metro ethernet where you’re given an ethernet connection on both sides and the service provider provides the link between those locations.
+
+
+14. What type of organizations tend to use Metropolitan Area Networks?
+Ans: Metropolitan area networks tend to be very common for governments because they already have the right of way to be able to put conduit in the ground and extend fiber connections between all of their remote sites.
+
+
+15. What is a Storage Area Network (SAN)?
+Ans: A SAN is a high speed network that allows us to communicate to a centralized storage facility, usually one with a very large capacity.
+
+
+16. How is data accessed on a SAN?
+Ans: A SAN is a high speed network that allows us to communicate to a centralized storage facility, usually one with a very large capacity. This provides block level access, which is very similar to the block level access we have on our local storage devices, which means it’s very efficient to read and write to that SAN.
+
+17. What is the typical bandwidth requirement for a SAN?
+Ans: here are usually very high bandwidth required to be able to communicate to these SANs, and they’re often isolated on their own high speed networks.
+
+
+18. Are SANs isolated on their own networks?
+Ans: Yes, they are isolated on their own networks.
+
+19. What is a Wireless Local Area Network (WLAN)?
+Ans: And if you’re communicating wirelessly to a network that’s in your building, you’re probably using an 802.11 network on a Wireless Local Area Network or WLAN. 
+
+20. What is the range of a WLAN?
+Ans: These wireless networks don’t have a very large range, so you often see them used inside of a building or a localized area.
+
+21. How can the size of a WLAN be extended?
+Ans: If you needed to extend beyond those distances, then you would usually add additional access points to be able to extend the total size of the wireless local area network.
+
+
+
+22. How do WLANs differ from other wireless networks?
+Ans: 
+
+Section -B  Q&A Network Types
+
+Q1. What is a LAN?
+
+A.
+
+Q2. What is a WAN network?
+
+A. 
+
+Q3. What is a PAN network?
+A. 
+
+Q4. What is MAN network?
+A. 
+
+Q5. What is a SAN network?
+A. 
+
+Q6. What is WLAN network?
+A. 
+
+

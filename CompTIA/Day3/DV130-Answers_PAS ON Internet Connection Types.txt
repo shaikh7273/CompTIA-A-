@@ -1,0 +1,119 @@
+20_SAS ON Internet Connection Types
+
+1. What is satellite networking?
+Ans: This is where you would use a satellite dish to communicate with a satellite that’s in a low Earth orbit. We sometimes refer to this as a non-terrestrial communication method because we’re communicating to a device that’s in space.
+
+2. How does the cost of satellite connectivity compare to other forms of internet connectivity?
+Ans: As you can imagine, having a rocket take your satellite connection into space is a relatively expensive task. And so the costs of having satellite connectivity can be more expensive than something that might be terrestrial networking. 
+
+3. What are typical speeds for satellite internet?
+Ans:  The speeds over these satellite links can vary widely, but it’s not uncommon to find 50 megabits of speed down and 03 megabits of speed going up to the satellite.
+
+4. What are some common uses for satellite internet?
+Ans: You would probably be using a satellite connection where no other type of Internet connectivity was available
+
+5. What is latency when communicating with satellites in space?
+Ans: Latency is 250 milliseconds going up to the satellite and another 250 milliseconds coming down from the satellite.
+
+6. How does satellite internet compare to terrestrial internet when it comes to latency?
+Ans: Satellite Internet is poor when compared to terrestrial internet.
+
+7. What is a newer type of satellite network?
+Ans: Starlink is the newer type of Satellite network.
+
+8. What is the latency time advertised by Starlink?
+Ans:Stralink advertises 40 millisecond latency times, and they’re working on getting that down to 20 milliseconds
+
+9. What frequency range do satellite connections operate in?
+Ans: These satellite connections tend to operate in higher frequencies such as the 2 GHz range.
+
+
+10. What is the cause of rain fade when using a satellite connection?
+Ans: Rain fade means you’ll lose your connection while that rain is between you and the satellite.
+
+11. What is the advantage of fiber optic links for internet connections?
+Ans: These fiber optic links are great for internet connections because you can send a very large amount of information in a very short period of time.
+
+12. Why is fiber optics more expensive than other internet connections?
+Ans: Fiber Optics tends to be more expensive because the equipment costs a bit more for fiber optics. You would have more expensive repairs for the fiber optics themselves and the equipment.
+
+13. How is fiber optics used in enterprise networks?
+Ans: If you’ve worked at all with enterprise networks, then you’re very familiar with fiber optics and connecting your infrastructure devices and the cores of your network together using this fiber optic technology. We’ve taken that concept of running fiber optics in a network core and extended it to running fiber optics to your home or to your business. This greatly improves bandwidth for your internet connections and gives you other options for sending or receiving information over these high speed links.
+
+14. How does running fiber optics to a home or business improve bandwidth?
+Ans: Fiber Optics supports very high data rate transfers which has improved the bandwidth for  home or businesses.
+
+15. What is the method of communication used by cable broadband?
+Ans: The standard for sending this data over cable networks is called DOCSIS. That stands for Data Over Cable Service Interface Specification.
+
+16. How does cable broadband transmit video, voice, and data?
+Ans: If your home or business is serviced by a cable company, then you might have the option for cable broadband. This brings an internet connection into your home or business using the same cable that you would use for cable television. Broadband describes a method of communication where you can send multiple streams of data across a single wire by communicating across multiple frequencies on that wire. This means on a single wire, we can transmit video, voice, and data simply by using different frequencies on that same medium.
+
+17. Who might provide cable broadband service?
+Ans: The Cable company.
+
+18. What is the standard for sending data over cable networks?
+Ans: The standard for sending this data over cable networks is called DOCSIS. That stands for Data Over Cable Service Interface Specification. This DOCSIS standard supports very high speeds, and it’s not unusual to find DOCSIS networks that are 1 gigabit or even higher in speed.
+19. What are the typical speeds of DOCSIS networks?
+Ans: This DOCSIS standard supports very high speeds, and it’s not unusual to find DOCSIS networks that are 1 gigabit or even higher in speed.
+
+20. Do you need to bring additional cables or services into your home for DOCSIS?
+Ans: No. You don’t need additional cables for DOCSIS.
+
+21. What is the technology that uses existing copper in a home?
+Ans: DSL (Digital Subscriber Line)
+
+22. What is the difference between the speed of download and upload on DSL?
+Ans: Downstream speed is 1o times more than the Upload speed of 20 megabits per second.
+
+23. What are the typical speeds of DSL networks?
+Ans: It’s not uncommon on DSL networks to have a downstream speed of around 200 megabits per second, but the upstream speed is limited to around 20 megabits per second.
+
+24. What is the limitation of DSL in terms of distance?
+Ans: 10,000 foot limitation.
+
+25. What type of networks are commonly used for internet connectivity when away from home or office?
+Ans: Many of us use cellular networks for internet connectivity, especially if we’re away from our office or our home.
+
+26. How is internet connectivity provided through cellular networks?
+Ans: Cellular networks provide internet connectivity through Tethering, where we would physically connect to our phone via USB or Bluetooth and use our phone as an internet connection.
+
+27. What is tethering?
+Ans:  Cellular networks provide internet connectivity through Tethering, where we would physically connect to our phone via USB or Bluetooth and use our phone as an internet connection.
+
+
+28. What is a hotspot?
+Ans: Many phones also support the ability to become a hotspot. So they would enable 802.11 capabilities and anything in range would be able to use that 802.11 network through your phone to access the internet.
+
+
+
+29. What is a WISP?
+Ans: And in some areas, you might have an ISP that is able to send information over a wireless network to your home. That would be a WISP or a Wireless Internet Service Provider.
+
+
+30. In what areas are WISPs commonly found?
+Ans: Usually you would find a WISP operating in rural areas or places where there’s not a large infrastructure already available to send internet traffic.
+
+
+
+31. What are the typical speeds of wireless networks provided by WISPs?
+Ans: Usually you get very good performance from these wireless networks. In some areas, these networks can operate up to 1,000 megabits per second.
+
+
+
+
+Section B
+
+Q1. What Is Satellite Internet?
+A. 
+Q2. What is fiber optic internet?
+A. 
+Q3. What is broadband internet?
+A. 
+Q4. What is DSL?
+A.
+Q5. What is a cellular network?
+A. 
+Q6. What is wisp internet?
+A. 
+

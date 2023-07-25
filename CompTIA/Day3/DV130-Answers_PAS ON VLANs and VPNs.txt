@@ -1,0 +1,70 @@
+19_SAS ON VLANs and VPNs
+Self-Assessment Sheet
+
+? What is a LAN?
+Ans: LAN or Local Area Network is a group of devices that are in the same broadcast domain.
+
+? Why might we want to segment a network into smaller pieces?
+Ans: To limit the number of broadcasts that might be on a network.
+
+? What are the inefficiencies of using multiple switches for a LAN?
+Ans: Powering the switches ; Managing the configurations; Maintaining the networks;
+
+? What is VLAN?
+Ans: Virtualization of the Local Area network is called VLAN.
+
+? How does VLAN solve the inefficiencies of using multiple switches?
+Ans: VLAN groups the devices in the same broadcast domain and on the same physical device on a single switch by implementing and configuring VLANs for each of these individual interfaces.
+
+? How can we make a LAN more efficient and cost-effective?
+Ans: By creating VLANs.
+
+? How does VLAN provide separation between different networks?
+Ans: VLAN separates different networks logically instead of doing it physically.
+
+? What are the advantages of using VLAN over multiple switches?
+Ans: VLAN separates different networks logically instead of doing it physically which results in using only a few switches instead of multiple switches.
+
+? How does using a single switch with VLANs help to manage and lower costs for a LAN?
+Ans: VLANs help lower the purchasing cost, power cost and managing cost by removing the need of multiple physical switches and helps grouping devices on the same broadcast domain.
+
+
+
+
+
+
+? What is a VPN and how does it work?
+Ans: A technology that has become rather commonplace on our networks today is a VPN or a Virtual Private Network. This is usually a combination of software and hardware that allows us to securely send information across a public network such as the internet. Everything sent over that VPN connection is automatically encrypted, which means if anyone in the middle happens to capture this information, they wouldn’t be able to see or understand anything in the conversation. 
+
+? Everything sent over a VPN connection is automatically encrypted, making it unreadable if intercepted by anyone in the middle.
+Ans: True
+
+? What does a VPN look like on the desktop of an operating system?
+Ans: It is installed as an application.
+
+? The user can connect and disconnect from the VPN using this interface and may also have options to configure the VPN connection settings?
+Ans: False
+
+? Are VPNs typically hardware or software-based?
+Ans: Both.
+
+
+? What is the advantage of using a VPN in a coffee shop?
+Ans: This means that you can still be secure when using your laptop in a coffee shop even if the wireless network in that coffee shop is one that is open and not encrypted. You would either use VPN software that’s always on and always connected or you would have the option on your laptop to enable or turn on the VPN capability.
+
+? How does the VPN concentrator handle incoming and outgoing data?
+Ans:  VPN concentrator will receive that encrypted information. It will decrypt the data and send that information into the corporate network. Any device that needs to send information back to the laptop will send that information to the VPN concentrator. The concentrator will encrypt that data, send it over the encrypted tunnel, and when it reaches your laptop, the laptop will then decrypt that data so that it can be used locally. This entire process happens behind the scenes and is automatic when you enable your VPN software.
+
+? Can VPN software be installed on operating systems?
+Ans: Yes, VPN software can be installed on operating systems.
+
+? Most modern operating systems come included with some type of VPN client.
+Ans: True
+
+
+? What is a VPN concentrator?
+Ans: A VPN concentrator is a dedicated network device that provides secure connections between remote users and a company network. VPN concentrators tend to be enterprise-grade devices capable of handling a large number of simultaneous Internet connections.
+
+? The entire process of VPN data encryption happens behind the scenes and is automatic as soon as you enable the VPN software
+Ans: True
+

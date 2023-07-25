@@ -1,0 +1,64 @@
+18_SAS ON DHCP Configuration
+Self-Assessment Sheet
+? What is an IP Scope?
+Ans: IP scope is generally a single contiguous pool of IP addresses.
+?  How do you exclude certain IP addresses?
+Ans: With IP reservation through DHCP server.
+? What is a Scope of a subnet?
+Ans: A scope is simply a range of IP addresses that a Dynamic Host Configuration Protocol (DHCP) server is configured to distribute. In the simplest case, where a single DHCP server oversees IP configuration for an entire subnet, the scope corresponds to the subnet.
+? What is address leases within a scope?
+Ans: A DHCP server running on a Windows Server device with the scope of 165.245.44.0, and underneath that scope we have a series of address pools, so we know what IP addresses will be assigned. We have address leases, so we can view what IP addresses have previously been assigned. We can configure IP reservations. So if a certain device should always receive the same IP address, we can configure that in that section of the DHCP server.
+?  What are reservations within a scope?
+Ans: You can also take this one step further by configuring a DHCP address reservation, which means that a device connecting to the network will always receive that same IP address and that IP address will never be given to a different device on the network. This is usually configured based on the MAC address or Media Access Control address, which is the burned in address on a network interface card.
+
+?  What are Scope options?
+Ans: we have scope options which allow us to configure additional parameters. For example, we might want to add the IP address of a voice over IP gateway so that all of the devices on your network would know exactly what IP address to contact.
+?  What is a dynamic assignment?
+Ans: For most devices connecting to a network and receiving a DHCP address, they’re receiving a dynamic assignment. This means that they could receive any IP address from that large pool of IP addresses that we’ve previously configured. And after your lease period has timed out, those addresses will be available for another person who connects to the network.
+?  What happens after the lease period has timed out?
+Ans: Once the lease timer has expired, that IP address is returned to the DHCP server and it can be assigned to others. 
+? What is address reservation?
+Ans: It means that a device connecting to the network will always receive that same IP address and that IP address will never be given to a different device on the network.
+? What is a DHCP lease?
+Ans: A DHCP lease is a temporary assignment of an IP address to a device on the network. When using DHCP to manage a pool of IP addresses, each client served on the network is only “renting” its IP address. Thus, IP addresses managed by a DHCP server are only assigned for a limited period of time.	
+? What is automatic assignment?
+Ans: Many DHCP servers will also have an automatic assignment where they will keep a list of everyone who’s previously connected to the network, and if you happen to connect to the network again after a short period of time away, it will remember your previous assignment. And if that IP address is still available, it will assign you the same IP address you had originally.
+? What is the amount of time on a lease?
+Ans: Usually the amount of time on a lease is 15 Mins.
+? What is the T1 timer?
+Ans: When a device receives an IP address from a DHCP server, there’s a timer that starts that is the length of the lease time that’s configured for that DHCP server. One is called the T1 timer. This checks in with the DHCP server halfway through the lease time. So if your lease time was eight days, this T1 timer, which is 50% of the lease time by default, will check in after four days and let the DHCP server know that we would like to keep this IP address for another lease duration. At that point, the timer resets to eight days and we start counting down again.
+? What is the T2 timer?
+    Timer that rebinds with any DHCP server at 87.5% of the lease time when the original DHCP server is down
+
+
+
+Asif khan DV-500 Day-3 SLV-18 Q&A DHCP Configuration
+Q1. What are DHCP scope properties?
+A. A DHCP scope is a valid range of IP addresses that are available for assignment or lease to
+client computers on a particular subnet. In a DHCP server, a scope is configured to determine
+the address pool of IPs that the server can provide to DHCP clients. Scopes determine which IP
+addresses are provided to the clients.
+Q2. What are DHCP pools?
+A. Address pool is a set of Internet Protocol addresses available for allocation to users, such as
+in host configurations with the DHCP. An address-assignment pool can support either IPv4
+address or IPv6 addresses. You cannot use the same pool for both types of address.
+Q3. What is DHCP address assignment?
+A. The assignment of IP addresses happens dynamically within a given address range. As a
+result, a device connected to the network doesn't have a forever address. The IP address can
+periodically change as its lease time expires unless the lease is successfully renewed.
+Q4. What is DHCP address allocation?
+A. DHCP assigns an IP address from a pool of addresses for a limited period of time chosen by
+the server, or until the client tells the DHCP server that it no longer needs the address.
+Q5. What is dhcp address reservation?
+A. When you use DHCP IP reservation, you're telling your Wi-Fi network to assign the same IP
+address to a specific device whenever that device connects to your network.
+Q6. What is dhcp address lease time?
+A. When DHCP sends configuration information to a client, the information is sent with a lease
+time. This is the length of time that the client can use the IP address it has been assigned. The
+duration of the lease time can be changed according to your specific requirement.
+
+Q7. What is DHCP address renewal time?
+A. Generally, the recommended time to lease an IP address is 48 hours to renew the IP address
+once a day. After applying the specified parameters, clients will receive an IP address for 1
+minute, after which they will send a request to the DHCP server for a new IP address every 30
+seconds.
