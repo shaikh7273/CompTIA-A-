@@ -1,0 +1,64 @@
+28_SAS On SATA Device Cables
+Self-Assessment Sheet
+
+Q1. What does SATA stand for? 
+Ans: Serial AT Attachment
+
+Q2. What was the data transfer rate of SATA revision 1.0? 
+Ans: 1.5 Gbits/s over 1 meter
+
+Q3. How fast is SATA revision 3.2? 
+Ans: 16 Gbits/s over 1 meter
+
+Q4. SATA revision 2.0 doubled that speed to __________ gigabits per second.
+Ans. 3.0 Gbit/s
+
+Q5. What type of connection is used for external storage devices? 
+Ans: eSATA
+
+Q6. What is the maximum length of the SATA cable? 
+Ans: 2 meters
+
+Q7. What type of connector is used for data transfer in a hard drive? 
+Ans: 7 pin connector
+
+Q8. A larger ______ pin connector is used to power the device.
+Ans. 15
+
+Q9. The hard drive also has a power connector for a ___________.
+Ans. Molex Connector
+
+Q10. How many cables are required to connect a storage device using a SATA connection? 
+Ans: Single cable
+
+Q11. What type of connections are used for power and data? 
+Ans: 15 Pin and 7 Pin connections.
+
+Q12. What type of connectors does this motherboard have? 
+Ans: SATA Connectors.
+
+Q13. What are the colors of the SATA connections? 
+Ans: Black, yellow and Blue.
+
+Q14. What are the two types of connections needed to connect a storage device to a motherboard? 
+Ans: Storage and Power connections
+
+Q15. What is eSATA? 
+Ans: External SATA
+
+Q16. What kind of cable is needed to connect an eSATA drive to a computer? 
+Ans: eSATA cable is needed which is a very different connector type.
+
+Q17. If we look at a SATA interface on your motherboard, it has this _________ shape associated with it. 
+Ans. L
+
+Q18. What type of cables are needed to connect an internal SATA drive? 
+Ans: SATA cable
+
+Q19. What type of connection options are available for many external storage drives? 
+Ans: Many different options.
+
+Q20. How do you connect an external storage device with an eSATA connection? 
+Ans: External storage drive has FireWire, USB 2, and eSATA as some of those options. If you’re using that eSATA connection, you would plug-in to the storage drive, connect that eSATA cable to the eSATA interface on your computer, and now you’ll be able to transfer data from this external storage device.
+
+

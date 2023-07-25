@@ -1,0 +1,75 @@
+29_SAS_SCSI Device Cables 
+Self-Assessment Sheet
+
+Q1. What does SCSI stand for?
+Ans Small Computer Systems Interface
+
+Q2. What is a SCSI interface? 
+Ans:This is a standard interface that can be used to connect to storage devices, scanners, printers, and other devices on your network.
+
+Q3. What was the purpose of creating the SCSI interface? 
+Ans: This was originally designed so that you can have many devices connected to one single interface on your computer by daisy chaining multiple devices together. 
+
+Q4. How many devices can be connected to one SCSI chain? 
+Ans: 16
+
+Q5. What is the newest SCSI standard? 
+Ans: iSCSI
+
+Q6. What types of connectivity does SCSI support? 
+Ans: Parallel and Serial Connectivity
+
+Q7. How many devices could a single SCSI interface support on a narrow bus? 
+Ans: 8
+
+Q8. What was used to connect our scanners and CD-ROM drives before SATA and USB? 
+Ans: SCSI
+
+Q9. What is one of the benefits of SCSI and its protocols? 
+Ans: Very Intelligent Interface functionality
+
+Q10. Are SCSI protocols still used today? 
+Ans: Yes.
+
+Q11. What is the 68 pin connector commonly used for? 
+Ans: To connect to Hard Drives.
+
+Q12. What is the purpose of having a single interface on a computer? 
+Ans: When you have a single interface on your computer that you’re connecting multiple devices to, you need some way to be able to differentiate between all of these separate devices you’re connecting to the same cable.
+
+Q13. What is the purpose of a SCSI ID? 
+Ans:  So every device you would connect to that particular SCSI cable would all have a separate ID number associated with it.
+
+Q14. How does SCSI allow for connectivity to a drive array? 
+Ans: If you think about connectivity to a drive array, it’s a single chassis with many different drives inside of it. Because of this, SCSI has a method, not only to identify the chassis of that drive array through a SCSI ID, but we can identify individual drives by a logical unit or LUN.
+
+Q15. What is the purpose of a SCSI terminator? 
+Ans:  The SCSI terminator allows you to have multiple devices on this wire and still be able to communicate across all of those devices simultaneously.
+
+
+Q16. What is a logical unit? 
+Ans: If you think about connectivity to a drive array, it’s a single chassis with many different drives inside of it. Because of this, SCSI has a method, not only to identify the chassis of that drive array through a SCSI ID, but we can identify individual drives by a logical unit or LUN. That logical unit allows you to reference a single drive within a much larger SCSI ID device.
+
+Q17. What is a newer SCSI standard? 
+Ans: Serial Attached SCSI
+
+Q18. Is there anything required to use a SAS device? 
+Ans: No. Nothing is required to use a SAS device.
+
+Q19. What can be seen on the back of an external SCSI storage device? 
+Ans: Power port ; Fan and SCSI Interfaces.
+
+Q20. Are there any buttons to modify the SCSI ID? 
+Ans: Yes. There are.
+
+Q21. What does a SCSI controller look like when you look inside a computer? 
+Ans: So if you look inside of a computer that has a SCSI controller and multiple SCSI hard drives, you’ll probably see the SCSI controller set to a SCSI ID of 0. And then there’s probably a cable from that device that goes to the first hard drive. And that drive is daisy chained to, in this case, a second hard drive. And then at the end of that cable is a SCSI terminator. This is what the SCSI terminator looks like that is connected to the end of that SCSI cable.
+
+
+Q22. What does the SCSI terminator look like? 
+Ans: 
+
+Q23. What replaced the need for cables with multiple interfaces and devices with multiple SCSI interfaces? 
+Ans: Serial attached SCSI
+
+

@@ -1,0 +1,53 @@
+25_SAS_568A and 568B Colors
+Self-Assessment Sheet
+
+Q1. What are the international standards for cabling? 
+Ans: ISO/IEC 11801
+
+
+Q2. The TIA standard for cabling is the _________standard, which is the ___________________Standard.
+Ans. TIA 568 Standard, Commercial Building Telecommunications Cabling
+
+Q3. What does TIA stand for?
+Ans. Telecommunications Industry Association
+
+Q4. What does the TIA 568 standard cover? 
+Ans: TIA 568 Standard covers what color wires you use on what pins of an ethernet connection. This is referred to as the pin and pair assignments of eight-conductor 100-ohm balanced twisted pair cabling. And as an abbreviation, we often just refer to this as T568A and T568B.
+
+
+Q5. What are the two standards for 8P8C connectors? 
+Ans: T568A & T568B
+
+Q6. What are 8P8C connectors?
+Ans. These are 8 position 8 conductor connectors.
+
+
+Q7. What is the 568A coloring scheme associated with? 
+Ans: 568A coloring scheme is associated with Horizontal cabling.
+
+Q8. What is the difference between the 568A and the 568B color standards? 
+Ans: White and Green and Green versus white and Orange and Orange.
+
+Q9. : What color scheme do ethernet crossover cables use? 
+Ans: 568A on one end and 568B on another end.
+
+Q10. What do the 568A and 568B standards specify? 
+Ans. These two standards provide us with the colors that we’ll use for our 8P8C connectors. These are 8 position 8 conductor connectors.
+
+
+Q11. What is the difference between T568A and T568B? 
+Ans: The only difference between T568A and T568B is that the orange and green pairs are interchanged.
+
+Q12. How are pins 1 and 2 different between the 568A and 568B standards? 
+Ans: 568A - Pins 1 and 2 are White Green and Green ones.
+         568B - Pins 1 and 2 are White Orange and Orange ones.
+
+Q13. What is the best way to tell what standard is in use for an ethernet cable? 
+Ans: By looking at the back of an Ethernet cable and see exactly what colors might be on this particular pin out.
+
+Q14. What are the colors in the A and B standard? 
+Ans: White and Green, Green, White and Orange, Orange, White and Blue, Blue & White and Brown and Brown.
+
+Q15. Write an example of a block that has a  different color assigned to A & B standard.
+Ans. Punch Down Block.
+

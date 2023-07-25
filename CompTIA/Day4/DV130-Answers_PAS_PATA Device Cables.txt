@@ -1,0 +1,62 @@
+30_SAS_PATA Device Cables
+Self-Assessment Sheet
+
+Q1. What is PATA? 
+Ans: Parallel AT attachment
+
+Q2. What other names has PATA been known by? 
+Ans: Parallel ATA or ATA.
+
+Q3. The name AT Attachment comes from one of the original PCs created by _______.
+Ans. IBM
+
+Q4. What speeds can PATA achieve? 
+Ans: 16 MB/s through 133 MB/s
+
+Q5. What other types of drives can connect to PATA? 
+Ans: CD-ROMs or DVD-ROMs
+
+Q6. So although you may find motherboards and other equipment that are referring to an ATA drive or an IDE connection, today we refer to all of these as__________.
+Ans.  Parallel ATA or PATA
+
+Q7. What type of connection is on one end of the PATA cables? 
+Ans: 40 pin connection
+
+Q8. How many 40 pin connectors are on each cable? 
+Ans: 3 40 pin connectors
+
+Q9. How is the device order different on the 80 wire cable? 
+Ans:  If we put a 40 wire cable and an  80 wire cable right next to it, you can see visually they’re quite different, because the 80 wire cable obviously has twice the number of wires inside of the ribbon cable.
+
+
+Q10. What was the original PATA cable? 
+Ans: IDE or Integrated Drive Electronics
+
+
+
+
+Q11. How did they decrease crosstalk between wires? 
+Ans: we needed some way to decrease the amount of crosstalk between all of these wires, so we doubled the number of wires while keeping the number of pins on the connectors exactly the same. And this minimizes the crosstalk over these higher speeds that are used over 80 wire cables.
+
+
+Q12. How does an 80 wire cable differ from a 40 wire cable? 
+Ans: The 40 wire cable was the original PATA cable. And then as we increase the speeds for PATA, we needed some way to decrease the amount of crosstalk between all of these wires, so we doubled the number of wires while keeping the number of pins on the connectors exactly the same. And this minimizes the crosstalk over these higher speeds that are used over 80 wire cables.
+
+
+Q13. The size of the PATA connector compared to the SATA connectors is large. (True/False)
+Ans. True
+
+Q14. What is the purpose of the missing pin in the motherboard's PATA connector? 
+Ans: missing pin allows us to properly orient the cable into the right format when we’re plugging it into that connector.
+
+Q15. What do you need to look at to understand how a PATA cable works? 
+Ans: 
+
+Q16. What is the purpose of the notch on a PATA cable? 
+Ans:  A notch helps orienting the cable.
+
+
+
+Q17. What type of connector is used for storage devices? 
+Ans: PATA connector
+

@@ -1,0 +1,109 @@
+23_SAS_Network Cables
+Self-Assessment Sheet
+
+Q1. What type of cable is commonly used for ethernet networks? 
+Ans: For our ethernet networks, we very commonly used twisted pair of copper cabling.
+
+Q2. What does an ethernet cable look like inside? 
+Ans: we have four pairs inside of that cable. Those four pairs have different colors. One is a solid blue. One is blue and white. One’s a solid green. One's green and white. We have solid orange, orange and white, and solid brown, and brown and white. These pairs of wires contain equal and opposite signals to each other.
+
+Q3. What is the purpose of twisting the wires in a pair? 
+Ans: Purpose of twisting the wires in a pair means that the signal going through this wire is constantly twisting as well and effectively moving away from any type of interference as it’s moving through the cable.
+
+Q4. What is the purpose of having two cables? 
+Ans: The purpose of having two cables is to have two different signals to be able to compare.
+
+Q5. Why are the four pairs of wires different?
+Ans. These pairs of wires contain equal and opposite signals to each other. Sometimes you’ll see these referred to as a transmit plus and transmit minus to show that they are sending opposite signals from each other. We combine this difference in signal with a twisted cable to be able to get this information from one side of the network to the other.
+
+Q6. What is twisted pair cabling?
+Ans: A twisted pair cable is a type of cable made by putting two separate insulated wires together in a twisted pattern and running them parallel to each other. This type of cable is widely used in different kinds of data and voice infrastructures.
+
+Q7. : How many different types of twisted pair cabling are there? 
+Ans: 4 different types.
+
+Q8. What do we refer to the different types of twisted pair cables as? 
+Ans: Categories of cables.
+
+Q9. What is 1000BASE-T? 
+Ans: 1000BASE-T is a 1 gigabit per second ethernet standard that operates on twisted pair copper cabling.
+
+Q10. : What is the maximum distance of 1000BASE-T? 
+Ans: 100 meters.
+
+Q11. What type of cable is used for 1000BASE-T? 
+Ans: Category 5
+
+Q12. What is 10GBASE-T? 
+Ans: 10GBASE-T which is a 10 gigabit per second ethernet that also runs over twisted pair cabling.
+
+
+Q13. What does the "E" stand for in Category 5e? 
+Ans: Enhanced
+
+Q14. What type of cabling is available to purchase today? 
+Ans: Category 5e
+
+Q15. What type of cabling is commonly used in existing network infrastructures? 
+Ans: Category 5
+
+Q16. What type of cabling does 1000BASE-T support? 
+Ans: Minimum of Category 5
+
+Q17. Is there an augmented version of category 6? 
+Ans: yes. There is. It’s Category 6A
+
+Q18. What type of cable is commonly used with cable modem networks? 
+Ans: Coaxial Cable.
+
+Q19. What is the conductor of a coaxial cable? 
+Ans: Wire conductor 
+
+Q20. What is the most commonly used type of coax cable? 
+Ans: RG6
+
+Q21. What is the construction of a coax cable? 
+Ans:Coaxial means there are two or more forms that share a common axis. And that’s certainly the case here. You can see the wire conductor is all one single conductor running the length of that coaxial cable. Around that is an insulator that also runs the same direction, with metal shielding around that and a plastic jacket around the outside. This is commonly the type of cable you would see used inside of your home with your cable television or your cable modem. And it commonly uses RG6 as the type of coax cable.
+
+Q22. What is the plenum? 
+Ans: In your work environment, you might have a work area with a drop ceiling. And above that drop ceiling maybe ducts that supply the cold air and remove the warm air to send back to your air conditioning system. But with other environments, you may have ducts that provide the cool air, but the warm air or the air return is going into a shared airspace that we call the plenum.
+
+Q23. What is the purpose of the plenum?
+Ans: Plenum is usually situated on either side of the fan or heat exchanger and have the important function of bringing in, distributing, and removing air. They are the air's first stop after being heated or cooled and its last stop before going back into your AC, heat pump, or furnace.
+
+Q24. What type of cable should be used in a shared plenum area? 
+Ans: we need to use a special type of network cable so that we don’t create more problems during a fire. The jacket that is around an ethernet cable is commonly made of PVC or polyvinyl chloride. If you’re putting this cable into a plenum, then you’ll need a special plenum-rated cable that has FEP, this is the fluorinated ethylene polymer, or a low smoke version of polyvinyl chloride. These cables may not be as flexible as a non-plenum rated cable, but they are safer in the case of a fire.
+
+Q25. What is the jacket of an ethernet cable typically made of? 
+Ans: PVC or Poly Vinyl Chloride.
+
+
+Q26. What type of cable is usually used for cable runs? 
+Ans: We use UTP or Unshielded Twisted Pair.
+
+Q27. What is STP?
+Ans:  In environments where there’s much more interference or you want to add some additional protection to the cable, you might want to use STP or Shielded Twisted Pair.
+
+Q28. What type of writing is found on the outside of an ethernet cable? 
+Ans: If you look at the outside of an ethernet cable, you’ll see some writing that describes what type of cable is on the inside.
+
+Q29. What do the abbreviations stand for? 
+Ans: This uses abbreviations such as U for unshielded, S for braided shielding, and an F for foil shielding this is usually written with a letter, a slash, another letter, and then TP to describe the twisted pair. If there’s braided shielding around the entire cable and foil around the pairs, then we’ll have an S for braided shielding, a slash, an F for foil shielding, and then the twisted pair at the end. If we have foil around the entire cable but nothing is shielded around the individual pairs, then it is an F slash UTP.
+
+Q30. What does S/FTP stand for? 
+Ans: Braided Shielding / Foil Twisted Pair
+
+Q31. What does F/UTP stand for? 
+Ans: Foil Shielding / Unshielded Twisted Pair
+
+Q32. What type of cable is used for direct burial? 
+Ans: There may be occasions when you need to have a cable run that is outside. And in those cases, you may want to bury the cable directly in the ground, in some cases without any type of conduit. We refer to this as a direct burial STP for shielded twisted pair.
+
+
+Q33. What is used to waterproof the cables? 
+Ans: Gel i used to waterproof the cables.
+
+Q34. What purpose does the shielding serve? 
+Ans: Shielding helps keep the water away from any of the pairs within the cable.
+
+
