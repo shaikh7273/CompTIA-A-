@@ -1,0 +1,68 @@
+37_SAS_On Motherboard Form Factors
+Self-Assessment Sheets
+
+Q1. What is the fundamental physical component within all of our computers? 
+Ans: Motherboard is the fundamental physical component within all of our computers.
+
+Q2. What does the motherboard generally contain? 
+Ans: CPU and spaces for memory, Connectivity for power and additional slots to expand the capabilities of the system.
+
+Q3. What is one factor when choosing a motherboard? 
+Ans: Size of the case.
+
+Q4. One thing that doesn’t seem to change much between motherboard versions, though, is the _______________.
+Ans. Power Connector.
+
+Q5. How many sizes and types of motherboards are there? 
+Ans: 40 Different sizes and types
+
+Q6. Are motherboards generally compatible between cases? 
+Ans: Yes, they usually are.
+
+Q7. Can you fit a very large size motherboard in a desktop computer?
+Ans. Yes. We can.
+
+Q8. What size of motherboards can you fit in a small form factor device? 
+Ans: Mini-ITX Motherboard.
+
+Q9. What should you consider when selecting a motherboard? 
+Ans: 
+
+Q10. What type of motherboard is typically found in a desktop computer? 
+Ans: The standard ATX is the motherboard that you’d most likely find in a desktop computer.
+
+Q11. What is the size difference between a standard ATX motherboard and a Mini-ITX motherboard? 
+Ans: The standard ATX is the motherboard that you’d most likely find in a desktop computer. It has a lot of real estate, plenty of expansion slots, lots of memory, and there’s plenty of room inside of a desktop for this size of motherboard. The smaller systems, though, may require a much smaller motherboard, and you can see this Mini-ITX motherboard is very different in size than the larger standard ATX. You might use ATX on a desktop system, but a Mini-ITX motherboard might be perfect for the small form factor computer that you keep next to your television.
+
+
+Q12. An ATX motherboard is a standard for desktop computers that has been around since __________and is very popular today.
+Ans. 1995
+
+Q13. What does ATX motherboard stand for?
+Ans. Advanced technology Extended
+
+Q14. How many pins does the ATX power connector have? 
+Ans: 20 24 pins
+
+Q15. Does an ATX motherboard have additional power for the CPU? 
+Ans: Yes, it does.
+
+Q16. How many expansion slots are available? 
+Ans: Multiple expansion slots are available such as 4 for memory, 2 for additional power etc.
+
+Q17. Does the motherboard have additional power for CPUs that require some additional voltage? 
+Ans: Yes, it does.
+
+Q18. What type of motherboard is suitable for small form factors? 
+Ans: An ITX motherboard is suitable for small form factors. 
+
+Q19. What is the purpose of using a small motherboard? 
+Ans: his is a style of motherboard that was created by VIA Technologies in 2001, and it’s perfect for small form factors and smaller cases.
+
+Q20. ITX is a style of motherboard that was created by ______________ in __________.
+Ans. VIA technologies in 2001.
+
+Q21. What are the advantages of using an ITX motherboard? 
+Ans: The real value of these smaller motherboards is that you can fit them into much smaller cases which can then fit into much smaller areas.
+
+

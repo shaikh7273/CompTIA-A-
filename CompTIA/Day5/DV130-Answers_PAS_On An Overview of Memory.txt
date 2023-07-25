@@ -1,0 +1,76 @@
+34_PAS_On An Overview of Memory 
+Possible Answer Sheets
+Q1. What is RAM? 
+Ans: Random Access Memory
+
+Q2. What type of memory slots are used in computers nowadays? 
+Ans: These days, practically everyone uses exactly the same type of memory slots in their computers.
+
+
+Q3. The specific type of memory in your system can vary widely so make sure you look at your_____________________ to know exactly what type of memory needs to be installed in those memory slots.
+Ans.  MotherBoard Documentation
+
+Q4. What is a SO-DIMM? 
+Ans: Small Outline - Dual Inline memory Module
+
+Q5. How do you install a DIMM onto memory slots on a motherboard? 
+Ans:  To install the memory, you would push it very lightly into that slot, and there are clips on the end that will hold that memory in place so that it can’t accidentally be removed.
+
+
+Q6. Another common specification for these DIMMs is information is transferred in and out of the DIMM in _____________________data widths. 
+Ans.  64 bit
+
+Q7. What type of memory modules are typically used on laptops? 
+Ans: SO-DIMM
+
+Q8. What type of memory should I install in the memory slots of my system? 
+Ans: The specific type of memory in your system can vary widely so make sure you look at your motherboard documentation to know exactly what type of memory needs to be installed in those memory slots.
+
+Q9. What is the black component on memory modules? 
+Ans: Random Access Memory
+
+Q10. Why do we refer to RAM as a D-RAM?
+Ans. Because it constantly needs to refresh so that the data does not disappear.
+
+Q11. What does the random part of random access memory mean? 
+Ans: The random part of the random access memory means that we can access any data that’s on any part of this module by simply asking for it.
+
+Q12. What is the clock on our system used for? 
+Ans: There’s a clock on our system that regulates the flow of data in and out of these memory modules, and every clock cycle, there will be some data that is transferred either in or out of this system. 
+
+Q13. Why are there notches on the bottom of the DIMMs and SO-DIMMs? 
+Ans: These notches prevent us from using the wrong type of memory in our system.
+
+Q14. What if you try to install a DDR2 module into a system with a DDR3 slot?
+Ans. So if you try to install a DDR2 module into a system with a DDR3 slot, you’ll notice that particular notch will not allow that memory to be installed.
+
+Q15. What is the difference between SDR memory and DDR memory? 
+Ans: If you’re using a much older computer that has single data rate memory, then one clock cycle is able to transfer one bit of data. So you can see what the single clock cycle, we have data one, data two, data three and so on. Our modern systems use double data rate memory or DDR. This double data rate can transfer twice in a single clock cycle, which means we can effectively transfer twice as much than a single data rate.
+
+Q16. What does DDR stand for?
+Ans. Double Data Rate
+
+Q17. Why do we use DDR?
+Ans. This double data rate can transfer twice in a single clock cycle, which means we can effectively transfer twice as much than a single data rate.
+
+
+Q18. ___________allowed you to increase the data rates to be twice as fast as those older DDR2 systems.
+Ans. DDR3
+
+Q19. What is the maximum RAM of DDR3 memory modules? 
+Ans: 16 gigabytes per module
+
+Q20. What does the notch at the bottom of a DDR3 memory module do? 
+Ans: Notch at the bottom of a DDr3 module ensures that this will only be installed on a system that can support DDR3.
+
+
+Q21. What is the maximum amount of storage on a single DDR4 module? 
+Ans: 64 gigabytes
+
+Q22. What type of memory is supported by newer motherboards? 
+Ans: DDR5
+
+Q23. What is the difference between DDR4 and DDR5 memory? 
+Ans: DDR5 memory still has a maximum total size per module of 64 gigabytes, but it is a faster throughput than the older DDR4. And of course, this notch or key that’s on the memory has moved so you can only use DDR5 memory on a motherboard specifically designed for DDR5.
+
+
