@@ -1,0 +1,47 @@
+DV500_54_SAS On Impact Printer Maintenance
+Self-Assessment Sheet
+
+Q1. What is inside a dot matrix printer? 
+Ans: On a dot matrix printer, there is an ink ribbon that’s inside of that printer that is one long piece of fabric. It’s going around and around and around to be able to provide the ink that you need to create the output on the page.
+
+Q2. How does the ink in a printer ribbon get used up? 
+Ans:  Eventually you’re going to use all of the ink that’s inside of that ribbon. And the output on the page will become lighter and lighter as that ink is consumed.
+
+Q3. How can the issue of a ribbon cartridge being worn out be resolved? 
+Ans:  To resolve this, you’ll need to replace the entire ribbon cartridge. Fortunately, these cartridges have been designed to be quickly replaced.
+
+Q4. What causes a dot matrix printhead to fail? 
+Ans: On an impact printer, like the dot matrix printer you see here, the printhead is constantly hitting those pins against the printed page. That constant movement will cause this printhead eventually to fail. And you’ll need to replace the entire printhead. 
+
+Q5. Do we need to replace the entire printhead if it eventually fails?
+Ans. Yes we need to 
+
+Q6. What is the purpose of the container for the printhead? 
+Ans: the whole container for the printhead is quite large. Because it contains heatsinks to be able to pull the heat away from the printhead and dissipate that into the air. 
+
+Q7. What is a printhead? 
+Ans: 
+
+Q8. What should be done when replacing a printhead? 
+Ans: if you are replacing this printhead, make sure you’re very careful not to burn yourself.
+
+
+Q9. How is replacing paper in a dot matrix printer different from replacing paper in a laser printer or inkjet printer? 
+Ans: Replacing paper in a dot matrix printer can be somewhat trickier than replacing printer on a laser printer or an inkjet printer. Dot matrix printers commonly do not have paper trays. And you’re not using loose paper that you might use in a copier or a laser printer.
+
+
+
+Q10. What type of paper is typically used in a dot matrix printer? 
+Ans: you’re probably using paper that has tractor feed holes on the side to be able to pull the paper through the printer.
+
+Q11. What is necessary when replacing this paper into the printer? 
+Ans: This means when you’re replacing this paper into the printer, you need to make sure it is straight and lined up perfectly and that the holes on the feed are connecting with the holes on the paper.
+
+Q12. What should you check before using a tractor feed in the printer? 
+Ans:  You also have to make sure that nothing is in the way of the paper feed. Since this is effectively one very long piece of paper, you need to be sure there’s nothing in the way that would cause a problem with that paper easily feeding into the printer.
+
+Q13. What if you’re sure that the paper has been installed properly?
+Ans.  Once you’re sure that the paper has been installed properly and that the holes in the paper are lining up with the holes of the tractor feed, you can push the paper feed button and continue with the printing process.
+  
+
+

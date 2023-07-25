@@ -1,0 +1,71 @@
+DV500_53_SAS On Impact Printers  
+Self-Assessment Sheet
+Q1. What is an Impact printer? 
+Ans: A dot matrix printer is a type of impact printer, and as the name implies, an impact printer is one that presses against a ribbon to make a mark on the paper. It’s literally impacting with the paper in order to create the output. 
+
+Q2. _____________ is a type of impact printer.
+Ans. Dot Matrix
+
+Q3. How does a dot matrix printer work? 
+Ans. A dot matrix printer is a type of impact printer, and as the name implies, an impact printer is one that presses against a ribbon to make a mark on the paper. It’s literally impacting with the paper in order to create the output. The pins in this matrix itself can be seen in the output.
+
+Q4. What is the advantage of using a dot matrix printer? 
+Ans: These dot matrix printers are perfect if you’re making multiple copies because you can have carbon paper and multiple pages being printed at the same time. This gives a relatively low cost per page compared to other printing types because the only thing that you need to be able to create that image on the page is the ink that’s inside the ribbon.
+
+Q5. What is the downside to using a dot matrix printer? 
+Ans: One downside to impact printers is the process of making that impact against the paper creates noise. And in some cases, these are much louder printers than any other type that you might use.
+
+Q6. Why are dot matrix printers perfect if you’re making multiple copies?
+Ans. These dot matrix printers are perfect if you’re making multiple copies because you can have carbon paper and multiple pages being printed at the same time. 
+
+Q7. What type of printer is a dot matrix printer? 
+Ans: Impact Printer.
+
+Q8. What is the resolution of a dot matrix printer? 
+Ans: The output created by a dot matrix printer is not the highest resolution
+
+Q9. Is a dot matrix printer suitable for very graphical output? 
+Ans: No. It is not.
+
+Q10. What is the purpose of the ribbon in a dot matrix printer? 
+Ans: There is a ribbon in front of the paper, and on the other side of the ribbon is the print head. This print head is going to move back and forth across this paper, and it’s going to use the tiny pins that are in the print head to create the output.
+
+
+Q11. Why is the component containing the print head relatively large? 
+Ans: The component containing the print head is relatively large because most of this is a heat sink that dissipates the heat that’s created during this printing process.
+
+Q12. How many pins are inside the print matrix? 
+Ans: There are 24 pins inside of this print matrix, and the width of these pins is about the width of a single character.
+
+Q13. How wide are the pins inside the print matrix? 
+Ans: There are 24 pins inside of this print matrix, and the width of these pins is about the width of a single character.
+
+Q14. What material is the ribbon made of? 
+Ans: The ribbons themselves are made of fabric, and they’re usually one very long ribbon that is constantly cycling through the printing process.
+
+Q15. How do we get output on page?
+Ans. To be able to show output on the page, we need to move ink that is inside of a ribbon onto the printed page itself. So our pins are pressing into the ribbon, the ribbon is pressing into the page, and that’s what’s leaving the marks or the output on the printed page.
+
+Q16. What should one make sure of when swapping out printer ribbons? 
+Ans: If you are planning to swap out these ribbons, you have to make sure you have exactly the right model. Each ribbon is proprietary to a specific printer type. So you want to be sure that the ribbons you’re purchasing are designed to match the model of the printer that you’re using.
+
+
+Q17. What is inside of a ribbon cartridge? 
+Ans: If you were to take the top off of one of those ribbon cartridges, you would see that it was one long piece of fabric that provides us with that ink for the printing process.
+
+
+Q18. Dot matrix printers commonly use a ____________to be able to pull the paper all the way through the printer.
+Ans. Tractor Feed
+
+Q19. How is the paper positioned in the printer? 
+Ans: Since this piece of paper is one very long piece that has perforations, we use this tractor feed to pull the paper through the printer and to control it much better than using something like friction. These tractor feed guides lift up to allow you to put the paper in place. You would line these up so that it is perfectly straight across both of them, and then you can lock those guides in place.
+
+
+Q20. What should you do after confirming the paper is installed properly? 
+Ans: Once you’ve confirmed that the paper has been installed properly, you can press the paper feed button, and it will pull the paper through the printer and prepare for the next print.
+
+Q21. What type of paper is commonly associated with mainframe printing? 
+Ans: Green Bar Paper
+
+Q22. What is the size of pages that are used in mainframe printing?
+Ans. It’s 11 inches high by 14 inches wide.

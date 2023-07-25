@@ -1,0 +1,67 @@
+DV500 50_SAS On Inkjet Printer Maintenance
+Self-Assessment Sheet
+
+Q1. What is an important maintenance step on an inkjet printer? 
+Ans: One important maintenance step on an inkjet printer is making sure that these print heads remain unclogged.
+
+Q2. What is the ink used in inkjet printers prone to? 
+Ans: The ink that’s used in these inkjet printers is very prone to clogging, and many printers are set up to run a cleaning process every day to try to keep these print heads as clean as possible.
+
+Q3. How can you tell if a print head needs to be cleaned?
+A: If you’re printout has streaks that are going across the page, then you probably have a print head that needs to be cleaned.
+
+
+Q4. How can you clean a printer's print head? 
+Ans: Many printers, there’s a button you press that will go through the entire cleaning process without having to do any type of intervention. But you can also take the print head out yourself, clean it off manually, and place it back into the printer.
+
+Q5. Removing the cartridge to clean the print head or remove the individual print heads themselves is an easy process. (True/ False)
+Ans. True
+
+Q6. How can you fix the clog? 
+Ans: By cleaning the print head.
+
+Q7. How often do inkjet cartridges need to be replaced? 
+Ans: The inkjet cartridges that are in your printer will need to be replaced when they’re depleted, and it’s usually a relatively straightforward process.
+
+Q8. Does this printer have a single cartridge for each color? 
+Ans: No
+
+Q9. What if any one of those colors becomes depleted in this printer?
+Ans. If any one of those colors becomes depleted, you have to remove the entire cartridge and replace it with a new one.
+
+Q10. What are the advantages of having a single cartridge for each colour?
+Ans.  Some printers will have a single cartridge for each color, making it much more efficient to replace when you have a single color that has been depleted.
+
+
+Q11. How long does it take to replace a cartridge in a printer? 
+Ans: This usually takes just a few seconds to replace.
+
+Q12. What is the cartridge made of? 
+Ans: These cartridges are mostly plastic, so make sure you recycle them when you’re done.
+
+Q13. What do you need to do after replacing a cartridge? 
+Ans: Once you replace the print cartridges, you may have to calibrate the printer to make sure that all of the colors overlap perfectly on the page.
+
+Q14. How can you recycle used cartridges? 
+Ans: The manufacturer of the print cartridge often has a list of options on their site for recycling.
+
+
+Q15. How do you replace a print cartridge in an inkjet printer? 
+Ans: Replacing the cartridges just as easily, it fits right into that slot and locks in place. 
+
+Q16. What do you need to do after replacing the print cartridge? 
+Ans: Once you replace the print cartridges, you may have to calibrate the printer to make sure that all of the colors overlap perfectly on the page.
+
+Q17. What is a common printer troubleshooting challenge? 
+Ans. A troubleshooting challenge with any printer is clearing paper jams. 
+
+Q18. How can you remove a stuck piece of paper? 
+Ans. To be able to remove that paper, it’s easiest to remove the paper tray, get rid of any loose paper that might be inside of the printer, and then firmly try to remove the paper from the path that it’s already on.
+
+
+Q19. What might help with the removal of a paper jam?
+Ans: There may be some options in the printer to release the tension on that paper path, which might help you with the removal of that paper jam.
+
+Q20. What should be done after a paper jam is removed? 
+Ans: Once you have that paper out of the printer, check it and make sure that it is complete and that no pieces of that paper are still stuck inside the printer somewhere. 
+

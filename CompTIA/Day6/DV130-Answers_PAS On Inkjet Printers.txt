@@ -1,0 +1,67 @@
+DV500_49_SAS On Inkjet Printers
+Self-Assessment Sheets
+
+Q1. What type of printer is usually found at home? 
+Ans: Inkjet Printers
+
+Q2. What are the advantages of using an inkjet printer? 
+Ans: They are inexpensive, quiet and they provide color and high resolution output.
+
+Q3. What are the drawbacks of using an inkjet printer? 
+Ans: Unfortunately, replacing the ink cartridges in the printer are relatively expensive, and the cartridges themselves are proprietary and only available from the printer manufacturer. Ink used in an inkjet printer tends to fade rapidly over time.
+
+
+Q4. The ink used in inkjet printers tends to fade rapidly over time and can easily clog. (True/False)
+Ans. True
+
+Q5. What are the components color of the ink used in inkjet printers? 
+Ans: CMYK
+
+Q6. What is an integrated print head? 
+Ans: Some of those ink cartridges are not just there to contain ink, but if you were to look at the bottom of the ink cartridge, they also incorporate an integrated print head. 
+
+Q7. What does an integrated print head do? 
+Ans: These are print heads that integrate both the ink inside of the ink cartridge with the print head that’s on the bottom of the cartridge itself. 
+
+Q8. Where is the printhead located? 
+Ans: Bottom of the ink cartridge.
+
+Q9. What is found on the front of an inkjet printer? 
+Ans: Many inkjet printers will have a paper tray or a place to put paper on the front of the printer, and that paper is pulled through the printer with the feed rollers.
+
+Q10. What do the feed rollers do? 
+Ans: You can see that many feed rollers are working together in the front of this printer to be able to pull the paper through the entire print path.
+
+
+Q11. Why should the feed rollers be maintained? 
+Ans: These rollers will need to be cleaned and maintained so that the paper will easily be pulled through the printer. Here’s a closer view of these feed rollers.
+
+Q12. What is a duplexer? 
+Ans: Another useful feature that’s available on many different kinds of printers is a duplexer. With duplexing, the printer can print on both sides of the page without you doing any type of intervention during the print process.
+
+
+Q13. How does a duplexer work? 
+Ans: There’s usually some type of mechanism within the printer that allows it to flip the page over and send it back through the printing process.
+
+Q14. What can be seen inside an inkjet printer? 
+Ans: You can see the carriage is on the right side, and there’s this brown belt that is used to be able to pull that carriage back and forth across the paper.
+
+Q15. What is inkjet printer calibration? 
+Ans: To be able to properly align all of these different colors, you may want to perform an inkjet printer calibration.
+
+Q16. Why do you use the calibration option? 
+Ans: There’s usually a calibration option within the menus of the printer itself, and it will begin the calibration output that you can then use to make changes. 
+
+Q17. What does a calibration page from an inkjet printer look like? 
+Ans: you can see that it is using the CMYK. We zoom up on that, we can see that all of the corners are very crisp. Each color is exactly where we would expect it to be which means that this printer is very well aligned and calibrated.
+
+
+Q18. When we know that printer is very well aligned and calibrated?
+Ans: Each color is exactly where we would expect it to be which means that this printer is very well aligned and calibrated.
+
+
+Q19. Why do we use Brown belt in printer?
+Ans. It is used to be able to pull that carriage back and forth across the paper.
+
+Q20. What does CMYK stand for?
+Ans.  Cyan, Magenta, Yellow & Key Color.
