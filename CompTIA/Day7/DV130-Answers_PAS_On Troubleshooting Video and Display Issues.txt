@@ -1,0 +1,126 @@
+DV500_62_SAS_Troubleshooting Video and Display Issues
+Self-Assessment Sheet
+
+
+Q1. What could be the cause of no signal from a video display? 
+Ans: If you see no signal from a video display then it’s possible that you have the cable that has become disconnected, or perhaps a cable has been damaged.
+
+Q2. How can the issue  of no signal from a video display be resolved?
+Ans: If you check the connectivity and reseat the cables, it’s possible that the issue would be resolved.
+
+Q3. What should you do if the image on the display is very dim? 
+Ans: If you look closely at the display and you notice there is a very dim image, then it may be that the brightness or contrast needs to be turned up on the display. 
+
+Q4. What should you do if you are getting a black screen when you start the Windows operating system? 
+Ans: If you’re getting a black screen when you start the Windows operating system, you may want to choose the option for VGA mode, which you can access by pressing F8 during the Windows start up process. This will start Windows in a very basic resolution that should be compatible with most monitors on the market.
+
+
+Q5. What might you be able to see on a display with a black screen? 
+Ans: Instead of having a completely black display, you may be able to see some information on the screen. But there could be flickering or color issues. You may want to check the cable itself and make sure that none of it has been damaged. 
+
+Q6. What should you check if you're using a VGA connection? 
+Ans: And if you’re using VGA, you might want to check the individual pins of the video connection itself.
+
+
+Q7. How can I fix a distorted or misaligned display? 
+Ans: If the display is distorted, or the geometry of the display seems off, you may check the configuration settings in the operating system. The driver may allow you to change refresh rates or resolution settings to something that’s more compatible for that monitor.
+
+Q8. What does the documentation for the monitors tell you?
+Ans. If you’re not sure what this should be, then you should check the documentation for the monitor, which will tell you exactly what resolutions and what refresh rates are supported by that device. 
+
+Q9. What if your video adapter supports hardware acceleration?
+Ans. And if your video adapter supports hardware acceleration, you may want to try disabling that temporarily to see if that resolves some of these display issues.
+
+
+Q10. What is a challenge when working with LCD displays? 
+Ans: One challenge when working with LCD displays is that there are a fixed number of pixels on that display. You don’t have a way to modify the resolution of that display since those pixels are fixed in place. 
+
+Q11. What is the best way to get a sharp picture on an LCD display? 
+Ans:  if you can match the native resolution of that display, you will have the sharpest picture available on that output.
+
+
+Q12. What does it mean when some letters are larger and more blocky than other letters in an output? 
+Ans: If you don’t match the resolution, you might have an output like this one that shows some letters as being larger and more blocky than other letters in the output. This usually indicates that the wrong resolution is being used, and we might want to change our resolution to better match the capabilities of the monitor.
+
+
+Q13. What should be done if you don't want to use the native resolution of a display? 
+Ans: If you don’t want to use the native resolution of the display, then use one that is a factor that is compatible with that native resolution. For example, if the native resolution was 2560 by 1600, you could use the resolution of 1920 by 1200 because that is exactly the same ratio in both of those resolutions.
+
+
+
+Q14. Give one example to describe this statement “ if you don't want to use the native resolution of a display” .
+Ans. If you don’t want to use the native resolution of the display, then use one that is a factor that is compatible with that native resolution. For example, if the native resolution was 2560 by 1600, you could use the resolution of 1920 by 1200 because that is exactly the same ratio in both of those resolutions.
+
+
+Q15. What is the problem of “burn-in”? 
+Ans: A problem that can occur across all display types is the problem of “burn-in.” This is when you have a single image on the screen that stays for a very long time and it stays for so long that when you remove that image from the screen that a portion or ghost of that image is left on the display.
+
+
+Q16. What is pixel-shift technology? 
+Ans: Some displays have a technology known as “pixel-shift” built into the display to help prevent this. It will slightly move an image that is not changed after a certain amount of time by just a pixel or two in an effort to prevent this type of burn-in. It’s such a slight change to the display that you’ll probably not even realize that the display is moving, especially if you have a single image on the screen for an extended period.
+
+
+Q17. On LCDs you may see this burn-in referred to as ____________.
+Ans. Image Sticking
+
+Q18. How can you clean the screen from a stuck image? 
+Ans: one way to clean the screen from the stuck image is to display a white screen for an extended period of time. You’re effectively trying to reset this image so that it is no longer stuck to our LCD.
+
+
+Q19. What are dead pixels? 
+Ans: Some LCDs have one or more pixels on the display that simply don’t have any color on them at all. They are completely black and they always stay black. We refer to these as “dead pixels” because they never show any other type of color other than black. 
+
+Q20. Is there a way to fix a dead pixel on an LCD monitor? 
+Ans: No. There’s no way to fix a Dead Pixel on an LCD screen.
+
+Q21. What causes flickering of the image? 
+Ans: This is often caused by a loose cable. 
+
+Q22. How do you fix a monitor that is flickering? 
+Ans: you can reseat the cables or replace it with a new cable and you’ll no longer have the flickering issue.
+
+
+Q23. What if there’s a difference between the capabilities of the monitor and what you’re sending to that monitor through the driver?
+Ans. We get flickering with the output.
+
+Q24. How can you fix the issue when the output that is shown is the wrong color?
+Ans. Another challenging troubleshooting task is when the output that is shown is the wrong color. There might be one particular color that’s shown more than another, or the whole mix of colors on the screen may be incorrect. You first might want to look at the configuration of the monitor, specifically, the tint or any custom color presets. And if you can’t find any problem with those, it might be worthwhile to perform a factory reset of the monitor’s configuration.
+
+
+Q25. Does the operating system modify the colors depending on the time of day? 
+Ans: Yes, it does.
+
+Q26. What is important to know when using a monitor with built-in speakers? 
+Ans: It’s also important to know what’s feeding that audio to the monitor itself.
+
+Q27. How can you adjust the brightness and contrast settings on a monitor? 
+Ans: If the display on the monitor is very dim, then you may want to check the brightness and the contrast settings. They’re usually configurations on the monitor that allow you to modify what these values are, and you can adjust them to match the lighting of your work area.
+
+
+Q28. What can cause a display to be black? 
+Ans: If the display seems to be black, but if you look closely you can almost see the display being shown, then you might have a backlight failure. There’s a backlight on our LCD that shines a light through the display so that we’re able to see the information on the screen.
+
+Q29. What happens when the backlight fails and how will you resolve it? 
+Ans: If that backlight fails, it will be very difficult to make out anything that’s being displayed. Some monitors allow you to replace the backlight that’s on the display, or you may have to replace the entire display to resolve this issue.
+
+
+Q30. What is an LCD projector? 
+Ans: If you’re working in a conference room, you may be using an LCD projector like the one you see here to display information on a screen. You commonly see these used in environments where you need to have a lot of people viewing the information that’s on one single screen. We often refer to these devices as “LCD projectors,” but there may be other technologies that are used inside the device itself. However, as a generic term we often refer to these as an LCD projector, even though they might be using some other type of technology.
+
+
+Q31. Is the lamp inside projectors a hot light? 
+Ans: Yes it is.
+
+Q32. What kind of lamp is inside projectors? 
+Ans: Inside of these projectors is a very bright lamp.
+
+Q33. Why is it a best practice to leave the fan running when you turn off an LCD projector? 
+Ans:  This allows the lamp to cool down slowly and hopefully extends the lifetime of that individual lamp.
+
+
+Q34. What should you do if the LCD projector intermittently shuts down and goes completely black but the fan continues to run? 
+Ans: If you’ve already replaced the lamp and you notice that the projector intermittently shuts down, goes completely black, but the fan continues to run, then you may have a situation where there’s a cooling problem. You may want to check the cooling vents on the LCD projector and make sure that the fan inside is blowing air through the entire system.
+
+Q35. How can I improve the airflow in my projector?
+Ans: you have a way to remove any blockages or clean out any of the dust that may be on the outside of this projector, it will improve the overall airflow. Some projectors also have air filters built into them and you may need to replace those filters to have a better airflow through the system.
+
