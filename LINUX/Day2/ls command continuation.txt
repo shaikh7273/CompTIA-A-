@@ -1,0 +1,46 @@
+2. Get more information
+
+
+How to get more details
+All right. We know ho to get list of items from directory.
+
+But this is less than informant. Yes, we have a view. But without details.
+
+Before we learn how to get more details, there is a command we will run now, to clear the screen.
+
+clear
+
+What does it do? Well, it clears the screen. How it works, doesn't matter for us, really.
+
+The same you can achieve by running /bin/echo -e "\x1b\x5b\x48\x1b\x5b\x32\x4a\c" , but we can agree, that 'clear' is easier to remember!
+Ok, let's finally learn more about ls. The command has multiple arguments we can add in order to change the output of the command.
+
+Now, important to understand. What we pass after the command - these are arguments. Not switches, parameters, etc. We can hear these names, but to learn how to work with Linux properly, we should name the elements with proper convention.
+
+So, our first argument will give us more details. Please execute
+
+ls -l .
+
+- indicates that we will pass arguments. We have two ways here
+
+- one dash informs the system that we will pass one letter argument, like 'l'
+-- two dashes means that argument will contain more than one letter. Most commonly it will be an english word.
+l means long listing format.
+
+What we have here?
+
+The format contains a few columns. Let's try to understand them:
+
+permissions. Here we can see what kind of permission has the object. We will work with permissions... soon :)
+number of hard links. By default every object has 1 hard link. What are links? We will learn it in 18th lesson.
+Owner. The owner of the object. It doesn't mean who created it, but who owns it at this moment.
+Group. Owner belongs to the group (of users). This inforation is here too. This means that our 'groupmates' have specific access to the file.
+Size. File size in bytes.
+date and time of last modification of the object.
+file name.
+Owner and group. For now it will be enough to know that we see on the listing above the names of the users and groups. The system keeps and translates them from numerical representation. These are UID for user identifier and GID for group identifier. We can list this information in numeric way, by entering the
+
+ls -n command. This works like ls -l, but it changes the user-friendly names to UIDs and GIDs.
+
+Right now we listed all files in alphabetical order.
+But... All files?
