@@ -1,0 +1,24 @@
+What is ls?
+The first command we learn is ls. This is the list command. It allows us... list the content of the directory.
+
+ls is the command we can encounter in all Linux and Unix systems. We can see it as one of the 'core' commands in the system.
+
+Ok, let's play with it a little.
+
+Run ls
+
+What we see on the screen is a list of the content of the current directory.
+
+What is visible immediately, that we have different colors. We can imagine what it means, but let's forget it for a second. What many waves of "classic" sys admins saw in their days:
+
+ls --color=no
+
+So, this leads us to the first output, the colorized list of content. In order to have it, we need to run
+
+ls --color=yes
+
+or, alternatively for now
+
+ls --color=auto .
+
+For now, it will be enough to say, this colorized option is added as default in one place in the system, we will go there in one of the future lessons.
