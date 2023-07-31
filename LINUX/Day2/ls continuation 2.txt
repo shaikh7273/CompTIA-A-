@@ -1,0 +1,39 @@
+3. List all files
+List all files
+Maybe some of you know, but there are many files and directories which are hidden. This generally means that these object are not listed by using standard listing commands (or by standard view in GUI). In Linux these files and directories are present too. There are a lot already in your directory.
+
+Linux uses . on the beginning of the object's name. We call these files the dotfiles. Ok, let's print the files again.
+
+ls
+
+Hm, there are no 'hidden' files.
+
+Yes, we have to find a proper argument. this time it will be -a.
+
+ls -a
+
+This command listed much more files than before. A lot of dotfiles! No matter what are they, at least, not now. But two of them needs to be explained.
+
+.
+..
+The first, . simply means the current directory of the user.
+
+The second, .. means parent directory.
+
+Simple like that :)
+
+So... Let's try something.
+
+ls .
+
+will show exactly the same output like simple ls. And
+
+ls .. shows... yes, the parent directory structure!
+
+Final argument for this section is -A (capital a). While a means all, A means almost all. In this case the command will show all files, except the . and ...
+
+Let's try: ls -A .
+
+Ok, last thing for now. We can combine multiple arguments in the command. Try run
+
+ls -al . What can you see?

@@ -1,0 +1,39 @@
+5. Sort by size
+
+
+Sort content by size
+OK, we know how to sort files by time, let's learn how to do it by size.
+
+As usual, we have multiple options to do so.
+
+First, we run this command
+
+ls -s
+
+This shows the short list of files and allocated space. As we already know, we can combine this argument - s - with others. Let's do it.
+
+ls -ls
+
+But this is what you have by default, using ls -l, right? No? You are correct, the answer is no. Take a look on the beginning of each line, this is where you can find, what was added by -s.
+
+Why we used s? I wanted you to pay attention here. When capital S is used, this means sort.
+
+ls -lS it sorts files by size, largest are going first.
+
+So, arguments are case-sensitive, like... everything in Linux :)
+
+Before we use the next command, there is one argument more to be learned. This argument is --human-readable, or better - -h
+
+Let's try.
+
+ls -lh we have printed the size of the files not in bytes, but in more readable form, with K, M, or G, that sort of things.
+
+h use the powers of 1024. So, 1K is a 1 powered by 1024. We have another otion
+
+ls -l --si
+
+which uses powers of 1000. But.. I think no one uses that :)
+
+Ok, let's try to sort with h parameter
+
+ls -lSh

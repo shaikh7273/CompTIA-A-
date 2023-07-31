@@ -1,0 +1,56 @@
+4. Sorting the files
+
+
+Sorting
+Obviously, all lists can be sorted. There is no exception here.
+
+Linux allows us to list files using multiple sorting options. ls command has some options built-in. First type of sort we already observed. By default ls sorts the files alphabetically. Let's try something else.
+
+Before we start, though, there is one concept we need to go through. Linux has differente timestamps, three, to be exact.
+
+atime - the last time when file was accessed
+mtime - last modification time. By modification we mean change in the file content.
+ctime - last metadata modification time. We mean here - permissions change, location of the file, etc.
+It is imperative for you to understand it.
+
+What is timestamp?
+
+This is the numerical representation of the time. It is the number of seconds passed from Unix epoch which is midnight of 1st of January, 1970.
+
+Example how it looks is visible below
+
+$ date +%s
+1635797690
+$ date
+Mon 01 Nov 2021 08:14:52 PM UTC
+Well, on the occasion we learned a new command - date. Enough to say, this command shows the current date and time:
+
+date .
+
+The first sort option will be -t. This argument sorts files with the last modification time, newest files come first.
+
+Let's try.
+
+ls -lt
+
+We use two arguments, to observe things better. We can specify exactly the modification time by adding u to the argument list. But please remember, in order to print this information properly you have to use t with another argument (u in this case).
+
+ls -ltu
+
+Ok, now let's print the list and order it by ctime - metadata change.
+
+ls -ltc
+
+Well, not much changed, right? Please execute these commands and carefully observe the output
+
+touch theNewestFile (this creates a new file)
+ls -ltu
+ls -ltc
+echo "hello world!" > file-02 (this will add something to the file)
+ls -ltu
+ls -ltc
+chmod 444 file-01 (this will change the permissions of the file)
+ls -ltu
+ls -ltc
+
+Please spend some time to understand what and how was printed. We used some commands which are new, but do not waste your time on them now.

@@ -1,0 +1,26 @@
+7. Other options and help
+
+
+A few arguments more
+To finalize some usefull arguments, please take a look on these:
+
+ls -al --author prints the username of the creator of the file.
+
+ls -ald prints directories only. Very useful in some circumstances.
+
+ls -ali prints inodes (there will be a lesson about inodes).
+
+ls -alR recursively prints all subdirectories.
+
+ls -alr prints list in the reversed order. So,
+
+ls -alSr is printing... what? :)
+
+Finale
+Two last commands in this scenario.
+
+ls --version prints the version of the binary.
+
+All commands which we used here are available in help. How to get the help?
+
+ls --help

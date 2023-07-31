@@ -1,0 +1,29 @@
+6. Formatting
+
+
+Different formats
+Ok, we are able to sort the list. Now it is time to format it a little.
+
+The first option will be applied to simple ls.
+
+Let's recall, how the simple ls looks like. Now, let's use it with our new argument.
+
+ls -1
+
+Now, please think, why it is obvious thet we do not need to use -1 with -l argument?
+
+--format can be usable when scripting and ls is used for input for other parts of the script.
+
+ls --format=commas will print the files separated by commas. We can use shorter syntax and write
+
+ls -m
+
+Surprise! -l is also the --format option. If you wish to use it in full, use ls --format=long
+ls -lQ prints the filenames in quotes
+
+--time-style changes the way how the date is formated in long format. Let's experiment:
+
+ls -l
+ls -l --time-style=locale
+ls -l --time-style=iso
+ls -l --time-style=full-iso
