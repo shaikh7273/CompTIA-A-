@@ -1,0 +1,22 @@
+Delete file(s)
+
+
+We already know the proper command. It is rm.
+
+We can remove single file
+
+rm try01
+
+We can remove more than one file
+
+rm try1 try2
+
+We obviously can remove multiple files
+
+rm testdir/mytest{01..1000}
+
+And, yes, we can remove all files, directories, the whole structure
+
+rm -rf testdir
+
+What -rf means? It is explained in previous lesson.

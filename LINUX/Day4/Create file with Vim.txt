@@ -1,0 +1,26 @@
+Vim
+
+
+Ok, vim is not part of this lesson. But I'd like to make sure, that we understand that touch is not only one way to create files.
+
+Let's run
+
+vim mynewfile
+
+We opened a vim editor. We wil lhave lessone about it later, now it is enough to follow the instruction.
+
+In order to start typing anything in editor (enter insert mode), hit
+
+i .
+
+Put some text, for example
+
+this is my great line
+
+Now, hit ESC key to enter the command mode, and type :wq
+
+You left vim and now you can check the file
+
+ls -l mynewfile
+
+Yes, we have the file and it is not empty!

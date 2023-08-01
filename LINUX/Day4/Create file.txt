@@ -1,0 +1,45 @@
+Create file(s)
+
+
+In order to create empty file in Linux, we have to use touch command. Let's do it.
+
+touch testfile
+
+Do we have it?
+
+ls -l testfile
+
+Yes, the file exists. We also can see that the file has 0 size, another words, it is empty.
+
+Of course, like in previous scenario, we can create multiple files.
+
+touch my{01..100}file
+
+Let's use the wildcard character * to list all of them
+
+ls my*file
+
+It is not what we really can use here, but if * means any string, sometimes we need to list specific subgroup. Let's prepare ourselves first.
+
+touch try1 try2 try01
+
+Ok, now, we want to list try1 and try2 only. If I use
+
+ls try*
+
+we will receive all three files.
+
+Instead of * we can use ?. This sign means any single character.
+
+Let's try
+
+ls try?
+
+Yep, this is it.
+
+Let's now create some structure.
+
+mkdir testdir
+touch testdir/mytest{01..1000} testdir/file{01..1000}
+
+Do you know what we've done?
