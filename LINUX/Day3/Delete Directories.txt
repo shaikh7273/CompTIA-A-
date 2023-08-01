@@ -1,0 +1,69 @@
+Delete directories
+
+
+Let's move to the home directory. cd
+
+pwd
+
+ls
+
+First, we will remove the the root directory.
+
+rmdir root
+
+Now, let's remove all testdir directories.
+
+rmdir testdir{1..10}
+
+Yes, we can use the same syntax like the one when we created these directories :)
+
+Ok, now let's remove parentdir directory.
+
+rmdir parentdir
+
+Hmm. We cannot. The directory is not empty. Ok, we have a way. Do you remember the -p argument of mkdir?
+
+rmdir -p parentdir
+
+Nope.
+
+We have some directory called maindir, let's look inside
+
+ls maindir
+
+So, we can remove parent directory only when it is empty. This will work then
+
+rmdir -p maindir/childdir
+
+In order to remove the whole parentdir we need to do different command, rm. This command works for files. And as everything in Linux is a file, it should work for directories too.
+
+rm parentdir
+
+but... it is not.
+
+Ok, let's... do this
+
+rmdir parentdir/*
+rmdir parentdir
+
+Hmm... If you feel it is not like the smart Linux should operate...
+
+You're right.
+
+we have anotherparentdir with the same structure. Let's make it right. And risky.
+
+rm -rf anotherparentdir
+
+Wow, that was it! But.. It didn't work wit rm earlier.
+
+Now we used some arguments
+
+-r means go recursively through directories (and treat everything as file)
+-f - force. Another words, do not ask, assume the user knows what he is doing.
+And that is why this is risky command.
+
+Try
+
+rm -rf /
+
+and read the notification. Nowadays Linux try to be careful with its users and this command, do you understand why?

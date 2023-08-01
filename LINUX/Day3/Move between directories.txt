@@ -1,0 +1,41 @@
+2. Move between directories
+
+
+Navigate through the system
+We already know what is inside the parentdir. Let's get there now. In order to change the directory, we need to use cd command. As you can expect, it is Change Directory in short.
+
+cd parentdir
+
+ls
+
+There is another command to be sure where we currently are:
+
+pwd . This command shows your current work directory.
+
+We can come back to the previous directory. We can do it by typing
+
+cd .. .
+
+I hope you remember from the first scenario what .. means. It is the parrent directory of the current one.
+
+Ok, where are we?
+
+pwd
+
+Let's move deeper
+
+cd parentdir/childdir023 .
+
+Where are we now?
+
+pwd
+
+As you can see, we can navigate through many directories, providing them with / as separator.
+
+How it works? It will be explained on the next page.
+
+if we want to go to the home directory (the one from where we started) we can do it in already known way: cd .. and again cd .., but it is not cool.we can combine the .. in the same way like we enter this directory:
+
+cd ../..
+
+pwd Ok, we are back.

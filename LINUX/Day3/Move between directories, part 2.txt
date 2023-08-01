@@ -1,0 +1,47 @@
+3. Move between directories, part 2
+
+
+A little of theory
+Ok, now it is time for another concept, but before we do that, let's create one more directory
+
+mkdir root
+
+We've created the root directory. now let's move to it
+
+cd root
+
+Please take a look where we are:
+
+pwd
+
+We have this structure: /root/root.
+
+Ok, now let's go back
+
+cd ..
+
+Now, let's do almost the same thing
+
+cd /root
+
+Where are we now?
+
+pwd
+
+What is the difference? Obviously, you noticed the / character. What all of it means?
+
+In Linux filesystems, the root, the "first point" is a root directory. This root directory is represented by /. Everything what is on the top level of the filesystem is in / directory.
+
+Let's take a look at the picture below.
+
+directories.png
+
+Let's suppose, I am in /home/user2/dir1 directory. If I want to go to /var/log/nginx directory, I can do it in several ways.
+
+cd ../../../var/log/nginx
+cd /var/log/nginx
+What is the difference? In the second version we are using the absolute path. We are referencing our journey through directories to the main, central point of the system - the root, /. When We place / on the beginning of the path it informs the system about our intention to use absolute path.
+
+In the first example we use relative path. It simply means we are navigating from the current position.
+
+Therefore, if we are in our home directory, which is root... Well, don't be confused. We are logged as root user. root user is the most powerful entity in the whole Linux system and it's home directory is /root. Other users have their home directories under /home. So, when you are in /root directory, it is totally different when you type cd /root than cd root.

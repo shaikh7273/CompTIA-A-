@@ -1,0 +1,37 @@
+Time to go home!
+
+
+Wherever we are in the Linux system, we have several ways to back home. Some says, all roads lead to Rome, in Linux it is almost true :)
+
+So, first, if you remember your home directory, use it
+
+cd /var/log
+pwd
+cd /root
+pwd
+
+but this is not funny way of doing it.
+
+There is a built-in variable called $HOME. This variable contains the path to the current user home directory.
+
+cd /var/log
+pwd
+cd $HOME
+pwd
+
+By the way, we can display the value of this variable, using echo $HOME
+But $HOME is long. We can use something shorter - ~
+
+cd /var/log
+pwd
+cd ~
+pwd
+
+And finally, the shortest version...
+
+cd /var/log
+pwd
+cd
+pwd
+
+Yes, just cd is enough to come back to home directory.

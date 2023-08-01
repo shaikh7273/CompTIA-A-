@@ -1,0 +1,47 @@
+1. Create directories
+
+
+Create directories
+First, let's check what we have in our current directory.
+
+ls -l
+
+In order to create directory we need to use mkdir command.
+
+Ok, let's create some structure.
+
+mkdir myfirstdirectory creates directory with provided name.
+
+Now imagine, we want to create multiple directories with similar names. We can create directories using one command after another, and repeat it multiple times. But we have better ways.
+
+Let's create 10 directories, starting with testdir1 to testdir10. How to do it in one command?
+
+mkdir testdir{1..10}
+
+With this syntax we are able to create 10 directories with the name contains numbers from 1 to 10. Very handy.
+
+ls -l
+
+ok, another approach.
+
+mkdir mydirectory anotherdirectory thirddirectory
+
+This creates three different directories for us.
+
+ls -l
+
+Ok, let's create more complicated stuff. In order to create deeper structure, we have to use -p argument. This allows us to create the whole structure, without creating parent directory as first step.
+
+mkdir -p parentdir/childdir{01..100}
+
+What we do here? with -p we allowed the system to create parent directory and the second part we already know. Under the parentdir we created 100 files, from childdir001 to childdir100. Please notice, how nice it is formatted by the system! We said 01, but system created directories to keet three digits as it is in childdir100. Nice.
+
+Let's see what we finally have.
+
+ls -l
+
+And as we created the structure, what we have in parentdir? How to check it? We'll learn more about it in the next section, but for now, let's take a look into parentdir
+
+ls -l parentdir
+
+In this way we can list files in another directory.
