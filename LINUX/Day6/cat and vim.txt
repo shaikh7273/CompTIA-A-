@@ -1,0 +1,56 @@
+cat and vim
+
+
+In the current directory we have one "special" file, testfile. This file is a copy of syslog file and contains a lot of information. Enough, to see different ways to read the file.
+
+Let's check if the file is available.
+
+ls -l testfile
+
+First, we will use this opportunity to learn a new command. cat can print all files, but it is not necesairly smart to print binary files with cat. It is usable for text files. So, let's learn if the file really is the text file.
+
+file testfile
+
+cat
+The most basic and I think, mostly used command is cat. As usual in linux the name of the file is a kind of contraction of longer word, in this case - concatenate.
+
+Ok, now we can read the file.
+
+cat testfile
+
+Well... Yeah, the file was printed, but the case here is that the file is fully printed. From the start to the end. We will see how to avoid this a little bit later.
+
+vim and view
+Let's be honest. The true linux admin uses vim. Or even more, the true admin uses vi :) most modern distributions contains vi, vim (in fact in most cases, vi is replaced by vim), emacs, nano... here are many text editors available.
+
+It is important to understand one thing. cat just prints the file. vi is fully functional, very powerful text editor.
+
+Before we run vim, let's learn new, very important thing. Please, try to guest, what is this?
+
+dwfi4t0gjvg0eg5jqh58wgpoweh4w8ghbo;witheaigh
+
+It is what one does when incidentally opens vi and doesn't have any idea how to quit.
+
+Right, in order to exit vim, press ESC and then :q - what means quit.
+
+If you changed something in the file and you don't want to save the changes, press :q!.
+
+If you want to save these changes, press :wq - write and quit.
+
+By using ESC we switch between modes in vim. One is INSERT mode. In this mode we can edit the file. Second is COMMAND mode, where we can interact with vim and do actions. Like save and quit. Third mode is VISUAL. in this mode we can do selection of text.
+
+In most cases, when we enter vim, it starts in COMMAND mode.
+
+Ok, let's see our file with vim.
+
+vim testfile
+
+We will touch vim in the lab later. Now it is enough to say that you can navigate using arrows (mostly :)). When you want to quit, please press ESC and then :q!
+
+So, this is vim.
+
+We have another possibility to work with vim. We can run it in read only mode:
+
+view testfile
+
+In order to quit, please execute - :q.

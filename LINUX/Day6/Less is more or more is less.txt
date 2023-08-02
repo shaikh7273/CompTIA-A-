@@ -1,0 +1,39 @@
+Less and more
+
+
+It is time to learn two new commands to print file content. We already know cat. The downside of cat is that this command prints the whole file in one shot. It is rather inconvenient to go through large files in this way.
+
+more
+The first command which we can use in order to have better experience is more.
+
+more testfile
+
+Now, we are in somehow interactive mode and we are able to navigate through file. However more has it's own limitations. We can go forward only, using enter. In order to quit, press
+
+q
+
+less
+There is a more sophisticted tool to read the file. It is called less. This command gives us better navigation. We can go back and forth using the same keys like in vi, moreover, we can search for strings, using / sign.
+
+less testfile
+
+Now, please try to go through the file. Down and upwards.
+
+/Resolution
+
+This searches through the file for Resolution string. Remember, linux is case-sensitive!
+
+By n
+
+and
+
+N we go through search results, down and upwards.
+
+In order to quit, press q
+
+Pipes
+What is interesting, we can use cat, more and less together with pipes.
+
+cat testfile | more
+
+cat testfile | less

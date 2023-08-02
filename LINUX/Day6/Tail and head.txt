@@ -1,0 +1,38 @@
+Print part of the file
+
+
+Despite the possibility of printing the whole file and navigate through it, we can print part of the file. We have two possibilities.
+
+head
+It we want to print first lines of the file, we can use head. By default head shows 10 lines.
+
+head testfile
+
+If we wish to see different number of lines, we can use -n argument and pass the number for lines.
+
+Let's try with 2 lines
+
+head -n2 testfile
+
+And now for 22 lines:
+
+head -n22 testfile
+
+tail
+tail does exactly the same thing as heead does, but from the end of the file.
+
+tail testfile prints 10 last lines.
+
+tail -n2 testfile will print 2 last lines, and
+
+tail -n22 testfile will show 22 lines.
+
+similar like with less and more, both head and tail can be used with pipes.
+
+Let's see on the examples. Please try to understand what you will see before you execute the commands!
+
+cat testfile | tail -n1
+
+cat testfile | head
+
+cat testfile | head -n4 | tail -n2
