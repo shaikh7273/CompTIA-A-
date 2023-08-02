@@ -1,0 +1,48 @@
+redirect from the file
+
+
+We did redirection to the file. We can do it in oposite direction too.
+
+We have our numbers.txt file. When we print it, we see:
+
+cat numbers.txt
+
+Ok, let's use this file as input for our commands.
+
+Do you remember how we couted number of lines in the file?
+
+cat numbers.txt | wc -l this is... not perfect way, believe me. Familiarize yourself with this very old webpage. Yeah, it is written more than 20 years ago in HTML 3.2! How cool is that! (and... it is 3 years younger than my first HTML page ;) )
+
+So, we can just do
+
+wc -l numbers.txt
+
+Ok, works. we have number of lines, but... We have a filename also. Yeah, we can do different things to remove it. Example? Yeah, why not!
+
+wc -l numbers.txt | awk '{print $1}'
+
+or...
+
+awk 'END{print NR}' numbers.txt
+
+(Now you can go outside and impress everyone around what you know about Bash and awk! ;) )
+
+But we want to use redirection to count the lines.
+
+wc -l < numbers.txt
+
+Ok. Let's write this number to another file
+
+wc -l < numbers.txt > count.txt
+
+cat count.txt - we have it!
+
+We can do crazy (and sometimes useless) things
+
+sort < numbers.txt | uniq for example.
+
+The input redirection, <, is used mostly to redirect content to file. To do some operations. Lets see the very simple example of one-liner:
+
+while read line; do echo "Content of the line: ${line}"; done < numbers.txt
+
+What we just did? We created a loop (we will talk about that later) and print every line from the file, as long as there is nothing more in the file numbers.txt.

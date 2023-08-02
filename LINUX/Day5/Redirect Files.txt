@@ -1,0 +1,65 @@
+Redirect to file
+
+
+Now we will look on redirecting output to file.
+
+Normally, all output is going to the screen. Here we have streams concept involved, but this will be explained in another lab. For now, let's assume that all output is going to the screen.
+
+On the screen we have listed the files. Lets do it again:
+
+ls -al
+
+>
+Now, let's redirect this to the file:
+
+ls -al > directorylist.txt
+
+What we did here?
+
+ls -al - we know this already
+> redirects all output from the left side of the sign, to the file on the right side of the sign
+directorylist.txt file where the redirected output will be sent.
+Ok, let's see what is in the file.
+
+cat directorylist.txt
+
+File contains exact output of ls -al command.
+
+Ok, let's write more stuff to the file. We have small file, .profile. Lets cat it and add the output to the directorylist.txt file.
+
+cat .profile > directorylist.txt
+
+Now it is time to see the file!
+
+cat directorylist.txt
+
+Hm... wait... We should add content, not rewrite it! What happened?
+
+Well, the > redirection will do as follows:
+
+If file doesn't exist, create it
+Add content from redirected output
+If file exists and it is not empty, clear the file and write the redirected output in empty file
+Now you see what happened? Ok, so how to append and not rewrite the file? Is it possible?
+
+Yes, it is.
+
+>>
+We need to use another syntax for redirection: >>.
+
+Let's try this:
+
+rm directorylist.txt - we removed the file, to have clear start.
+
+cat .profile > directorylist.txt - we did the first redirection, and now we will append something from command line and the file with directory listing:
+
+echo 'this line is a separator!' >> directorylist.txt
+
+ls -al >> directorylist.txt
+
+Let's check
+
+cat directorylist.txt
+
+Summary of redirections
+You need to remember, that > will create file (if not exists) and rewrite all data as fresh file. >> behaves similarly, however, if there is any content in the fill, this redirection will add theoutput of the command on the end of existing content.

@@ -1,0 +1,67 @@
+The pipes and redirections concept
+
+
+The concepts is simple, really. The pipes and redirections are used to send (or retrieve) some information sent from one command or script to another command or script. It works on files too. Let's think about some examples:
+
+Count number of lines in the file
+Select uniq values from one file and write it in another
+Find occurences of some string in the file or system
+and many more
+Before we start, here are some commands which we will use when learning pipes. Obviously, all these commands can be used independently.
+
+grep. This command search for given pattern in the output. Output may be the file or output from other command.
+
+grep 'case' .bashrc This command will search for pattern case in a file .bashrc.
+
+wc is a utility for counting words, newlines, bytes. Commonly we use it for counting lines.
+
+When we execute
+
+wc -l .bashrc
+
+it will count how many lines (-l argument) are in our .bashrc file.
+
+sort will sort the output in alphabetical order
+
+sort numbers.txt will sort the prepared file with generated numbers.
+
+By using uniq we can limit the occurences of the same record to only one. But in order to have this done properly, sort is needed, therefore, we need to pipe these one to another.
+
+Ok, we learned some new commands, lets use the in pipe.
+
+The pipe |
+Our first structure here is pipe, which uses |.
+
+The structure looks lie this:
+
+command1 | command2
+
+command1 | command2 | command3
+
+Yes, we can combine as many pipes as we wish.
+
+How it works? The output of command1 is taken over as input to command2. And this process can continue to the next command.
+
+Ok. Lets print the file first.
+
+cat numbers.txt
+
+Ok, the file is quite huge. How many records we have? Let's pipe the output from the command we just used to wc!
+
+cat numbers.txt | wc -l
+
+We have the number of lines in the file! Perfect. Now, let's collect the information how many unique records we have. I believe, you already noticed that this file contains numbers from 1 to 100. And as we have 10000 records... some must occured many times.
+
+cat numbers.txt | uniq |wc -l
+
+Hm... something is not right. Let's think...
+
+Did we piped our data correctly? At this moment, we can say - yes. We printed the file, select unique values and count them. But... Did we, really?
+
+Did we missed something? Yes, we did. In this case we have here, we used uniq on unsorted data. That is why we have close to 9000 values, when we should have max 100 (as the script which generated the file used random values between 1 and 100). It is important to remember, uniq always works best with sort. And sort is first.
+
+Let's try.
+
+cat numbers.txt | sort | uniq | wc -l
+
+Yeah! That works.
