@@ -1,0 +1,49 @@
+Most commonly used combinations
+
+
+Well, this lesson is not going through all arguments and combinations. All is in manual and I am sure you will find your best friend soon. But there are some combinations moslty used when admins run ps command.
+
+ps -ef
+
+Used mostly when someone wants to determine the PID of the process.
+
+ps aux
+
+I think it is the mostly used combination. It shows the most important info, like PID, status and resources usage.
+
+Some admins like to see the hierarchy of processes, therefore they use
+
+ps aux --forest
+
+But in reality, pstree is used by them most often. Let's try
+
+pstree
+
+Personally, I preffer ps aux --forrest from these two. It gives me more details. But to take a quick look on the system and dependencies, pstree might be enough.
+
+Finding useful information
+To be honest... most of people use grep with ps. But ps has enhanced filtering. So why we use grep? Because... it is only one command to lear and we already know it! With great filtering comes great number of argument and switches to learn.
+
+Anyway, let's go through some.
+
+ps -f -u syslog
+
+shows all processes run by user syslog.
+
+ps -f -C cron
+
+shows all processes, where the executable is cron.
+
+ps -f -p 1
+
+shows process with specified PID.
+
+ps -f --ppid 1
+
+show all processes, where parent process has PID 1. About parents, children, etc we will talk in future lesson.
+
+With -p we can specify more PIDs with coma. Something like ps -f -p 2543,8843,3456.
+
+There is much, much more options, views, etc. Here we took a look on the base functionality.
+
+more information is in manual man ps
