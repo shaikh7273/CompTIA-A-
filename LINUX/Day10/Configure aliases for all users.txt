@@ -1,0 +1,28 @@
+Aliases for all users
+
+
+Here we touch the administrative part.
+
+To this point we created aliases for current user. We are able to create aliases for all users. In order to do this, we have to add something to global configuration.
+
+There are couple of ways how to do it, however we will learn the best one.
+
+Here in Killercoda we are logged as root, so nothing additional is needed to do.
+
+The place where we have to add our aliases is /etc/profile.d.
+
+A little theory. When you log in to the system, the ~/.profile file is loaded. But before this file system loads the main and common configuration from /etc/profile file. This file does different things and loads all files from /etc/profile.d directory. Files are loaded in alphabetical order, so one of the good practices is to keep numbers in the files, if the order is important for us. So, let's supose, our aliases are not that important, therefor we can load it on the very end of this execution.
+
+Let's create the file, then, and write another alias.
+
+echo "alias lh2='ls -alh'" >> /etc/profile.d/99-aliases.sh
+
+As you noticed, we saved it as .sh file.
+
+We can add this alias to the /etc/profile file directly, but it is strongly not recommended.
+
+Let's see if it works. First, we will start new session - sudo -i
+
+(we will touch it in one of the next lab) and what we see after the
+
+alias execution?

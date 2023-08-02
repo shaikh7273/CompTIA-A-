@@ -1,0 +1,50 @@
+How to use alias
+
+
+Aliases give us a great possibility to "shape" command line to our needs. Let's suppose, we want to list all files in long format and with hidden files:
+
+ls -al
+
+We have to use 6 characters. not much. But if we need to repeat this command again and again, it may become tough. So, what about this:
+
+ll
+
+Better?
+
+Definitelly.
+
+ll (and a few more) is an alias configured in our profile configuration (please have in mind, not always, not for all users, not in all systems). Before we see how to do it, let's create some aliases in command line first.
+
+In order to create alias we need to use alias command. This time it is not an abbreviation :). Ok, let's create an alias for ls with long list, hidden files and human-readable format of size.
+
+alias lh='ls -alh'
+
+What we did?
+
+We want to create an alias called lh and when we invoke it, it should execute the ls -alh command.
+
+Now we are redy to execute this alias:
+
+lh
+
+Please remember, this alias is available in this session only. It is not available in other sessions, it will be not available when new session is started.
+
+Ok, are you curious what aliases you have in your system? We have lh now, we know about ll. Is there anything else?
+
+alias shows all defined aliases in the session.
+
+Sometimes we want to remove aliases. Well, honestly, I never needed to do that, only during the trainings :)
+
+anyway, lert's remove the alias created during this lab:
+
+unalias lh
+
+Can we remove alias, if it was defined earlier, somewhere in the configuration? Let's try:
+
+unalias ll
+
+Ok, now we can check the alias
+
+And let's try ll, what we should see?
+
+ll
