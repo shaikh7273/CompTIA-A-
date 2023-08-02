@@ -1,0 +1,97 @@
+How to modify the default view
+
+
+top is a very powerful tool. The main functionality we already know, but it is not all. First, we can modify a lot of visual aspects. Let's do it!
+
+CPU and memory list
+Hit 1
+
+And again 1
+
+And again 1 .
+
+What we see here? The CPU information in line 3 is expanded to single cores. We switch here between the unified view and detailed view.
+
+With Killercoda's default setting we probably see only one core. Please, be observant, and notice the difference between Cpu(s) and Cpu0.
+Press t couple of times and then
+
+m , also couple of times. Observe, how the CPU or memory visualisation is changing.
+
+Modify the order in the processes list
+Now it is time to modify what we see in processes list. Be sure that you have top running.`
+
+The standard view is by CPU usage.
+
+Let's switch to order by memory usage. In order to do it, press
+
+M .
+
+Now, by pressing
+
+N we will look on the list sorted by PID.
+
+Ok, Let's press
+
+T and now we have order by running time.
+
+Finally we can come back to CPU usage sort, by pressing
+
+P
+
+Tasks and threads
+By default our processes list contains the tasks. We can switch it to threads by pressing H (and come back to processes by pressing the same key).
+
+Paths and trees
+By pressing c we can change between simple name of the command and the full path.
+
+This might be useful with v and V. Please combine them (v, V and H) and play a little. v and V shows the tree of processes, instead simple list. This might help to understand the parent / child relations between processes.
+
+Filtering
+Press
+
+n
+
+in order to limit the number of shown processes / threads. When 0 is provided, it means simply all processes.
+
+The prompt for our action appears just above the process list.
+
+We can confirm our selection, by pressing enter or reject it, by using ESC.
+
+When
+
+u
+
+is used, we can select one user to list his processes.
+
+With
+
+o
+
+or
+
+O
+
+we can search through processes. o is case-insensitive and O is case-sensitive.
+
+Refresh
+With s we can change the refresh rate. The default is 3 seconds. We may set the refresh as slower or faster.
+
+Kill the process
+We didn't talk about it, yet. For now, it is enough to say, we can kill the process using top. In order to do so, press k and provide the PID of the process to kill.
+
+Save the changes
+Now interesting thing. If many settings were changed and we wish to keep them for longer time, we don't need to provide all of them again when we use top again. Simply press
+
+W
+
+and the settings will be written in the toprc file in the home directory (sometimes the file can be just .toprc in your home).
+
+Let's see this file.
+
+cat .config/procps/toprc
+
+And now run the top again.
+
+We touched here very limited number of options. There is much, much more to explore. Feel free to go through manual and try by yourself. To learn more, you can read manual
+
+man top

@@ -1,0 +1,16 @@
+Start with non default settings
+
+
+Many of options we used before can be executed directly from the command line. Here are the examples:
+
+top -o %MEM - run top with processes sorted by memory.
+
+q for exit
+
+top -c will show the full paths.
+
+q for exit, again.
+
+And the last example:
+
+top -u root will show the processes owned by root user.
