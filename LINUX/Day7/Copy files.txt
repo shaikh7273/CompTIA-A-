@@ -1,0 +1,125 @@
+Copy files
+
+
+First, let's take a look how to copy the file. Copy, means that we copy existing file to the new filename or location. The source file is still available.
+
+In this lab we have some directories structure with files prepared. Let's take a look.
+
+tree sourcedir
+
+We used here a new command, tree. It recursively shows the content of the directory. Recursively means if there is a subdirectory, its content will be shown as well.
+
+cp
+The command to copy file is cp. The way how we use it is very simple:
+
+cp source target
+
+Ok, we know the command, let's use it. But first we need to create a directory where we will copy files.
+
+mkdir targetdir
+
+Let's go to our source directory
+
+cd sourcedir
+
+Now we can copy one file to the target directory. From our current location, the targeet is one level higher, so we need to use .. in order to say go to parent directory.
+
+cp one ../targetdir
+
+Ok, do we have the file there?
+
+ls -l ../targetdir/one yes. Do we have the source file still located in the current directory?
+
+ls -l one
+
+Yeah! This works.
+
+Copy and change the filename
+Obviously, we can use cp not just for copying files, but also changing the name of the target file.
+
+In the previous examply we copied one file. Let's copy this file again, but in order to have two files in the target directory.
+
+cp one ../targetdir/another-one
+
+Let's check
+
+ls -l ../targetdir
+
+Copy two or more files in one command
+So, we know how to copy file. However, do we know how to copy two files, for example?
+
+copy sourcefile1 targetfile1 and then copy sourcefile2 targetfile2? Well, yeah, we can do it this way. For three files too. For 10 files? Yeah, why not. For... ? :)
+
+Ok, do not be hasty, we will come back to it. Right now let's take a look how we can copy two or so files in one shot.
+
+This is what we will do:
+
+cp file1tocopy file2copy file3tocopy targetlocation
+
+So, last parameter describes where to copy all files listed in parameters (but last, ofc).
+
+cp two01 two02 ../targetdir
+
+Ok, do we have these files in targetdir?
+
+ls -l ../targetdir
+
+Yes, we have it.
+
+Copy multiple files
+We can copy many files in easy way, using wildcards.
+
+In Linux we have multiple widlcards. We touch here only two.
+
+? this wildcard replaces one character. So, if we wish to copy all files, where the file name start with my and ends with file, but there is something in between, like a, g or6, but it has to be only one character (so something like my3file, but not myFGfile), I can use ?. It will look like this my?file.
+* this wildcard replaces all characters with nay length. Considering last example, if we wish to copy my1file and myFGfile, we will use my*file.
+If you wish to learn more about wildcards, run man 7 glob (and quit with q). We talk about man in another lab!
+
+Ok, let's try it.
+
+ls -l three*
+
+ls -l three* | wc -l
+
+We have 10 files, right?
+
+cp three0? ../targetdir
+
+ls -l ../targetdir/three*
+
+ls -l ../targetdir/three* | wc -l
+
+We have 9 files. Why? Please, try to find the answer yourself!
+
+Copy directory structure
+We copied files so far. Let's try to copy the whole directory structure, not just the file or files.
+
+First we need to go to the parent directory.
+
+cd
+
+and now we can copy the whole structure:
+
+cp -R sourcedir anotherdir
+
+-R argument means recursively. How to understand this, please take look back on top when we discussed tree
+
+ls -l anotherdir
+
+We copied the whole structure.
+
+Now, important thing. Please remember, the target directory must not exist. What will happen if the directory exist? Let's see!
+
+mkdir testdir
+
+Now we have the testdir directory, and we are ready to recursively copy all files from sourcedir. We do it in exactly the same way like previously.
+
+cp -R sourcedir testdir
+
+Recursive copy thought that you wish to copy the whole structure into testdir directory.
+
+ls -l testdir
+
+Here we see that the whole structure is copied under the directory.
+
+ls -l testdir/*

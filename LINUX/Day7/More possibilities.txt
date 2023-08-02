@@ -1,0 +1,32 @@
+More possibilities
+
+
+In order to copy file, or better to say, copy content of the file, we can use redirections.
+
+We have a special file - .profile. Let's use this file to copy the content.
+
+clear
+ls -l newfilewithcontent.txt
+
+File is not exist.
+
+cat .profile > newfilewithcontent.txt
+
+ls -l newfilewithcontent.txt
+
+Now we have the new file. Lets see, if the content was copied.
+
+We can do it is simple way:
+
+cat .profile
+cat newfilewithcontent.txt
+
+In this way we visually confirmed that files are the same. But what if the file contains 10000 lines? Will we check every single line? Well, no.
+
+We can check if there is any difference between two files. We do it with a new command - diff. This is the way to compare two files.
+
+diff .profile newfilewithcontent.txt
+
+No output means that both files are the same.
+
+There are other methods to copy files. Even to copy and transform the content during the process. But this is the basic tutorial, so we are not touhing them.

@@ -1,0 +1,51 @@
+Move files
+
+
+Ok, we know ho to copy files. Sometimes however, we want to move the file from one place to another. For this case, we need to use mv command. The usage is quite similar to cp, but... simpler.
+
+Move one file
+Let's clear the screen.
+
+clear
+
+Create another directory:
+
+mkdir movedfiles
+
+And finally we are ready to move our first file.
+
+ls -l sourcedir/one
+mv sourcedir/one movedfiles
+ls -l sourcedir/one
+ls -l movedfiles
+
+Done. Obviously, we can move and change the name:
+
+ls -l anotherdir/one
+mv anotherdir/one movedfiles/another-one
+ls -l anotherdir/one
+ls -l movedfiles
+
+Move a few files
+Similar like with cp we are able to move a few files to another location. It looks like this:
+
+mv file1 file2 file3 targetlocation
+
+Let's try:
+
+mv sourcedir/two01 sourcedir/two02 movedfiles
+ls -l movedfiles
+
+Move directories
+And finally, we can move all directories.
+
+mv anotherdir newdir
+ls -l anotherdir
+ls -l newdir
+
+And it works similarily like cp did when move is perform to existing directory:
+
+mv newdir movedfiles
+ls -l newdir
+ls -l movedfiles
+ls -l movedfiles/newdir
