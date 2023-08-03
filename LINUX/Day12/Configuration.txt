@@ -1,0 +1,124 @@
+Files
+
+
+As you can expect, history is configured somewhere.
+
+In our Katacoda system we need to go through .bashrc file.
+
+grep -i hist .bashrc
+
+The new thing - -i argument. It allows to grep through file the string with case-insensitive way. So, this way we can find hist and HIST string.
+
+Ok, we have 4 lines. Let's go through them.
+
+HISTCONTROL=ignoredups:ignorespace
+
+This means, that if you repeat the same connad twice (one by one) only one occurence will be storted in history. The same if you start your command with space.
+
+Let's run:
+
+ls
+ls
+ls (please notice, we added space on the beginning) history
+
+Ok, let's see what else we have in the configuration.
+
+shopt -s histappend
+
+Here we say that history file should not be overwritten, but all commands will be stored on the end of the file.
+
+HISTSIZE=1000
+
+Says that history available in terminal will keep 1000 records.
+
+HISTFILESIZE=2000
+
+And the last one says that history kept in history file will contain 2000 records.
+
+History file
+So, where is the history file?
+
+First, we need to write the file (normally it doesn't append in real time). History is kept in .bash_history file and it is written on the end of the session. So, at this moment the file is empty (probably :) ). In order to "dump* the session history to the file, we will use the -a argument.
+
+history -a
+
+And now we should see history.
+
+ls -al .bash_history
+
+cat .bash_history
+
+Variables
+The setting from .bashrc file can be changed for single session by changing the valuer of the variables.
+
+We can print our variables using echo command (echo prints data on standard output):
+
+echo $HISTSIZE
+
+In order to print the value of the variable, we need to inform bash that we want to print variable not string. Compare this:
+
+echo HISTSIZE
+
+with
+
+echo $HISTSIZE
+
+Or we can use command set and grep searched values:
+
+set | grep HIST
+
+The output should be silimar to:
+
+HISTCONTROL=ignoredups:ignorespace
+HISTFILE=/root/.bash_history
+HISTFILESIZE=2000
+HISTSIZE=1000
+We can change the value for this (and only this) session. Let's do it for the file where history is stored:
+
+HISTFILE="/root/.another_history"
+
+Let's check:
+
+set | grep HIST
+
+And write the history now:
+
+history -a
+
+and see if we have the file:
+
+ls -al .another_history
+
+cat .another_history
+
+The history of commands contains all data from the last save state.
+
+Clear history
+In order to clear the history, run
+
+history -c
+
+Please notice, that cleared only the history in memory not the files.
+
+For file, you have to remove file, or use redirect:
+
+> .another_history (we play with not default file)
+
+What we did? We redirected "nothing" to the file, therefore if we look into it:
+
+cat .another_history
+
+The file is empty.
+
+Disable history
+In order to disable history, run
+
+set +o history
+
+If we wish to disable history for current user:
+
+echo 'set +o history' >> ~/.bashrc
+
+And for all users in the system:
+
+echo 'set +o history' >> /etc/profile

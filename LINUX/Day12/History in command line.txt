@@ -1,0 +1,72 @@
+History in command line
+
+
+If history is enabled (we will learn how to check and do it in next chapter) we can re-use previous commands.
+
+Let's do this:
+
+ls -al
+cat .profile
+ls -alh
+ps
+
+Ok, we provided a few commands. Now, if we want to display the .profile file again, we can retype the command. But it is not neccesary.
+
+Arrows
+First, we can navigate through history with arrow up anfd arrow down. Please try to find cat .profile using arrows and then execute the command again.
+
+history command
+Ok, nice. But if you already typed 1000 commands and you want to go back to the command number 268 it will be... not very convenient. In this case we can call the history:
+
+history
+
+Now, you can simply copy/paste the command, but it is not very professional :) As you see, there is a number just before the actual command. Lets use this number.
+
+Please find the cat .profile command, and use its order number with leading !. Something like: !6
+
+This will recall the command with specific number.
+
+We can narrow the search with history command in two ways. First simple, with grep:
+
+history | grep cat
+
+Or, using built in functionality, if we want to see some specific and limited number of commands:
+
+history 3
+
+will show 3 last commands stored in history.
+
+Interactive search
+To prepare ourselves, lets run:
+
+cat .hushlogin
+cat .bashrc
+
+And now let's see what we have
+
+history
+
+We should see this:
+
+$ history
+    1  ls -al
+    2  cat .profile
+    3  ls -lh
+    4  ps
+    5  cat .profile
+    6  history
+    7  cat .profile
+    8  history | grep cat
+    9  history 3
+   10  cat .hushlogin 
+   11  cat .bashrc
+   12  history
+At least, something very close.
+
+Now we can interactively search through it. Press CTRL and r and start typing cat.
+
+You should see cat .bashrc (the last command where searched string is equal to part of the command).
+
+Press CTRL r again. the highlighted command changed. Very useful.
+
+Use ESC if you wish to leave the search, or simply enter to execute the command.
