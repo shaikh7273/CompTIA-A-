@@ -1,0 +1,66 @@
+Get information with stat
+
+
+stat allows us to get diffeerent type of information than file. With file we can learn what is the type of the file. It determines the type, like file, directory, package, device etc, and if file type is confirmed, it tries to understand the language (based on some structures and strings).
+
+stat shows information, which we can clasify like more system-oriented. We didn't discussed many of the aspects shown by stat, therefore we do not go deep into understanding of this command, it is timme for being just familiar with it.
+
+Let's take a look on the output.
+
+stat mybashscript.sh
+
+Well, the output is much more rich than from file.
+
+  File: mybashscript.sh
+  Size: 13              Blocks: 8          IO Block: 4096   regular file
+Device: fc01h/64513d    Inode: 70881       Links: 1
+Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2022-05-15 08:41:12.980389577 +0000
+Modify: 2022-05-15 08:41:08.804084682 +0000
+Change: 2022-05-15 08:41:08.804084682 +0000
+ Birth: -
+What do we have here?
+
+File - it is obvious, this is the name of our file.
+Size - the size of thee file in bytes.
+Blocks - the size of the file, but in blocks.
+IO Block - size of the each blocks.
+Every block device, like hard drive, is structured in blocks. Block is the largerst disk space which can be allocated by one I/O operation. This size is represented by IO Block.
+regular file - the type of the object. We will not get detailed information about the language, only the type, like file, pipe, directory or special file.
+Device - hex/decimal ID of the device on which object is located.
+Inode - Inode ID. Inode and Device create the unique identification of the object.
+Links ({{}} - number of hard links created. For now is enough to understand, that every file will have 1, if there is no hard links created. 0 means the file is deleted.
+Tricky thing. If you run stat agains the directory, Links will show number of files in the directory.
+Access - the permission matrix for the object.
+Uid and Gid - owner and owner's group identifiers.
+Access, Modify and Change - these three represent timestamps when some specific action was taken against the file. Access shows almost the time of last access to the file. But for specific reason, in modern Linux systems (read optimization) this value will be updated only if is older than Modify timestamp. Modify says about last modification of the content. And Change is about all changes - content and attributes (like permissions, for example).
+Birth is reserved for the time when file was created, but is not implemented in Linux systems.
+Sometimes we can see Context. It is the Selinux description.
+
+More functionalities
+stat has parameters, like most of commands in Linux. Let's look on some.
+
+stat -f mybashscript.sh
+
+-f gives us information about filesystem.
+
+  File: "mybashscript.sh"
+    ID: e75e6c15bddd0af4 Namelen: 255     Type: ext2/ext3
+Block size: 4096       Fundamental block size: 4096
+Blocks: Total: 2495808    Free: 1343138    Available: 1339042
+Inodes: Total: 1290240    Free: 1176298
+Here we have information related to the filesystem on which the file is located. For example, Namelen inform us about the maximum filename leghth possible to set.
+
+stat -t mybashscript.sh
+
+Will return condensed version of the information. Very cool to automation and use in scripts.
+
+mybashscript.sh 13 8 81a4 0 0 fc01 70875 1 0 0 1652607024 1652607012 1652607012 0 4096
+
+We can customize the output
+
+stat --printf="File %n is %s bytes, and is a %F\n" mybashscript.sh
+
+File mybashscript.sh is 13 bytes, and is a regular file.
+
+To find more about customization, use man stat

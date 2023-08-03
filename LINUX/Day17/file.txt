@@ -1,0 +1,125 @@
+Get information with file
+
+
+The first useful command is file. It is not the abreviation this time :)
+
+We can use this command to every file in Linux. And, as we already know, in Linux everything is a file, so... Yes, we can use this command on simple text file, or on /dev/null devince (like we did in previous lesson).
+
+Here is a list of entities we will check in this lab:
+
+empty text file
+text file with content
+directory
+binary exacutable (i.e. /bin/bash)
+packed file
+/dev/vda (or another device)
+Ok, let's get started!
+
+First, we create empty text file
+
+touch myfile
+
+And let's use our first command on the file
+
+file myfile
+
+In response we have myfile: empty. System knows only one thing - there is nothing inside.
+
+Ok, we will put some content to the file.
+
+echo 'this is my very creative text!' > myfile
+
+What we will see after running file again?
+
+file myfile
+
+System correctly recognized the file as myfile: ASCII text.
+
+Let's see what happen if we create script.
+
+touch mybashscript.sh
+
+file mybashscript.sh
+
+So, we see the same thing. System doesn't care about file extension (lucky us, believe me), but about content.
+
+Right. Now we do the script, shall we?
+
+echo "#! /bin/bash" > mybashscript.sh
+
+This is all we need :)
+
+The line we provided - #! / bin/bash is called shebang. For now it will be enough for you to know, this is the information about the interpreter which Linux should use to 'understand' and execute the script.
+file mybashscript.sh
+
+And we have
+
+mybashscript.sh: Bourne-Again shell script, ASCII text executable
+
+Wait... executable? We didn't talk about file permissions, but believe me, this information doesn't mean that the file actually has the execute permission. If we add this permission, nothing will change from the perspective of file command.
+
+Now we will create a Perl script
+
+echo "#! /bin/perl" > myperlscript.nomatterwhat
+
+file myperlscript.nomatterwhat
+
+And we see myperlscript.nomatterwhat: Perl script text executable, what proves what I said about extensions.
+
+Let's try omething funny
+
+echo "#! /bin/notexistinginterpreter" > mymysteryscript
+
+We try to use not existing interpreter. And we've got mymysteryscript: a /bin/notexistinginterpreter script, ASCII text executabl. So, shebang is interpreted as executable, but unknown type, so system said "ASCII" to not shame itself that it doesn't understand what we want.
+
+Remember, the language is not recognized by shebang only. There are some other elements which file is looking for and it tries to determine it on the first lines of code, not only first one.
+We can use file on directories (yes, it is very logical).
+
+file /var/log
+
+We received /var/log: directory, as expected.
+
+What about binaries?
+
+file /bin/bash
+
+Now Linux is more talkative: /bin/bash: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=a6cb40078351e05121d46daa768e271846d5cc54, for GNU/Linux 3.2.0, stripped. We have a lot information about this binary.
+
+Can we check some compressed files?
+
+file /usr/local/go/lib/time/zoneinfo.zip
+
+Will return /usr/local/go/lib/time/zoneinfo.zip: Zip archive data, at least v1.0 to extract
+
+file /usr/local/go/src/archive/tar/testdata/xattrs.tar
+
+And we've got /usr/local/go/src/archive/tar/testdata/xattrs.tar: POSIX tar archive
+
+And so on.
+
+Now interesting part.
+
+Do you remember? Everything is a file!
+
+I'' leave it as a mystery for now, but our system on Killercoda is installed on disk, which is recognized as /dev/vda1. Let's check what it is!
+
+file /dev/vda1
+
+And we see /dev/vda1: block special (252/1)
+
+Let's check two more
+
+file /dev/null
+
+file /dev/random
+
+Do you see any differences?
+
+You can experiment with file command. For example, yyou can repeat execution for all files we checked before, but now with -i argument, which will return mime data about file (which is less readable for human).
+We can use -s argument for devices (well, for all types, but I find it most useful for devices) to get another information.
+
+stat -s /dev/vda
+stat -s /dev/vda1 stat -s /dev/random
+stat -s /dev/null
+
+I hope you noticed the difference between /dev/vda and /dev/vda1. If yes, splendid, we will talk about it... Yes, you right! Soon! :)
