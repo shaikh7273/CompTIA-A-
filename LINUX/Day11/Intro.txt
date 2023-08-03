@@ -1,0 +1,44 @@
+Introduction to users
+
+
+Users are the way how we interact with operating system. We need to log in, provide user, password, or (what is definitely better way, and strongly recommended) provide user and ssh key.
+
+When logged, we are able to interact with the system, hardware and applications with defined boundaries. For example, we can see this directory, but not another, we can start and stop one aplication, but not another.
+
+We will go through most important files, where the information about users are stored. But first we will learn how to get the information who are we. Let's get started!
+
+Learn, who you are
+Ok. Who are we? A user, well, thank you, Captain Obvious, but which one? Sometimes we can read it in our prompt (yes, we can configure prompt to show different things). But how to get this information in a proper way?
+
+whoami
+
+The whoami command shows the user we are logged in.
+
+Another way to learn this information, not only about current user, but any user in the system.
+
+id
+
+We have here a few information. What is the User ID (UID), primary group ID (GID) and other groups to which user belongs to.
+
+Ok, we can use this tool to ask about another user:
+
+id ubuntu
+
+We wish to learn more about user ubuntu. So, we know his UID (1000), primary GID (1000) and all secondary groups, with their names and GIDs.
+
+UID, GID... What are they?
+A little theory here. UID is an unique User Identifier, which identify this user through the system and determine which resources this user can access.
+
+There is a good practice, even a standard, when UIDs are associated.
+
+UID 0 is reserved for root.
+1-99 are reserved for predefined accounts (like games, mail, www-data, sys, bin and more)
+100-999 reserved for system and administrative accounts.
+1000+ are reserved for users
+GID (Group IDentifier) has the same meaning, but for group. A group is an abstract which combines many users in similar entity (for the same privileges, purpose, actions, etc).
+
+We can find here similar number associations:
+
+GID 0 is reserved for root.
+1-99 are reserved for system and application use.
+100+ are for users.

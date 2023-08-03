@@ -1,0 +1,154 @@
+Modify existing user
+
+
+There are some functionalities which we do not touch in the fundamentals course. These will be touched later in more advanced one. Here we go through two functionalities which allow us modify existing users.
+
+Of course, many details can be changed through files manipulations, but... let's not go this way.
+
+passwd
+The most common reality of many admins is... changing the passwords. Unfortunatelly, this is something what still exists and we need to deal with it. In order to change the password we use command passwd <user>. If user is not provided, the password will be changed for current user.
+
+We have our testuser3, created in previous chapter. We will modify this user.
+
+grep testuser3 /etc/shadow
+
+passwd testuser3
+
+Provide the new password twice.
+
+grep testuser3 /etc/shadow
+
+As you can see, the record changed.
+
+usermod
+So, we know how to change password, it is time to modify the user.
+
+With usermod testuser3 -g testuser2
+
+we modified the primary group for testuser3. Right now it is testuser2.
+
+grep testuser3 /etc/passwd
+
+grep testuser3 /etc/group
+
+The change is visible.
+
+We can use GID also, not just name:
+
+usermod testuser3 -g 1001
+
+grep testuser3 /etc/passwd
+
+grep testuser3 /etc/group
+
+Did you observed how the GID changed from testuser3 to testuser2 and then to testuser1?
+
+Let's come back to original setting usermod testuser3 -g 1003
+
+Ok, now it is time to change or add secondary group.
+
+grep testuser3 /etc/group
+
+We just confirmed, testuser3 is attached to testuser3 group only.
+
+usermod testuser3 -G testuser1
+
+grep testuser3 /etc/group
+
+Yep, we added the secondary group 1001. Ok, let's add one more.
+
+usermod testuser3 -G testuser2
+
+grep testuser3 /etc/group
+
+Hm... We should have two secondary groups, not one!
+
+This happened because we didn't do the operation correctly. It is a good habit to add a argument to usermod -G. a means here - append.
+
+Ok, let's correct this.
+
+usermod testuser3 -aG 1001
+
+grep testuser3 /etc/group
+
+It works as expected now.
+
+With usermod -d we can create a home directory
+
+usermod testuser3 -d /home/anotherdir
+
+Let's see:
+
+grep testuser3 /etc/passwd ok, here it looks fine.
+
+ls -l /home Hmm... There is no directory...
+
+All right, let's come back
+
+usermod testuser3 -d /home/testuser3
+
+In order to properly move home directory (not just create if it doesn't exist, remember adduser without parameters?) we need to add another argument.
+
+usermod testuser3 -d /home/newdir -m
+
+Let's check:
+
+grep testuser3 /etc/passwd ok, here it looks good.
+
+ls -l /home ok, we have a directory! Let's check the content of the directory and owner of the files:
+
+ls -l /home/newdir Yep, it works now.
+
+Shell
+Let's modify the shell.
+
+usermod testuser3 -s /bin/sh
+
+grep testuser3 /etc/passwd
+
+Delete user
+We will learn more possibilities, like locking account, etc later. Now it is time to remove our user. In order to do that, execute
+
+userdel testuser1 .
+
+Well... Surprise.. We cannot remove the user's group because the group cannot be removed at this point. First, we need to clear other users attached to the group. Let's leave it, you know what to do :)
+
+The user itself, however, was removed.
+
+grep testuser /etc/passwd
+
+grep testuser /etc/group
+
+In order to remove secondary groups, we can run
+
+usermod testuser3 -G ""
+
+Another words, we set empty as secondary group.
+
+grep testuser /etc/group
+
+Ok, let's continue.
+
+userdel testuser2
+
+grep testuser /etc/passwd
+
+grep testuser /etc/group
+
+User and group are removed.
+
+ls -l /home hm... the home directory wasn't removed...
+
+In order to remove the files, it is a good practice (if we know what we are doing :) ) to add two arguments:
+
+r - remove files
+f - force removal (in case if files don't belongs to the user)
+So, userdel -rf testuser3
+
+Don't be alarmed, all files of the user means all files of the user. Mailbox too.
+
+grep testuser /etc/passwd
+
+ls -l /home
+
+That works.

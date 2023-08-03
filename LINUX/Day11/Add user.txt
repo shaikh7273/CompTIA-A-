@@ -1,0 +1,110 @@
+Create user
+
+
+We already know how to check users. It is time to create one or two.
+
+In order to create user we can use one of two ways. First is useradd and second is adduser. What is the difference?
+
+Let's figure it out.
+
+whatis useradd
+whatis adduser
+
+Well, this doesn't explain much.
+
+Let's try another way. We will use two new commands. file and which.
+
+which useradd
+which adduser
+
+Command which show us where the executable is located. We asked where is the executable for useradd and the anser is "in /usr/bin/useradd".
+
+file gives us information about the object. We can use it in simple way - file <object>, but we can combine these two commands together.
+
+command $(another_command)
+
+What bash will do? First, the $(another_command) will be executed. We enforce this by using $() then output of this command will be executed as parameter for command.
+
+Let's see it in the real example:
+
+file $(which useradd)
+
+How bash will interpret it? which useradd will be executed and it will be translated (well, broadly speaking) into which /usr/bin/useradd and executed.
+
+so, let's do it!
+
+file $(which useradd)
+file $(which adduser)
+
+So, there is a difference in the output. In fact, useradd is a binary, compiled with the system. adduser is a Perl script, which uses useradd in its backend. Another words, adduser uses useradd when creates user.
+
+All right, after the lenghty intro, we can create users. We use both ways in simplest way, compare differences, and then we will use adduser to create final user.
+
+useradd
+useradd testuser1
+
+adduser
+adduser testuser2
+
+Comparison
+First difference is that adduser is more verbose. We see what is happening.
+
+Second, very significant difference is that adduser is interactive. It asks for password for user and other information. Provide some test data during the execution of the binary. Let's have something to compare.
+
+Let's compare the users.
+
+grep testuser /etc/passwd
+
+We see something similar to this:
+
+testuser1:x:1001:1001::/home/testuser1:/bin/sh
+testuser2:x:1002:1002:Some test user,,,,other info:/home/testuser2:/bin/bash
+grep testuser /etc/shadow
+
+and output:
+
+testuser1:!:19002:0:99999:7:::
+testuser2:$6$4MrAXI/aJY1cfwDU$kVdzcVnA1kT3CtZa4U/R0A0IiIta0QMG8psxc1PKk48DvZllXrecwNJ7Yfxr5xpJ4GAyAb/vjBYMAwnquYyKS.:19002:0:99999:7:::
+What we see here?
+
+password is not set for testuser1
+description is added for testuser2
+testuser1 has sh set and testuser2 - bash as shell.
+One more check:
+
+ls -l /home
+
+Well, testuser1 has the home directory defined, but it is not created.
+
+Let's become an admin
+Right, the true admin will use useradd :) I am kidding here, use what is better for you, but in my history I didn't use adduser too much. useradd is available on every Linux and works in the same way. And we, admins, have our ways with it.
+
+Let's go through most important arguments, which we should consider to use during create of new user.
+
+-d - create home directory in specified location, if we want to change
+
+-m - create the home directory
+
+-p - password
+
+-s - provide shell
+
+-c - comments, or description of the account
+
+And generally that's it.
+
+If you wish to see more options, execute
+
+useradd -h .
+
+Ok, now we know the basis, let's create our final user.
+
+useradd testuser3 -s /bin/bash -m
+
+Let's see all three accounts now.
+
+grep testuser /etc/passwd
+
+grep testuser /etc/shadow
+
+ls -l /home

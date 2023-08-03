@@ -1,0 +1,62 @@
+Files involved in users configuration
+
+
+We have 4 files involved in configuration of users. Let's go through them one by one.
+
+passwd
+The first file is the passwd file. It is located, like most of config files, in /etc. Let's have a look on it.
+
+clear && cat /etc/passwd
+
+The structure of this file is as follows:
+
+username:password:UID:GID:description:homedir:shell
+
+username - obvious, it is the name of the user
+password - password. Many years ago this was the place where password actually was stored. But for security reasons it chaned and now passwords are available in different form, somewhere else. We will go there later. x in this field means that password is encrypted and stored in the other file.
+UID - unique User IDentifier.
+GID - unique Group IDentifier.
+description - this field can contain many information. The real first and last name. Address. Phone number. Role in the organization. You name it.
+homedir - the location named as home directory. This is the "home" of the user, where he logs and stores his data.
+shell - simply speaking, the shell is the program which takes the commands sent by user, interprets it, and return the answer
+We can use many shells. Today, however, the most popular is bash (Bourne Again SHell). It is an evolution of sh. Other examples are ksh, zsh (main shell on MacOS) or tcsh.
+
+How to find the available shells? Execute
+
+cat /etc/shells
+
+This file contains all available, installed shells. And yes, shell can be installed like any other program.
+
+Sometimes in the shell field we can find something else. it is /sbin/nologin. What is it? Some administrative users or technical users don't need to have the possibility to login. Another words, there is no need to perform actions interactively. Therefore, there is no need to login to this user. So, by setting shell as /sbin/nologin we ensure, that no one will log in as this user.
+
+As we can see here, sometimes it is /usr/sbin/nologin.
+
+shadow
+The "magic" file. This is "the other file" I reffered to minutes ago. This file contains sensitive information about the user, like password, and other configurations. We will talk about these settings later, now we will focus on passwords.
+
+clear && cat /etc/shadow
+
+The part of the file, which we want to understand now are the first and second element. It is a username and password.
+
+if password is set for the user, it is hashed and not retrievable from the file (well, let's say "not retrievable"... by staring on it. There are tools which allow us to crack passwords).
+* there is no password set (and very good, as we want to use passwordless approach with access keys, no passwords).
+! password was never set.
+group
+The file /etc/group contains information about groups.
+
+clear && cat /etc/group
+
+The structure is as follows:
+
+group name
+password
+GID
+users belong to the group
+Why password? Well, there is a possibility to have password set for groups. Honestly, during more than 20 years of my work with Linuxes, Unixes and other systems, I never saw password set for group, but, well, there is the possibility. And the principles for these passwords are the same like for users.
+
+gshadow
+The last file is /etc/gshadow.
+
+clear && cat /etc/gshadow
+
+This file contains encrypted passwords for groups.
