@@ -1,0 +1,75 @@
+Definition
+
+
+By definition, an inode is an index node. It serves as a unique identifier for a specific piece of metadata on a given filesystem, and the disk block location of this object.
+
+The theoretical maximum number of inodes is equal to 2^32 (approximately 4.3 billion inodes). Second, and far more important, is the number of inodes on your system. Generally, the ratio of inodes is 1:16KB of system capacity. Obviously, every system is different, so you need to do that math for yourself.
+
+How many inodes do we have?
+Let's use the df command. It shows information about filesystem.
+
+df /dev/vda1
+
+And now with inodes
+
+df -i /dev/vda1
+
+To check inode of specific file, we use -i argument for ls command.
+As we see, the free percentage of inodes and the space is different. Why is that? Well, imagine a well. Your task is to fill this well with water. But you have only 20 buckets of water. If the buckets will be very huge, possibly 18 buckets will fill the well to full capacity and you will be not able to put there more water. You are out of the space on your filesystem. However, if the buckets are very small, you use all 20 buckets, and the well isn't even half full. But you are out of buckets. You used all available inodes. I hope this analogy made things a little clearer.
+
+A lot of small files might drain all of the inodes (one file, one inode), even if the filesystem is not full. And the oposite, big files will take all space on filesystem, but there will be plenty unused inodes.
+
+Going advanced
+We are about to finish the fundamental training. So, let's make things more complicated.
+
+blockdev --getbsz /dev/vda
+
+This way we determined the block size used on the filesystem. Do you remember another way of doing it from previous lesson?
+
+We received 4096. Ok, we use it in
+
+df -B 4096 /dev/vda1
+
+We asked about disk usage, but this time, we said that we are interested in -B block size equal to 4096. Yes, the percentage is the same, but we can determine how many files we can write.
+
+Let's do a small excercise.
+
+df /dev/vda1
+df -B 4096 /dev/vda1
+echo 'this is my new file with some content' > testfile
+df /dev/vda1
+df -B 4096 /dev/vda1
+
+Please, compare the results.
+
+More about files
+We know how to get info about inode of the file. We can get interesting information about our testfile, using crazy looking command
+
+debugfs -R "stat <$(ls -il testfile | awk '{print $1}')>" /dev/vda1
+
+(quit with q - it is simple less)
+
+And compare it with
+
+debugfs -R "stat <$(ls -il /var/log/syslog | awk '{print $1}')>" /dev/vda1
+
+We immediately see the difference on the end, in EXTENDS. This crazy command extracted thee information about inodes used by this file. This metadata describees in two numbers the first and last block of the file. In the example with syslog we clearly see the fragmentation.
+
+More about directories
+Run
+
+pwd
+
+We determined, that we are in /root dirctory.
+
+ls -ild /root
+
+Note the inode. now execute the same but for parent directory
+
+ls -ild /
+
+Note the inode as well. And finally run
+
+ls -ial /root
+
+Please, compare the inodes for . and ... In our case the inode for / is equal to .. and inode for /root is equal to .. What makes sense, as . here means /root in absolute path. We talk here about our current directory. Adequately for / and .. - it is the parent directory.
