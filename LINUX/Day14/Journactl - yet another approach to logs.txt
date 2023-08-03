@@ -1,0 +1,88 @@
+Journactl - yet another approach to logs
+
+
+With Systemd Linux delivered a new way of storing logs, journald service. Logs are not stored as text anymore, therefore we need a new utility in order to read these files. We can do it with journalctl utility.
+
+Many SysOps are not happy with this solution. They claim that text based logs are better, faster for search, more "operatable" in terms of managing the files (backup, rotation, etc).
+
+Data stored by journalctl is binary. So, this time we do not have that simple option to scroll through the records.
+
+However, journalctl is very powerful tool and the possibilities of creating queries are nearly infinite.
+
+Before we start, we should understand different levels of messages. System and applications write messages to logs and are able to determine (well, it is programmed by developers, obviously) what severity (or another words - importance) of the message should be set. In syslog we have 7 defined levels of messages, which determine their severity:
+
+syslog message levels
+
+0: emerg
+1: alert
+2: crit
+3: err
+4: warning
+5: notice
+6: info
+7: debug
+A few explanations (more can be found in the Internet).
+
+emerg (emergency) is the highest level and shouldn't be used by applications. It means that system is unusable.
+
+debug is very often used during the development. Please remember that keeping logs where all messages in this level are stored may need special care about free space on your storage.
+
+In fact, the same may happen with levels 6 and 5. Messages on levels 5 to 7 are treated as informative only.
+
+Ok, theory part done, time for hands-on. We already know how to work with log files which are stored as text. Let's learn how to work with binary files from systemd.
+
+journalctl
+
+This command shows all systemd logs. We can navigate through them using arrows up and down, and quit with
+
+q .
+
+Where systemd stores its files?
+
+Let's go to the
+
+cd /var/log
+
+directory and list all files
+
+ls -al
+
+We should see the journal directory. Let's go inside
+
+cd journal
+
+and list files again
+
+ls -al .
+
+There may be the file system.journal, but this is not common approach. Despite this file (potentially), we can see one directory with strange name.
+
+With time we will see more and more of these directories. What are they? These directories contain logs stored for each boot. Another words, each restart will force system to create new directory for logs.
+
+But sometimes these directories don't exists. In order to check, and be sure that this option is enabled, check the config file:
+
+cat /etc/systemd/journald.conf
+
+This setting must be set:
+
+[Journal]
+Storage=persistent
+So, we said, directories represents boots. But how we can use it?
+
+journalctl --list-boots
+
+gives us ordered list of boots. Output should be similar to this one:
+
+0 6a8e47d21a894cc3944bb1982d13d13f Tue 2022-01-18 22:33:13 UTC—Tue 2022-01-18 22:49:50 UTC
+
+What it means?
+
+First column is the offset for boots. Another words, 0 is current boot, lower numbers represents older boots. Next is the absolute reference of the boot ID. And dates of start and end of the log.
+
+What we can do with it? Well, simple, we can display logs for specific boot! This is very, I mean it, very useful function.
+
+journalctl -b -10 will display "boot", or data collected during the run of the system done 10 reboots (stop/starts) ago.
+
+journalctl -b 0 will display the current boot.
+
+We can use -b and boot id. From example above it will be journalctl -b 6a8e47d21a894cc3944bb1982d13d13f.
