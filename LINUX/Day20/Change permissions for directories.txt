@@ -1,0 +1,91 @@
+Directories
+
+
+We mentioned earlier, that directory has different default permissions than files. Directories must have execute flag to allow users to go into them.
+
+First, let's go up one directory.
+
+cd .. && ls -l
+
+The permissions for directory are set to drwxr-xr-x, what means that owner can do everything, but group and other cannot write anything in the directory.
+
+As you remember (I hope), everything in Linux is a file, so we work with directory's permissions in the same way, as we did in previous chapter with files. We simply use the same chmod command.
+
+Let us play a little with it!
+
+chmod o-r student3 && ls -ld student3/
+
+Right, this czanges something for other users, but not us. Let's remove read flag for everyone.
+
+chmod a-r student3 && ls -ld
+
+Can we see what is in the directory?
+
+ls -l student3
+
+ls: cannot open directory 'student3': Permission denied
+
+No, we can't.
+
+What about jumping there? Shouldn't be possible, right?
+
+cd student3
+
+Well, it is possible...
+
+ls -l
+
+But we can't read anything.
+
+Why?
+
+It is simple, really. We removed read flag, so we cannot read the list of content inside the directory. But...
+
+cd .. && cat student3/student3
+
+works!
+
+So with read permissions you can read the content list inside the directory.
+
+Ok, let's bring back the default setting.
+
+chmod 755 student3 && ls -ld student3
+
+Now we will remove execute flag.
+
+chmod u-x student3 && ls -ld student3
+
+ls -l student3
+
+And we have this
+
+ls: cannot access 'student3/student3': Permission denied
+total 0
+-????????? ? ? ? ?            ? student3
+Oh, my... What had happen here?
+
+Without execute flag we can read the list od elements inside directory, but we lost actual work ability. To prove it, we can run
+
+cat student3/student3
+
+And we see
+
+cat: student3/student3: Permission denied
+
+cd is also impossible to be executed.
+
+cd student3/
+
+-bash: cd: student3/: Permission denied
+
+Understanding what is possible and what is not is very important. I found very useful matrix actions and permissions for directories done by David and I recreated it here for more handy information.
+
+directory permissions	digit	delete, rename, create files	directory list	read file content	write file content	cd to directory	cd subdirectory	subdirectory list	access subdirectory files
+---	0								
+--x	1			x	x	x	x	x	x
+-w-	2								
+-wx	3	x		x	x	x	x	x	x
+r--	4		filenames only						
+r-x	5		x	x	x	x	x	x	x
+rw-	6		filenames only						
+rwx	7	x	x	x	x	x	x	x	x

@@ -1,0 +1,54 @@
+Owner and group
+
+
+Finally, we came to the point, when we can learn about owner and group attached to the object.
+
+We need to switch the user now.
+
+exit
+
+su - student2
+
+Let's have a look what is in home directory of student2.
+
+ls -al
+
+Each object has an owner (student2) and a group (which is student1). Why is that?
+
+id student1
+
+id student2
+
+cat /etc/passwd | grep student
+
+As you can see, the default group of student2 is changed. Indeed, when this lab was prepared, I did usermod -g 1001 student2 - I've changed the default group for this user.
+
+Ok, let's go to student2 now.
+
+exit
+
+su - student1
+
+And now let's try
+
+cd /home/student2
+
+Well, we can go to another user directory.
+
+ls -l
+
+We can list it.
+
+ls -l student2
+
+cat student2/student2
+
+We can list subdirectory and read the file.
+
+echo 'test' >> student2/student2
+
+-bash: student2/student2: Permission denied
+
+But obviously we can't write to file.
+
+So, to conclude this section. User student2 belongs to group student1 together with student1. So, they can have additional privileges to work on the same objects. Privileges which are lower than owner, but higher than for everyone in the system.

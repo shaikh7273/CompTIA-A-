@@ -1,0 +1,64 @@
+Change owner and group of the file
+
+
+Let's switch back to root.
+
+exit
+
+And now we can navigate to student1 directory.
+
+cd /home/student1
+
+ls -ld student1
+
+We see that student1 owns the file, and his group is attached. In order to change the group, we can use chgrp command. Syntax is simple.
+
+chgrp <group> <objects>
+
+Let's make the student2 group the 'selected one' for student1 directory.
+
+chgrp student2 student1
+
+ls -ld student1
+
+Yes, the group was changed.
+
+ls -l student1
+
+But not the files inside the directory. Let's modify our command now.
+
+chgrp -R student2 student1 && ls -l student1
+
+Now it works. We simply added -R as argument, what means recursive .
+
+Now it is time to change owner. We use chown command for it. But what is interesting, chown can also change the group. Here is the syntax:
+
+chown <owner>:<group> <objects>
+
+Let's try with some additional files.
+
+touch test{01..03} && ls -l test*
+
+chown student2 test01
+
+chown :student2 test02
+
+chown student1:student3 test03
+
+Observe the results
+
+ls -l test*
+
+Of course, we can use recursive mode too.
+
+chown -R student2:student3 student1
+
+ls -ld student1
+
+ls -al student1
+
+Did you noticed who is the owner of ..? Do you know why?
+
+Answer
+Do you remember, what '..' means? It is the parent directory, right? Please check, who owns the parent directory?
+

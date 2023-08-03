@@ -1,0 +1,57 @@
+Theory, continuation
+
+
+Ok, we know what each block represents, it is time to talk about the meaning of each letter.
+
+Please, take a look at your home directory now.
+
+ls -al
+
+We can see many objects and different matrixes.
+
+Each group (owner, group and others) is build with three parts. By setting these elements we say:
+
+r - means Read permission is granted
+w - means Write permission is granted
+x - means eXecute permission is granted
+So, in this example:
+
+drwx------ 2 root root 4096 May 2 10:20 .ssh
+
+we see, that it is a directory (d) with full access for owner (rwx) and no access for the group and others (---).
+
+Two methods of setting permissions
+Absolute mode
+Absolute, or numeric mode uses digits to set exat tpermissions in each block. Each block is represented by one digit. Each digit has specific meaning. Here is the table with relations between digits and permissions.
+
+Digit	Meaning
+0	no access
+1	eXecute
+2	Write
+3	Write + eXecute
+4	Read
+5	Read + eXecute
+6	Read + Write
+7	Read + Write + eXecute
+So, to represent the permission from example a few lines above, we can say 700.
+
+I used capital letters on purpose. I want to build the connections in your minds between the digit, permission and its meaning.
+
+Important! eXecute doesn't simply mean execute the file or program, etc. It also means execute the directory, what allows us to enter into the directory.
+Symbolic mode
+This mode allows us to work in more easier, more visual way. Here we use operator and the user denotation to define the permission matrix.
+
+Operator	Meaning
+=	Set the whole block and override the previous permissions
+-	Remove the permission for specific user
++	Add the permission for specific user
+Now you will understand, why I used deliberately the capital letters before.
+
+User denotation	Meaning
+u	Owner
+g	Group
+o	Other
+a	all (owner, group and others)
+So, if I wrote a bash script and I want to make it executable for me, I use u+x. If I want to do it for everyone - a+x. And if I decide later to remove this permission for others - o-x.
+
+And finally, I decided now to give exactly read and execute permissions to a file, no matter what was set earlier. I want it for others, so I can use explicit definition - o=rx.

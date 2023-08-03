@@ -1,0 +1,22 @@
+Theory, continuation
+
+
+Right. We've done a lot. Something still to do.
+
+Let's list something again.
+
+ls -l /var/log
+
+Please, try to answer, how the system knows who is this owner? Or the group?
+
+The answer is here:
+
+-rw-r--r-- 1 root adm 48194 May 2 10:20 dmesg
+
+Let's look on the picture.
+
+permissionsExtended.png
+
+We can see root root (or root adm from the log above). The firs string describes the owner, second the group. Simple like that :)
+
+That's concludes the theory part :) After the short quiz we will finally do some hands-on!

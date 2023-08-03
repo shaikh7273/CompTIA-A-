@@ -1,0 +1,99 @@
+Time to play
+
+
+Ok, we know theory now. It is time to finally get our hands dirty and do some work with permissions!
+
+First, we need to switch the user
+
+su - student3
+
+ls -l
+
+We see, that student3 is in fact directory (d on the beginning), and has 755 privileges, what means all access for owner and read and execute for group and others.
+
+Let's go into this directory.
+
+cd student3 && ls -l
+
+We see student3 file (-) with 644 permissions. Please, figure out for your own, what it means.
+
+Play with the file
+We start our work with the file. Can we write to it?
+
+echo 'second line' >> student3
+
+Yes, we can, at least, we didn't see any error. Let's confirm it.
+
+cat student3
+
+Yep. We also confirmed that we are able to read the file.
+
+The command to change permissions is chmod. Obviously, an abbreviation :). Syntax is very simple:
+
+chmod permissions objects
+
+Ok, it is time to change the permissions of our file!
+
+chmod 755 student3 && ls -l student3
+
+Permissions were changed. We can easily see, that the execute permission was added (and file name is colored differently). Now, we will change permissions to something else
+
+chmod 640 student3 && ls -l
+
+Ok. now, the task is, I wrote a script, and want to ensure that all users are able to run it. I can use 755 like before. But in this case, I will not only add the execute flag, but I will change the all permission matrix. Let's do it again with digits.
+
+chmod 755 student3 && ls -l student3
+
+Let's compare the before and after matrix:
+
+-rw-r-----
+-rwxr-xr-x
+As you can see, we not only added the permissions. We changed them from 640 to 755 That is why this method is called absolute.
+
+To see how the symbolic method work, we will restore previous permissions first.
+
+chmod 640 student3 && ls -l student3
+
+And now we will add the execute flag.
+
+chmod o+x student3 && ls -l student3
+
+Confirmed, we added the execute flag to others' permissions. Let's add this permission to the group and others too (just to make sure it is there :) )
+
+chmod g+x,o+x student3 && ls -l student3
+
+Ok, we have it. Now, if we want to add execute flag to all three groups, we need to do o+x,g+x,o+x, right? Well, yes. But it is not effective way. We have better.
+
+chmod a+x student3 && ls -l student3
+
+a simply means all.
+
+When we run
+
+chmod a-x student3 && ls -l student3
+
+we removed execute flag from the permissions matrix.
+
+Previously we confirmed that we can edit and read the file. Let's change it.
+
+chmod u-w student3 && ls -l student3
+
+echo 'third line' >> student3
+
+No, we can't write to the file, system throws the error message -bash: student3: Permission denied
+
+cat student3
+
+but we still can read it.
+
+chmod 000 student3 && ls -l student3
+
+echo 'third line' >> student3
+
+cat student3
+
+And now we are not able to write or read the file.
+
+In next chapter we quickly see how to work with directories. To do so, we have to bring back the file permissions.
+
+chmod 644 student3 && ls -l student3

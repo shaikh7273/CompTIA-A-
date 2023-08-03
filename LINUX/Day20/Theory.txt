@@ -1,0 +1,60 @@
+Theory
+
+
+In this page we will go through the theory of the permissions.
+
+Recap
+We discussed previously a few elements of permissions. To remind them, we'll go through them.
+
+d on the first place of the matrix means directory
+l in the same place means soft (symbolic) link
+- means file
+And that is all what we learned :)
+
+Permissions elements
+To make things a little bit complicated, not only the permission matrix is important. The full picture is composed from this matrix and information about owner (and the owning group) of this file. Why? It become clear very soon.
+
+Matrix explained
+Let's take a look on the matrix itself. When we run
+
+ls -al
+
+We see the long format of the command ls. On the beginning of each line we see something similar to the picture below. Let's take a look.
+
+permissionsBasic.png
+
+I splitted this string of mysterious characters into four elements.
+
+On the beginning we have information about object's type. We know three already, but the list below contains more. And... Surprise! In fact, we know more types!
+
+- - normal, regular file
+d - directory
+l - soft (symbolic) link
+b - block special file (like hard drive)
+c - character special file (like /dev/null)
+n - network file
+p - FIFO
+s - socket
+We never touch the last three. And we will not do it here.
+
+But we can check first five. Observe the first letter in the matrix.
+
+ls -al .bashrc
+
+ls -ld /root
+
+ls -l /usr/bin/python
+
+ls -l /dev/vda
+
+ls -l /dev/random
+
+Uh, we just described the first letter. 9 to go.
+
+Don't worry, now it will go faster :)
+
+Please, return to the picture above. We explained the first block and we have three more. As picture explains, these three blocks are related to specific user or users.
+
+Owner. This is the user who owns the file. Not necessairly the author, but current owner.
+Group. Every file in Linux can have the distinct permissions for one, selected group. By default, this group is set to the owner's group, but it can be changed. For example, the config file of the application can have a owner (a user who uploaded it), but the application is not run by this user but special user (with special group). So, we can allow this group to have distinct access to this file.
+Others. All other users in the system.
