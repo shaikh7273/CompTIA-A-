@@ -1,0 +1,113 @@
+Set the task in crontab
+
+
+Before we set the task, we need to learn about syntax. It is easy, but I think, you will need some time to memorize it :)
+
+Ok, imagine your crontab now. You have there...
+
+1 17 7 4 2 /usr/bin/ls >/dev/null 2>&1
+
+What the hell is that!?
+
+Ok... Let's look on etc/crontab now. You can also read the documentation (for example info crontab )
+
+What we have there?
+
+# Example of job definition:
+# .---------------- minute (0 - 59)
+# |  .------------- hour (0 - 23)
+# |  |  .---------- day of month (1 - 31)
+# |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+# |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+# |  |  |  |  |
+# *  *  *  *  * user-name command to be executed
+17 *    * * *   root    cd / && run-parts --report /etc/cron.hourly
+Ok, now we can talk.
+
+We have a few elements here, we can go through them, one by one.
+
+minute defines on which minute scheduler should execute the program. In our example above, it is 1 minute after specified hour.
+hour defines hour for execution. In our example it is 5PM. Yes, Linux takes here 24 hours for a day.
+day of the month as above, but for day in the month. In the example above it is 7th day of the month.
+month as you can expect, the month. It may be a number, or text. In our example it is 4th month, so April. You can use apr.
+weekday final option defines the weekday. In our example it is 2, what means Tuesday. Please remember, Sunday can be defined as 0 and 7 as well.
+So, in our example, system will execute the command at 17:1 on 7th of April. But only if it will be Tuesday.
+
+Well, it is not handy. If we set day/month, we generally not set weekday. The same in oposite direction. If we want to keep every in any of position, we use *. So, if we set 15 * as two first elements, it means: execute 15 minutes after every hour. If we set * for minutes, it means every minute. And this is the biggest granularity possible for scheduling tasks.
+
+Right, let's finalise our journey through crontab.
+
+user - we do not set user for user related crontabs, it doesn't make any sense, but for system wide crontab this possibility is valuable. It might be used for specific cases, when some operation should be performed by specific user, but the operation itself is system wide.
+command. This is simple :D
+Please notice, that the example provided above the lines from documentation, doesn't contain user .
+
+And finally... >/dev/null 2>&1 from the example. You should recognize this contruction. We redirect all output into /dev/null.
+
+Right... it is the time to set our cronjob! Finally!
+
+Setting cronjob
+Each entry in crontab is called cronjob.
+
+To list our jobs, we execute
+
+crontab -l
+
+What we see now, is
+
+no crontab for root. It is because there is no job defined.
+
+Let's define a job, which will be executed at 9:12, every 23rd day of month. We want to do ls of /var/log send all output to logfile.
+
+crontab -e opens crontab editor. (at the first time, we need to set the default editor. I prefer vim :) )
+
+Let's put there
+
+12 9 23 * * /usr/bin/ls -al > logfile 2>&1
+
+And save the file with :wq
+
+You should see installing new crontab
+
+Is it set?
+
+crontab -l
+
+Yes, it is!
+
+As you can see, I intentionally used usr/bin/ls - full, absolute path. It is not needed in this example, however it is a good practice to do. Remember, cronjob, when executed, will create another shell. We need to ensure that this newly created shell is able to use our system. In this example, when I use ls, my shell is looking for executable in defined $PATH. What will happen, if new shell will not have $PATH defined?
+Ok, let's change something to see, if it really works. Change the schedule to * * * * * - every minute.
+
+Now we need to wait a moment, and the nwe should be able to successfuly execute
+
+cat logfile
+
+Yeah! We have our first crontab!
+
+Where is it configured? Do you remember material from previous page?
+
+ls -al /var/spool/cron/crontabs/root
+
+Yes, we have a file, root. It means, user root created it, root is an owner, and the group assigned is crontab. Let's look inside
+
+cat /var/spool/cron/crontabs/root
+
+The file contains exactly what we defined.
+
+Logs
+Different Linux distribution will log cronjob execution in different logs. Here, in Ubuntu, we need to go through /var/log/syslog. Execute
+
+cat /var/log/syslog
+
+and look for May 13 22:31:01 ubuntu CRON[24797]: (root) CMD (/usr/bin/ls -al > logfile 2>&1) (date for you will be different, obviously)
+
+We can use journactl as well
+
+journalctl -u cron
+
+We run journalctl for all entries for user cron
+
+Obviously, we can use also the systemctl command
+
+systemctl status cron.service
+
+Cool crontab generators can be found here and here.

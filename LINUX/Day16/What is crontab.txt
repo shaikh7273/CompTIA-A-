@@ -1,0 +1,79 @@
+What is crontab
+
+
+Although the title is about crontab, we start our story from something else - cron.
+
+Cron, the daemon
+What is service, or daemon, how to use them - we will learn later. Now it is enough to say, that cron is a service responsible for control and execution of scheduled tasks. It is started when system is booting and works till the system is shut down.
+
+Let's see a few ways how we can check the status of the service.
+
+systemctl status cron.service
+
+This command is a management command for systemd. What is interesting for us at this moment is only this part of the displayed information:
+
+Active: active (running)
+
+This means that the service is active.
+
+ps aux | grep cron
+
+Shows processes related to the cron service. We should see something similar to
+
+root 565 0.0 0.1 8536 3084 ? Ss 19:48 0:00 /usr/sbin/cron -f
+
+So, to conclude this part, cron is a service which controls multiple crontabs.
+
+Crontab
+We know what is cron already. So, what is crontab?
+
+crontab is simply a list of tasks or commands which are scheduled to be executed on specific date and time. The thing is, that Linux have many crontabs. Let's go through them.
+
+/etc/crontab
+The first file we discuss is located in /etc/ directory. Let's see it
+
+ls -al /etc/crontab
+
+This is the system wide crontab. As you can see, all users can read, but only admins can edit this file. What we keep there? Generally, system related, admin stuff. But please remember, it is not root's crontab, this one is somewhere else. Again, it is system-wide crontab.
+
+This crontab has associated directory - /etc/cron.d. Let's see what is inside
+
+ls -al /etc/cron.d
+
+Well, here we have scrips, which are scheduled in /etc/crontab.
+
+cron.daily and others
+In this directory we have a few more directories.
+
+ls -al /etc/cron.* -d
+
+You should see
+
+drwxr-xr-x 2 root root 4096 Oct  7  2021 /etc/cron.daily
+drwxr-xr-x 2 root root 4096 Oct  7  2021 /etc/cron.hourly
+drwxr-xr-x 2 root root 4096 Oct  7  2021 /etc/cron.monthly
+drwxr-xr-x 2 root root 4096 Oct  7  2021 /etc/cron.weekly
+I think you get the idea. These directories contain scripts which are executed... daily, hourly, monthly or weekly.
+
+Let's see one example
+
+ls -al /etc/cron.daily
+
+Well, there is no crontab, only scripts (and .placeholder, which is obligatory). If you don't believe me, check :)
+
+cat /etc/cron.daily/dpkg
+
+How these are executed? How system knows when to do it? Well, the answer is in the file which we already know:
+
+cat /etc/crontab
+
+We have four anacron command executed with different scheduling. We will learn about it later. What is anacron?
+
+It is scheduler too. But works a little bit differently than cron. Unlike the cron, anacron doesn't assume that the machine is run continuously without stops. It is crucial for system's scripts which must be executed daily, for example.
+
+Ok, let's jump to another location.
+
+/var/spool/cron/crontabs
+In this directory (which is empty at this moment) user's crontabs are stored. It is related to root's crontab as well.
+
+ls -al /var/spool/cron/crontabs we confirmed, the directory is empty. It is time to jump to the next chapter and learn how to define task in crontab!
