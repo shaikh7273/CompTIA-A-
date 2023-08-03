@@ -1,0 +1,78 @@
+Become another user or elevate privileges
+
+
+Normal user
+When we log in to Linux we are "normal" user. With limited access to programs, directories, etc.
+
+In this lab we will use two newly created users: student1 and student2. Both have password set and these are 1student for student1 and 2student for student2.
+
+Elevated privileges
+Sometimes we say that Linux has two types of users. Normal, and root. But the truth is that we have something in between - user with elevated privileges (or possibility to use elevated privileges) - sudo. This possibility can be very specifically configured and allows to use only specific subset of commands with root privileges.
+
+Therefore I say this should be treated as "something in between" root and normal user. It is an user, who has a possibility to run selected set of commands as root.
+
+root
+Root is a master of the system. Root can do everything. Simply, it is an admin :)
+
+Change user
+Let's check who we are:
+
+whoami
+id
+
+We are logged as root (Killercoda functionality). In order to use another user we need to use command su. As usual it is a abbreviation from the word substitite. It allows us to use another user in order to run commands.
+
+su has multiple options. You can learn them with
+
+su -h
+
+For us, however, important is only one argument: -l or simply -. Let's use it to switch to student1.
+
+su - student1
+
+As we can see, when we use su as root, we don't need to provide the user's password. The power of being admin :)
+
+Let's check, if we are student1:
+
+whoami
+id
+
+Now, let's login as student2.
+
+su - student2
+
+Right, now we need to provide the password. This is the password for user2: 2student . Type it in the command line, in the terminal, please.
+
+Let's see:
+
+whoami
+id
+
+Ok, let's go back to the initial user - root.
+
+exit
+
+(quit from student2 to student1)
+
+exit
+
+(quit from student1 to root)
+
+When su is executed without user: su - root is assumed and you need to give root password. And yes, you are right, it will not work in this setup. Why? Let's find out.
+
+But first, we need to login again as normal user (it doesn't make sense to change user from root to root, don't you think?)
+
+su - student1
+
+su -
+
+CTRL+c will quite the password prompt (or you can try 3 times to login).
+
+exit
+
+grep ^root /etc/passwd
+grep ^root /etc/shadow
+
+The reason is simple. There is no password set for root.
+
+It makes perfect sense. Let me tell you a little bit why. Having password for the most powerful user in the system is a security concern. Imagine weak password for root with another problem (this is one of the common misconfigurations) - allow access to root account from outside the system. It is a huge hole, a highway into your system for attackers. Therefore we never should allow access to root from outside the system and we should keep the root user paswordless, accessed only with elevated privileges by allowed users. Paswordless doesn't mean vulnerable, it means simply, that... no one can crack not existing password :)

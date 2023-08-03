@@ -1,0 +1,58 @@
+Elevate privileges
+
+
+When su log us as root, sudo elevates our privileges on behalf of root (let say it this way).
+
+Elevate privileges for users
+We are logged as root, so sudo at this moment has no sense, totally. But in order to see what happens when sudo is executed, let's see it now.
+
+Before we start, let's observe, how our processes list looks like.
+
+ps
+
+$ ps
+    PID TTY          TIME CMD
+    899 pts/0    00:00:00 bash
+   1099 pts/0    00:00:00 ps
+You should see something like the list above.
+
+We have two processes: bash which is our "main" session and ps - the process which we just executed.
+
+We can use sudo in two ways:
+
+If we want to run some commands as root, we can use sudo <command>. Like in the example.
+
+sudo ps
+
+The output will be similar to this one:
+
+$ sudo ps
+    PID TTY          TIME CMD
+    899 pts/0    00:00:00 bash
+   1243 pts/0    00:00:00 sudo
+   1244 pts/0    00:00:00 ps
+This time we have three processes. Two - bash and ps we already understand. The third is sudo itself.
+
+Why is that? bash is the parent session. In this context we executed ps, but with sudo. Therefore sudo created its own session, where the ps were finally run.
+
+Second method is to interactively use sudo mode and use elevated privileges in the full session (not command by command).
+
+sudo -i
+ps
+
+-i argument means that we want to use sudo with login option, another words, to switch the session to privileged one.
+
+The output should be like below:
+
+$ sudo -i
+$ ps
+    PID TTY          TIME CMD
+    899 pts/0    00:00:00 bash
+   1299 pts/0    00:00:00 sudo
+   1300 pts/0    00:00:00 bash
+   1308 pts/0    00:00:00 ps
+Now we have four sessions. What happened here? The "main" session has PID 899. This session executed session with PID 1299 (when we typed sudo -i). in order to login to session, Linux started another session of bash (PID 1300) in which we executed our ps (PID 1308). Simple :)
+
+Let's come back to the main session. exit
+
+Ok, our understanding of options and usecases is better now, let's configure sudo for our two users in next chapter.

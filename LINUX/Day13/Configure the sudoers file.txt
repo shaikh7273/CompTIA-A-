@@ -1,0 +1,109 @@
+configuration of /etc/sudoers file
+
+
+Sudo can be configured. In order to do so, we use /etc/sudoers file. Let's see it.
+
+clear
+cat /etc/sudoers
+
+We are interested in two lines there. At least, for now.
+
+root ALL=(ALL:ALL) ALL
+
+This is the configuration line for the user
+
+%sudo ALL=(ALL) NOPASSWD:ALL
+
+And this one for the group. The character which indicates group is %.
+
+Probably you noticed, that we have two entries for group sudo. The last one is used.
+
+Check if sudo is configured for users
+Let's check student1 is sudo is configured for him.
+
+su - student1
+sudo ps
+
+Provide password (1student )
+
+No, we cannot use sudo.
+
+exit
+
+Let's configure it, then!
+
+Edit sudoers file
+We can do it simply, by using your editor of choice, like vim:
+
+vim /etc/sudoers.
+
+However, Linux givees us special tool which allows us to safely edit sudoers file. It is visudo.
+
+But first, let's configure visudo to use vim.
+
+update-alternatives --config editor
+
+And select vim.basic (which should be listed with number 3 on the list).
+
+Ok, we ready.
+
+visudo
+
+So, visudo knows which file to edit and which editor to use.
+
+Ok, let's quit for now: :q!
+
+Config line explained
+Each config line looks like this:
+
+user pos1=(pos2:pos3) pos4
+
+or
+
+%group pos1=(pos2:pos3) pos4
+
+On the beginning we have user or group. To differentiate these two, we use % for specify the group.
+pos1 - applies to all hosts
+pos2 - user can use all commands as all users (i.e. root can ls as user03, etc)
+pos3 - user can use commads as all groups
+pos4 - user can use all commads
+
+Let's add some configuration for student1.
+
+Please open
+
+visudo
+
+and go to the end of the file and add the line (press i to change vim mode to INSERT, if needed):
+
+student1 ALL=(ALL:ALL) ALL
+
+Quit visudo by pressing ESC key followed by :wq
+
+Login to `student1 again.
+
+su - student1
+sudo ps
+
+provide password (which is 1student)
+
+exit
+
+Now it works, but with password.
+
+please remember, when you use su you have to provide the password of the user you want to use. With sudo you have to provide the password of current user.
+
+sudo without password
+Ok, let's edit sudoers again with
+
+visudo
+
+and add this line:
+
+student2 ALL=(ALL:ALL) NOPASSWD:ALL
+
+It is easily noticeable, that we configured our second user with one difference - NOPASSWD. in this way we informed sudo, that this user doesn't need to confirm himself with password. Let's see it.
+
+su - student2
+sudo ps
+exit

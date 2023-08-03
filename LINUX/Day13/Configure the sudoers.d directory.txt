@@ -1,0 +1,47 @@
+The sudoers.d directory for better granulation
+
+
+On previous page we configured the /etc/sudoers file. This file contains one setting, which we will use now.
+
+#includedir /etc/sudoers.d
+
+First, here we have not a comment (normally, in bash, # means comment), but an instruction #include. Here it means that in order to evaluate sudo config, files in /etc/sudoers.d directory will be used.
+
+Let's take a look what we have there:
+
+ls -al /etc/sudoers.d
+
+Please, read the README file there.
+
+cat /etc/sudoers.d/README
+
+In my practice, I used to create files in this directory with filename which represents the user or group. So, let's use the configs we have previously, but first we will remove the both users which we added earlier. We do it with sed and remove the lines with student from the /etc/sudoers file.
+
+sed -i '/student/d' /etc/sudoers
+
+(we will talk about sed later)
+
+echo "student2 ALL=(ALL:ALL) NOPASSWD:ALL" > /etc/sudoers.d/student2
+
+echo "student3 ALL=(ALL:ALL) ALL" > /etc/sudoers.d/student3
+
+Do we have proper configuration?
+
+ls -al /etc/sudoers.d
+
+Yes, we have.
+
+Let's check student3 user
+
+su - student3
+sudo ps
+
+the password is 3student
+
+exit
+
+And student2
+
+su - student2
+sudo ps
+exit
