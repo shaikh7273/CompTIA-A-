@@ -1,0 +1,143 @@
+Soft links
+
+
+We start with soft links. In source directory we have two files with the same content. Let's check one of them, which we will use in this chapter.
+
+cat ../source/file1
+
+It is simple, but we don't need anything more.
+
+Ok, we are ready to create the soft link.
+
+ln -s ../source/file1 softlink
+
+What we have now?
+
+ls -al
+
+And we see lrwxrwxrwx 1 root root 15 May 15 11:20 softlink -> ../source/file1
+
+Right! We see that this output looks a little bit differently than for regular files, correct? We have two information here.
+
+l on the beginning of permissions matrix, which informs us clearly that it is the link.
+origin location, or redirection. However we weill call it, the fact is that this shows us the name of the link and where is the origin.
+Now interesting thing.
+
+Please, createw second soft link, this time with absolute path.
+
+ln -s /root/source/file1 softlink2
+
+ls -al
+
+What we see now?
+
+ls shows us exact object, exact path used to create the link. These two links direct us to the same file, however the paths look different.
+We can read the softlink now.
+
+cat softlink
+
+And do some modifications
+
+echo 'change to origin' >> /root/source/file1
+echo 'change to softlink' >> softlink
+echo 'change to softlink2' >> softlink2
+
+Ok, shall we check the file?
+
+cat softlink2
+
+Yes, all changes are in the file.
+
+Inodes
+Although thee concept of inodes isn't familiar to us yet, but for now it is not needed. Let's see output of these two commands
+
+ls -il ../source/file1
+ls -il
+
+The first number in each line is different. This number is an inode. Simply speaking, it is the ID of the object. By definition, an inode is an index node. It serves as a unique identifier for a specific piece of metadata on a given filesystem, and the disk block location of this object. Enough :)
+
+The different numbers means the these objects are different. They are not the same. Another words, the information about the origin file and our soft link is stored somewhere else on the filesystem.
+
+Get some info
+Let's use the commands we learned last time.
+
+file softlink
+
+This returned
+
+softlink: symbolic link to ../source/file1. Nice.
+
+stat softlink
+
+And we see
+
+  File: softlink -> ../source/file1
+  Size: 15              Blocks: 0          IO Block: 4096   symbolic link
+Device: fc01h/64513d    Inode: 775746      Links: 1
+Access: (0777/lrwxrwxrwx)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2022-05-15 11:20:49.221533962 +0000
+Modify: 2022-05-15 11:20:49.081531934 +0000
+Change: 2022-05-15 11:20:49.081531934 +0000
+ Birth: -
+But when we do
+
+stat ../source/file1
+
+Links is still 1. Why? Simple. This is the count of hard links.
+
+Remove links
+In order to delete the link, we can use the command unlink. The syntax is simple
+
+unlink LINK
+
+So...
+
+unlink softlink2
+ls -al
+
+Yes, we removed the link. What will happen if we remove the orginal file?
+
+Let's try.
+
+rm ../source/file1
+
+And now we check the link
+
+ls -al
+
+As we can see, the way of display the information changed.
+
+file softlink
+
+Returned
+
+softlink: broken symbolic link to ../source/file1, what means the link leads to not existing object.
+
+What is interesting, stat doesn't show any problem
+
+stat softlink
+
+cat softlink
+
+We see
+
+cat: softlink: No such file or directory
+
+Ok, now we try to recreate the original file
+
+touch ../source/file1 && echo 'hello!'> ../source/file1
+
+What happened with our link?
+
+ls -al
+cat softlink
+
+Everything is back to the state before we removed the source file (except content of the file). Why it is possible? As we learned above, the soft link is somehow an independent entity. This link is soft, what means in this case that link is a pointer to the source.
+
+Finally, we can remove soft link using rm command.
+
+rm softlink
+
+ls -al
+
+Confirmed, the link is removed.

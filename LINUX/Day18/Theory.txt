@@ -1,0 +1,35 @@
+Theory
+
+
+We start with soft links. These links are easily visible in the system and we use soft links in wide applications in our work. Start with simply linking the objects between places, system uses soft links to configure specific versions of tools, to the system-related services configurations. For example, in *old) Init V soft links vere used to define what service should be started in which runlevel.
+
+We will not go that deep. But we will learn how to use soft links.
+
+Let's start with some preparations. We will create two directories and files, which we will use to create links.
+
+mkdir source target
+touch source/file1
+touch source/file2
+echo 'hello!'> source/file1
+echo 'hello!'> source/file2
+cd target
+
+Ok, we are ready, we have files and directories and we are in target directory.
+
+What are links
+First, what are links. Simply speaking, we can treat them as shortcuts to original destination/file. It is very handy way to use libraries, executables, configurations in multiple places without multiplicating the files, which might make our work very complicated. But it is not just the shortcut. It is also something what we call pseudo-file. The difference is simple. Imagine, you created a shortcut to file or directory in Windows system (so, I should say 'folder', shouldn't I?:) ). When you open this shortcut, in fact you open the original location. In linux, when you open the link, the system sees it as object opened from the location where it resides, not the original (or source) location. The effect will be similar on the end, but this is the important difference to understand.
+
+Syntax
+The command to create both types links is simple - ln. And yeah, it is an abbreviation again :)
+
+ln SOURCE TARGET
+
+Here we have the syntax of the link command. Afterln command we have to provide the source (original) object and then the target. Target will be the actual link.
+
+The difference between soft and hard links is in the argument we use in ln command.
+
+In this way we see above, we create hard link. In order to create soft link, we have to add -s argument.
+
+ln -s SOURCE TARGET
+
+Ok, now we know what are links and how to create them, in next chapters we will create soft and hard links and we will look closer what are thee differencces between them.
