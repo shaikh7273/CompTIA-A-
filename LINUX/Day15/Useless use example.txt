@@ -1,0 +1,25 @@
+Useless use example
+
+
+Well, not that useless. This is the example, how we can capture the information what STDIN is used, and act accordingly.
+
+The script is simple (but we wil not go through details).
+
+#!/bin/bash
+if [ -t 0 ]; then
+  echo stdin coming from keyboard
+else
+  echo stdin coming from a pipe or a file
+fi
+Of course, this script is already prepared by system. So, we can run it.
+
+./script.sh
+
+./script.sh < dummy.txt
+
+cat dummy.txt | ./script.sh
+
+Do you see the difference?
+
+Answer
+In the script we check the origin of input data. If it is terminal, script says that. If the input comes from file (please, notice two ways of doing it in the examples above) script notifies, that input is from file.

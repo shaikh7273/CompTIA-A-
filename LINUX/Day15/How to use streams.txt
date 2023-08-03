@@ -1,0 +1,73 @@
+How to use streams
+
+
+Let's try to understand STDERR on example.
+
+cat noexist.txt
+
+This will throw an error cat: noexist.txt: No such file or directory. It is how it should be, there is no file like that.
+
+Ok, what if I don't want to see errors but write them into some log?
+
+cat notexists.txt 2> errorfile
+
+This way we directed STDERR to errorfile . We can check it:
+
+cat errorfile
+
+What we've done? By using 2> we directed all 2 (what means file descriptor for standard error) to file. Let's runn the previous command again
+
+cat notexists2.txt 2> errorfile
+
+Now we should have two entries in log, let's see it
+
+cat errorfile
+
+Hm...
+
+Do you know why we don't see two entries?
+
+Answer
+Very often we use special redirection for STDERR.
+
+cat notexists.txt 2> /dev/null
+
+In this way we redirect error to... nowhere. /dev/null is the special virtual file (yes, everything is a file in Linux!) to which we can write. And only write, we cannot read /dev/null. Well, I mean, you can try cat or whatever, but do not expect anything. It is like void. Or better, a black hole. But unlike blakc hole, which, at least in theory, emits Hawking radiation, /dev/null doesn't emit anything. It is the only one perfect black hole in the universe :)
+
+However! Yeah ;) We can... overwrite /dev/null. We'll do it in the last page of this lesson, it will be fun!
+We can redirect STDOUT and STDIN as well, in the same way. Let's try something else now. Do you remember, when we discussed that we can join different pipes and redirections? It is time to refresh our memory!
+
+cat notexists.txt 1> catfile 2> errorfile
+
+What we've done? We directed STDOUT to catfile which can be our execution log (or whatever you wish) and, if we have error, we write it to errorfile .
+
+cat catfile - no, nothing here.
+
+cat errorfile - yes, it is here.
+
+And now?
+
+But first, we clean both log files, to be sure.
+
+rm catfile errorfile
+
+cat .profile 1> catfile 2> errorfile
+
+cat catfile
+
+Here we have the outpu of the cat command.
+
+What is it? Simple, cat prints the content on screen. Now we know: cat prints the content to STDOUT.
+cat errorfile - empty, as expected.
+
+We can capture STDOUT and STDERR in the same file.
+
+cat notexists.txt > capture.txt 2>&1
+
+cat capture.txt
+
+cat .profile > capture.txt 2>&1
+
+cat capture.txt
+
+2>&1: This uses the &> redirect instruction. This instruction allows you to tell the shell to make one stream got to the same destination as another stream. In this case, we’re saying “redirect stream 2 (STDERR), to the same destination as stream 1 (STDOUT), is being redirected to.”

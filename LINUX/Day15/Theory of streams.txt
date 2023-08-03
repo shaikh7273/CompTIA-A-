@@ -1,0 +1,53 @@
+Theory of streams
+
+
+Let's spend some time and understand what streams are. Look at right side of your screen. There is a command line with prompt waiting for interacting with you. This interaction is executed by two streams - output and input. To be more precise, we talk here about I/O streams. I/O - Input/Output.
+
+To interact with the system we need to use mouse or, like here, with Linux, the keyboard. These are our inputs. The display on which you read this tutorial is the output. Of course, not only these devices can be input our output. Do you remember pipes and redirections? Exactly.
+
+Streams
+We have three default streams in the system.
+
+Hm... wait... Three? Input, output... there is no mistake in the math, only two!
+
+Well, Linux offers the third stream, now we will learn something about all of them.
+
+Standard input
+First stream is called standard input. Its file descriptor is 0. In short, we use the name STDIN. File descriptor... It means... Yes, everything in Linux is a file, STDIN as well. So, we have to look first into
+
+ls -al /dev/fd/
+
+Here we see here links (this will be the subject of our interest soon) to at least 4 elements:
+
+0
+1
+2
+proc/<number>/fd/
+These files are located in fd directory, what means file descriptors.
+
+Let's look closer on the last link. It directs us to the special filesystem (or directory), called proc. We will not discuss it here, it is enough to say that the number represents the PID of the process which executes some action. Do not try to find it after the command ls execution, you will not find it :D
+
+What are the other links? Numbers 0, 1 and 2 point to /dev/pts/1 . Run this command now:
+
+tty
+
+What do you see in output?
+
+/dev/pts/1, correct?
+
+It maybe 0 as well, here on Killercoda.
+
+Please open another terminal (by clicking + next to the tab name on top of the terminal) and execute tty command there.
+
+Tty is just the terminal through which we communicate with operating system. We see that all streams are connected to it. It makes sense, as this terminal is an output and input in the same time. And pts is pseude terminal slave which emulates (more or less) tty. This emulation is needed, when we use some other program to connect to system, like ssh, screen, etc. Tty is used directly, when our screen/keyboard is directly connected to computer.
+
+We can define new, or redefine existing streams, using programming languages. Like C, for example. But it is not a part of this tutorial.
+Ok, we can discuss second stream now.
+
+Standard output
+When STDIN is waiting for instructions passed to it, standard output displays responses from the system (in the simplest scenario). Its file descriptor is 1 and we name it STDOUT.
+
+Standard error
+The third stream is somehow special. It is standard error, with 2 as file descriptor. We call it STDERR. Why we have special stream for errors? The reason is very simple, in this way we can differentiate the actions taken when output from our scripts are correct or there are some errors.
+
+Now, when we know what streams are, let's have some fun with them and see how to use them.

@@ -1,0 +1,85 @@
+Even more useless example
+
+
+I promised you something :)
+
+We try to force our black hole to emit something.
+
+echo 'whatever' > /dev/null
+
+cat /dev/null
+
+Hm, no. It doesn't work.
+
+Ok, let's try differently
+
+echo 'whatever' > tmpfile && mv tmpfile /dev/null
+
+cat /dev/null
+
+WOW! Our black hole emits whatever radiation!
+
+But.. is it?
+
+No, it is not.
+
+If we run
+
+file /dev/null
+
+We will see /dev/null: ASCII text It means, we have simple text file, not special one!
+
+Let's see different view
+
+ls -al /dev/null
+
+The output will be -rw-r--r-- 1 root root 9 May 11 21:07 /dev/null
+
+It is definitely not what we wanted to see.
+
+This thing might happen. IT SHOULDN'T but it might. So, how to recover the proper /dev/null?
+First, we need to remove faulty file
+
+rm /dev/null
+
+Don't worry, nothing bad happen. It already happened :)
+
+And now we have to run
+
+mknod -m 0666 /dev/null c 1 3
+
+mknod creates a speacial file
+-m 0666 says about file permission
+/dev/null is the name
+c is the device type
+1 3 are the MAJOR and MINOR numbers to specify the device
+I want to focus your attention on device type. We used c. When we run
+
+ls -al /dev/null
+
+We will see
+
+crw-rw-rw- 1 root root 1, 3 May 2 10:20 /dev/null
+
+Did you noticed c on the beginning?
+
+When you run info mknod you'll see the explanation. Let me copy it here.
+
+p for a FIFO
+b for a block special file
+c for a character special file
+So, we have three main types of devices. C is one of them and it means character special file which... let say.. operates only in "one way". Another examples of this type in dev/random which generates random characters and cannot receive any data.
+
+Block and fifo are not in our scope.
+
+Last thing is MAJOR and MINOR numbers. These numbers are not random. The specific pairs are defined in Kernel. For example, mentioned random has MAJOR and MINOR number set to 1 and 8.
+
+Ok, let's finally see our special file
+
+file /dev/null
+
+The response should be /dev/null: character special (1/3)
+
+We are done!
+
+Another way of creating /dev/nul is to run udevadm trigger --sysname-match=null . But this might not work on all systems.
